@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  kfic-tests:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../results:/app/results
+      - ../data:/app/data
+    environment:
+      - ENVIRONMENT=dev
+      - BROWSER=chrome
+      - HEADLESS=true
+    networks:
+      - kfic-network
+
+  selenium-hub:
+    image: selenium/hub:4.15.0
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+    environment:
+      - GRID_MAX_SESSION=16
+      - GRID_BROWSER_TIMEOUT=300
+      - GRID_TIMEOUT=300
+    networks:
+      - kfic-network
+
+  chrome:
+    image: selenium/node-chrome:4.15.0
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_INSTANCES=4
+      - NODE_MAX_SESSION=4
+    networks:
+      - kfic-network
+    scale: 2
+
+  firefox:
+    image: selenium/node-firefox:4.15.0
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_INSTANCES=4
+      - NODE_MAX_SESSION=4
+    networks:
+      - kfic-network
+    scale: 2
+
+  allure:
+    image: frankescobar/allure-docker-service
+    container_name: allure-reports
+    ports:
+      - "5050:5050"
+    environment:
+      CHECK_RESULTS_EVERY_SECONDS: 3
+      KEEP_HISTORY: 20
+    volumes:
+      - ../results/allure-results:/app/allure-results
+      - ../results/allure-reports:/app/default-reports
+    networks:
+      - kfic-network
+
+networks:
+  kfic-network:
+    driver: bridge

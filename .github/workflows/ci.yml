@@ -1,0 +1,114 @@
+name: KFIC Automation Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9, 3.10, 3.11]
+        browser: [chrome, firefox]
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Setup Chrome
+      if: matrix.browser == 'chrome'
+      uses: browser-actions/setup-chrome@latest
+      
+    - name: Setup Firefox
+      if: matrix.browser == 'firefox'
+      uses: browser-actions/setup-firefox@latest
+      
+    - name: Run Smoke Tests
+      run: |
+        robot --variable BROWSER:${{ matrix.browser }} \
+              --variable ENVIRONMENT:dev \
+              --include smoke \
+              --outputdir results \
+              tests/
+              
+    - name: Run API Tests
+      run: |
+        robot --include api \
+              --outputdir results/api \
+              tests/api/
+              
+    - name: Generate Allure Report
+      if: always()
+      run: |
+        allure generate results/allure-results -o results/allure-report
+        
+    - name: Upload Test Results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results-${{ matrix.python-version }}-${{ matrix.browser }}
+        path: |
+          results/
+          !results/allure-results
+          
+    - name: Upload Allure Report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-report-${{ matrix.python-version }}-${{ matrix.browser }}
+        path: results/allure-report/
+        
+    - name: Publish Test Results
+      if: always()
+      uses: dorny/test-reporter@v1
+      with:
+        name: Robot Framework Tests
+        path: results/output.xml
+        reporter: java-junit
+        
+  parallel-tests:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'schedule'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run Full Test Suite in Parallel
+      run: |
+        pabot --processes 4 \
+              --variable BROWSER:chrome \
+              --variable ENVIRONMENT:dev \
+              --outputdir results/parallel \
+              tests/
+              
+    - name: Upload Parallel Test Results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: parallel-test-results
+        path: results/parallel/

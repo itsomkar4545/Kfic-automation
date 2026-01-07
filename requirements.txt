@@ -1,0 +1,40 @@
+# Core Framework
+robotframework==6.1.1
+robotframework-seleniumlibrary==6.2.0
+robotframework-requests==0.9.7
+robotframework-databaselibrary==1.4.4
+robotframework-excellibrary==0.0.2
+robotframework-jsonlibrary==0.5
+robotframework-pabot==2.16.0
+
+# Web Automation
+selenium==4.15.2
+webdriver-manager==4.0.1
+playwright==1.40.0
+robotframework-playwright==17.5.0
+
+# API Testing
+requests==2.31.0
+jsonschema==4.20.0
+
+# Data Handling
+pandas==2.1.4
+openpyxl==3.1.2
+PyMySQL==1.1.0
+psycopg2-binary==2.9.9
+
+# Reporting
+allure-robotframework==2.13.2
+robotframework-allure-listener==1.0.0
+robotframework-metrics==3.4.0
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+faker==20.1.0
+pillow==10.1.0
+
+# Development
+pytest==7.4.3
+black==23.11.0
+flake8==6.1.0
