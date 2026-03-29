@@ -1,0 +1,7 @@
+datasources:a7aed8123e443c78287bf7bef4c3d1d1fc22ae56
+commandlineoptions:a3decaa431cba35210a2b18a89ff814f94c1d118
+suitesfrom:no-suites-from-option
+file:d40c9dfad1c779dc70e600ff678e7e0b0c537270
+--test Receipt Management.TC001_Complete_Receipt_Generation_Workflow
+--test Receipt Management.TC002_Generate_Receipt_Only
+--test Receipt Management.TC003_Approve_Receipt_Only

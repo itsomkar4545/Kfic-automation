@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.1 on win32)" generated="20260220 15:33:36.566" rpa="false" schemaversion="4">
+<suite id="s1" name="Lead Api Tests" source="D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot">
+<kw name="Create Session" library="RequestsLibrary" type="SETUP">
+<arg>kfic_api</arg>
+<arg>${API_CONFIG.base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20260220 15:33:36.960" level="INFO">Creating Session using : alias=kfic_api, url=http://172.21.0.123:8080/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20260220 15:33:36.958" endtime="20260220 15:33:36.960"/>
+</kw>
+<test id="s1-t1" name="TC006_Lead Status Workflow API" line="67">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${lead_data}</var>
+<arg>applicantType=Individual</arg>
+<arg>firstName=Test</arg>
+<arg>lastName=User</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20260220 15:33:36.962" level="INFO">${lead_data} = {'applicantType': 'Individual', 'firstName': 'Test', 'lastName': 'User'}</msg>
+<status status="PASS" starttime="20260220 15:33:36.961" endtime="20260220 15:33:36.962"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Authorization=${AUTH_TOKEN}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20260220 15:33:36.963" level="INFO">${headers} = {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9', 'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20260220 15:33:36.962" endtime="20260220 15:33:36.963"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>kfic_api</arg>
+<arg>${API_ENDPOINT}</arg>
+<arg>json=${lead_data}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20260220 15:33:39.020" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E500F21400&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads</msg>
+<msg timestamp="20260220 15:33:41.253" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E500F16710&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads</msg>
+<msg timestamp="20260220 15:33:44.147" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E500F16AD0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads</msg>
+<msg timestamp="20260220 15:33:46.184" level="FAIL">ConnectionError: HTTPConnectionPool(host='172.21.0.123', port=8080): Max retries exceeded with url: /api/v1/leads (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E500F4DA70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<status status="FAIL" starttime="20260220 15:33:36.963" endtime="20260220 15:33:46.198"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${lead_id}</var>
+<arg>${response.json()['id']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:46.199" endtime="20260220 15:33:46.199"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${status_data}</var>
+<arg>status=CREDIT_APPROVED</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:46.199" endtime="20260220 15:33:46.199"/>
+</kw>
+<kw name="PUT On Session" library="RequestsLibrary">
+<arg>kfic_api</arg>
+<arg>${API_ENDPOINT}/${lead_id}/status</arg>
+<arg>json=${status_data}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:46.200" endtime="20260220 15:33:46.200"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>kfic_api</arg>
+<arg>${API_ENDPOINT}/${lead_id}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:46.200" endtime="20260220 15:33:46.200"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${response.json()['status']}</arg>
+<arg>CREDIT_APPROVED</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:46.200" endtime="20260220 15:33:46.201"/>
+</kw>
+<doc>Test lead status workflow through API</doc>
+<tag>api</tag>
+<tag>integration</tag>
+<tag>status_change</tag>
+<tag>workflow</tag>
+<status status="FAIL" starttime="20260220 15:33:36.960" endtime="20260220 15:33:46.201">ConnectionError: HTTPConnectionPool(host='172.21.0.123', port=8080): Max retries exceeded with url: /api/v1/leads (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E500F4DA70&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+</test>
+<kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
+<doc>Removes all the session objects</doc>
+<msg timestamp="20260220 15:33:46.202" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20260220 15:33:46.202" endtime="20260220 15:33:46.202"/>
+</kw>
+<doc>API Test Suite for KFIC LOS/LMS</doc>
+<status status="FAIL" starttime="20260220 15:33:36.614" endtime="20260220 15:33:46.202"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">api</stat>
+<stat pass="0" fail="1" skip="0">integration</stat>
+<stat pass="0" fail="1" skip="0">status_change</stat>
+<stat pass="0" fail="1" skip="0">workflow</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Lead Api Tests">Lead Api Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260220 15:33:36.948" level="ERROR">Error in file 'D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot' on line 5: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Scripts\robot.exe
+  D:\New_automation_\kfic-automation-framework
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32\lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\Pythonwin</msg>
+<msg timestamp="20260220 15:33:39.020" level="WARN">Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E500F21400&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads</msg>
+<msg timestamp="20260220 15:33:41.253" level="WARN">Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E500F16710&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads</msg>
+<msg timestamp="20260220 15:33:44.147" level="WARN">Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E500F16AD0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads</msg>
+</errors>
+</robot>

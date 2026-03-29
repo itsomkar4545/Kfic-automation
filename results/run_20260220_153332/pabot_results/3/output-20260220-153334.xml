@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.1 on win32)" generated="20260220 15:33:34.831" rpa="false" schemaversion="4">
+<suite id="s1" name="Lead Api Tests" source="D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot">
+<kw name="Create Session" library="RequestsLibrary" type="SETUP">
+<arg>kfic_api</arg>
+<arg>${API_CONFIG.base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20260220 15:33:35.276" level="INFO">Creating Session using : alias=kfic_api, url=http://172.21.0.123:8080/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20260220 15:33:35.274" endtime="20260220 15:33:35.277"/>
+</kw>
+<test id="s1-t1" name="TC004_Update Lead" line="50">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${update_data}</var>
+<arg>email=john.updated@test.com</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20260220 15:33:35.279" level="INFO">${update_data} = {'email': 'john.updated@test.com'}</msg>
+<status status="PASS" starttime="20260220 15:33:35.278" endtime="20260220 15:33:35.279"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Authorization=${AUTH_TOKEN}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20260220 15:33:35.279" level="INFO">${headers} = {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9', 'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20260220 15:33:35.279" endtime="20260220 15:33:35.280"/>
+</kw>
+<kw name="PUT On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>kfic_api</arg>
+<arg>${API_ENDPOINT}/${CREATED_LEAD_ID}</arg>
+<arg>json=${update_data}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<msg timestamp="20260220 15:33:35.281" level="FAIL">Variable '${CREATED_LEAD_ID}' not found.</msg>
+<status status="FAIL" starttime="20260220 15:33:35.280" endtime="20260220 15:33:35.282"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:35.283" endtime="20260220 15:33:35.284"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${updated_lead}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:35.284" endtime="20260220 15:33:35.284"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${updated_lead['email']}</arg>
+<arg>john.updated@test.com</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:35.284" endtime="20260220 15:33:35.284"/>
+</kw>
+<doc>Test PUT update lead API</doc>
+<tag>api</tag>
+<tag>integration</tag>
+<tag>put</tag>
+<tag>update_lead</tag>
+<status status="FAIL" starttime="20260220 15:33:35.277" endtime="20260220 15:33:35.285">Variable '${CREATED_LEAD_ID}' not found.</status>
+</test>
+<kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
+<doc>Removes all the session objects</doc>
+<msg timestamp="20260220 15:33:35.287" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20260220 15:33:35.286" endtime="20260220 15:33:35.287"/>
+</kw>
+<doc>API Test Suite for KFIC LOS/LMS</doc>
+<status status="FAIL" starttime="20260220 15:33:34.865" endtime="20260220 15:33:35.287"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">api</stat>
+<stat pass="0" fail="1" skip="0">integration</stat>
+<stat pass="0" fail="1" skip="0">put</stat>
+<stat pass="0" fail="1" skip="0">update_lead</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Lead Api Tests">Lead Api Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260220 15:33:35.266" level="ERROR">Error in file 'D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot' on line 5: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Scripts\robot.exe
+  D:\New_automation_\kfic-automation-framework
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32\lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

@@ -1,0 +1,23 @@
+[ ERROR ] Error in file 'D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot' on line 5: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Scripts\robot.exe
+  D:\New_automation_\kfic-automation-framework
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32\lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\Pythonwin
+[ WARN ] Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B19400>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads
+[ WARN ] Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220AF6D50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads
+[ WARN ] Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220AF6FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads
+[ WARN ] Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B3E060>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads
+[ WARN ] Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220A82C30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads
+[ WARN ] Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B116A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads
+[ WARN ] Retrying (RetryAdapter(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B12BE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads
+[ WARN ] Retrying (RetryAdapter(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B12E00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads
+[ WARN ] Retrying (RetryAdapter(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B13020>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/v1/leads

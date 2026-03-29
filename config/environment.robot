@@ -4,13 +4,17 @@ Library          Collections
 
 *** Variables ***
 # Environment Selection
-${ENVIRONMENT}    dev
+${ENVIRONMENT}    qc
 
 # URLs
 &{URLS}
 ...    dev=http://172.21.0.123:5555/finairoLending-1.0.1/LoginPage?tid=139&lang=en
+...    qc=http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&lang=en
 ...    uat=http://uat.kfic.com/finairoLending/LoginPage?tid=139&lang=en
 ...    prod=http://prod.kfic.com/finairoLending/LoginPage?tid=139&lang=en
+
+# LOS URLs
+${LOS_QC_URL}    http://172.21.0.93:6661/finairoLending-1.0.1/LoginPage?tid=139&lang=en
 
 # Database Connections
 &{DB_CONFIG}

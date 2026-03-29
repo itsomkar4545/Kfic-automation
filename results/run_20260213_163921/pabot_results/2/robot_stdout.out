@@ -1,0 +1,38 @@
+==============================================================================
+Receipt Management :: Receipt Management Test Suite                           
+==============================================================================
+TC003_Approve_Receipt_Only :: Test receipt approval only                
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\lms\receipt_management.robot:26
+    T:  TC003_Approve_Receipt_Only    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\lms\receipt_management.robot:32
+      Approve Receipt Only    ${receipt_no}    ${checker_user}
+      |  ${receipt_no} = <Unable to define variable value>
+      |  ${checker_user} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\keywords\receipt_workflow.robot:41
+      Search And Approve Receipt    ${receipt_no}
+      |  ${receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_management_page.robot:57
+      Wait For Element And Click    ${approve_locator}
+      |  ${approve_locator} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:82
+      Run Keyword Unless    ${success}    Fail    Failed to click element ${locator} after ${retry_count} attempts
+      |  ${success} = False (bool)
+      |  Failed to click element ${locator} after ${retry_count} attempts = Failed to click element xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')] after 3 attempts (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:82
+      Fail    Failed to click element ${locator} after ${retry_count} attempts
+      |  Failed to click element ${locator} after ${retry_count} attempts = Failed to click element xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')] after 3 attempts (str)
+______________________________________________________________________________
+| FAIL |
+Failed to click element xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')] after 3 attempts
+------------------------------------------------------------------------------
+Receipt Management :: Receipt Management Test Suite                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  D:\New_automation_\kfic-automation-framework\results\run_20260213_163921\pabot_results\2\output-20260213-163922.xml

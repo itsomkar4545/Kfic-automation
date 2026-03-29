@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.1 on win32)" generated="20260107 20:44:17.836" rpa="false" schemaversion="4">
+<suite id="s1" name="Lead Api Tests" source="d:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot">
+<kw name="Create Session" library="RequestsLibrary" type="SETUP">
+<arg>kfic_api</arg>
+<arg>${API_CONFIG.base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20260107 20:44:18.380" level="INFO">Creating Session using : alias=kfic_api, url=http://172.21.0.123:8080/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20260107 20:44:18.379" endtime="20260107 20:44:18.380"/>
+</kw>
+<test id="s1-t1" name="TC003_Get Lead By ID" line="41">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Authorization=${AUTH_TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20260107 20:44:18.381" level="INFO">${headers} = {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'}</msg>
+<status status="PASS" starttime="20260107 20:44:18.381" endtime="20260107 20:44:18.381"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>kfic_api</arg>
+<arg>${API_ENDPOINT}/${CREATED_LEAD_ID}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20260107 20:44:18.382" level="FAIL">Variable '${CREATED_LEAD_ID}' not found.</msg>
+<status status="FAIL" starttime="20260107 20:44:18.382" endtime="20260107 20:44:18.382"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20260107 20:44:18.383" endtime="20260107 20:44:18.383"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${lead}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20260107 20:44:18.383" endtime="20260107 20:44:18.383"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${lead['id']}</arg>
+<arg>${CREATED_LEAD_ID}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20260107 20:44:18.383" endtime="20260107 20:44:18.383"/>
+</kw>
+<doc>Test GET lead by ID API</doc>
+<tag>api</tag>
+<tag>get</tag>
+<tag>integration</tag>
+<tag>lead_by_id</tag>
+<status status="FAIL" starttime="20260107 20:44:18.381" endtime="20260107 20:44:18.384">Variable '${CREATED_LEAD_ID}' not found.</status>
+</test>
+<kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
+<doc>Removes all the session objects</doc>
+<msg timestamp="20260107 20:44:18.385" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20260107 20:44:18.384" endtime="20260107 20:44:18.385"/>
+</kw>
+<doc>API Test Suite for KFIC LOS/LMS</doc>
+<status status="FAIL" starttime="20260107 20:44:17.874" endtime="20260107 20:44:18.385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">api</stat>
+<stat pass="0" fail="1" skip="0">get</stat>
+<stat pass="0" fail="1" skip="0">integration</stat>
+<stat pass="0" fail="1" skip="0">lead_by_id</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Lead Api Tests">Lead Api Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260107 20:44:18.374" level="ERROR">Error in file 'd:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot' on line 5: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Scripts\robot.exe
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32\lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

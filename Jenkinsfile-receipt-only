@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+    
+    environment {
+        BROWSER = 'chrome'
+        ENVIRONMENT = 'qc'
+    }
+    
+    stages {
+        stage('Setup') {
+            steps {
+                echo 'Installing dependencies...'
+                bat 'pip install -r requirements.txt'
+            }
+        }
+        
+        stage('Run Receipt Tests') {
+            steps {
+                echo 'Running receipt_test.robot...'
+                bat '''
+                    robot --variable BROWSER:%BROWSER% ^
+                          --variable ENVIRONMENT:%ENVIRONMENT% ^
+                          --outputdir results ^
+                          tests/receipt_test.robot
+                '''
+            }
+        }
+    }
+    
+    post {
+        always {
+            archiveArtifacts artifacts: 'results/**/*'
+            robot outputPath: 'results'
+            
+            emailext (
+                subject: "📋 Receipt Test Results - Build #${BUILD_NUMBER}",
+                body: "Receipt test execution completed. Check attached reports.",
+                to: "omkar.patil@kiya.ai",
+                attachmentsPattern: "results/report.html, results/log.html"
+            )
+        }
+    }
+}

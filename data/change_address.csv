@@ -1,0 +1,4 @@
+Section,Action,Address_Type,Status,Area,Block,Street,Building,Unit_Type,Unit_No,Floor,Address_Line,Customer_Type,District,Living_Since
+RESIDENTIAL,Edit,RESIDENTIAL ADDRESS,Active,SALMIYA,1,10,Building A,Apartment,101,1,Sample Address Line,Main Applicant,HAWALLI,01/01/2020
+PERMANENT,Create,PERMANENT ADDRESS,Active,JABRIYA,2,20,Building B,Villa,201,2,Permanent Address Line,Main Applicant,HAWALLI,01/01/2019
+BUSINESS,Skip,BUSINESS ADDRESS,Active,AHMADI,3,30,Building C,Apartment,301,3,Business Address Line,Main Applicant,AHMADI,01/01/2021

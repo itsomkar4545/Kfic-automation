@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2026-01-07T16:05:39.363897" rpa="false" schemaversion="5">
+<suite id="s1" name="Kfic Login Test" source="d:\New_automation_\kfic-automation-framework\tests\kfic_login_test.robot">
+<test id="s1-t1" name="TC001_KFIC_Login_Test" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:05:39.625134" level="INFO">Opening browser 'chrome' to base url 'http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en'.</msg>
+<arg>${URLS.qc}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-07T16:05:39.623757" elapsed="6.172811"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-07T16:05:45.796956" elapsed="0.032733"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>15</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-01-07T16:05:45.829916" elapsed="0.001268"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:05:46.071036" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="01_kfic_login_page.png"&gt;&lt;img src="01_kfic_login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>01_kfic_login_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-07T16:05:45.831428" elapsed="0.239723"/>
+</kw>
+<kw name="Handle Re-Login If Present">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:01.461834" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-07T16:06:01.462308" level="FAIL">Element 'id=relogin' not visible after 3 seconds.</msg>
+<arg>id=relogin</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-01-07T16:05:46.071936" elapsed="15.396499">Element 'id=relogin' not visible after 3 seconds.</status>
+</kw>
+<msg time="2026-01-07T16:06:01.468612" level="INFO">${relogin_present} = False</msg>
+<var>${relogin_present}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id=relogin</arg>
+<arg>timeout=3s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-01-07T16:05:46.071755" elapsed="15.396883"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${relogin_present}</arg>
+<arg>Log</arg>
+<arg>🔄 Re-Login button detected, clicking...</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-07T16:06:01.468801" elapsed="0.000131"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${relogin_present}</arg>
+<arg>Click Element</arg>
+<arg>id=relogin</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-07T16:06:01.469710" elapsed="0.000167"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${relogin_present}</arg>
+<arg>Sleep</arg>
+<arg>3s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-07T16:06:01.469974" elapsed="0.000075"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${relogin_present}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>after_relogin_click.png</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-07T16:06:01.470131" elapsed="0.000074"/>
+</kw>
+<doc>Handles Re-Login button if it appears</doc>
+<status status="PASS" start="2026-01-07T16:05:46.071427" elapsed="15.398843"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginId</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-07T16:06:01.470361" elapsed="0.024900"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:01.495625" level="INFO">Typing text 'kiyaadmin@123' into text field 'id=loginId'.</msg>
+<arg>id=loginId</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T16:06:01.495423" elapsed="0.098803"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-07T16:06:02.595259" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-07T16:06:01.594395" elapsed="1.001123"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:02.596877" level="INFO">Typing text 'Abcd@1234' into text field 'id=uiPwd'.</msg>
+<arg>id=uiPwd</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T16:06:02.596152" elapsed="0.150151"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-07T16:06:03.747280" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-07T16:06:02.746651" elapsed="1.000829"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:03.902910" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="02_credentials_entered.png"&gt;&lt;img src="02_credentials_entered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>02_credentials_entered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-07T16:06:03.747857" elapsed="0.155180"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:03.903442" level="INFO">Clicking element 'id=userLogin'.</msg>
+<arg>id=userLogin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-07T16:06:03.903239" elapsed="0.394792"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-07T16:06:09.299050" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-07T16:06:04.298266" elapsed="5.000912"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:09.455230" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="03_after_login_click.png"&gt;&lt;img src="03_after_login_click.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>03_after_login_click.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-07T16:06:09.299387" elapsed="0.155984"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:09.462679" level="INFO">${current_url} = http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/validLoginUser;jsessionid=Kb0rLgDmJ9eShF7CooOi6lmhWdPCF5kXZLS66Mgz.itlser040v5</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2026-01-07T16:06:09.455570" elapsed="0.007152"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-07T16:06:09.462999" level="INFO">Current URL: http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/validLoginUser;jsessionid=Kb0rLgDmJ9eShF7CooOi6lmhWdPCF5kXZLS66Mgz.itlser040v5</msg>
+<arg>Current URL: ${current_url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-07T16:06:09.462860" elapsed="0.000176"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Location Should Not Contain">
+<msg time="2026-01-07T16:06:09.466679" level="FAIL">No keyword with name 'Location Should Not Contain' found. Did you mean:
+    SeleniumLibrary.Location Should Contain</msg>
+<arg>LoginPage</arg>
+<status status="FAIL" start="2026-01-07T16:06:09.466596" elapsed="0.000136">No keyword with name 'Location Should Not Contain' found. Did you mean:
+    SeleniumLibrary.Location Should Contain</status>
+</kw>
+<msg time="2026-01-07T16:06:09.466861" level="INFO">${login_successful} = False</msg>
+<var>${login_successful}</var>
+<arg>Location Should Not Contain</arg>
+<arg>LoginPage</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-01-07T16:06:09.463125" elapsed="0.003761"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-07T16:06:09.467888" level="INFO">❌ Login Failed - Still on login page</msg>
+<arg>❌ Login Failed - Still on login page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-07T16:06:09.467172" elapsed="0.000776"/>
+</kw>
+<arg>${login_successful}</arg>
+<arg>Log</arg>
+<arg>✅ Login Successful - Redirected from login page</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>❌ Login Failed - Still on login page</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-07T16:06:09.467010" elapsed="0.000993"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:09.620799" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="04_final_result.png"&gt;&lt;img src="04_final_result.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>04_final_result.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-07T16:06:09.468111" elapsed="0.152826"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-07T16:06:09.621146" elapsed="2.219384"/>
+</kw>
+<doc>Test KFIC login with actual page elements</doc>
+<tag>kfic</tag>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-01-07T16:05:39.621796" elapsed="32.219336"/>
+</test>
+<test id="s1-t2" name="TC002_Test_Re_Login_Button" line="65">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:11.846127" level="INFO">Opening browser 'chrome' to base url 'http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en'.</msg>
+<arg>${URLS.qc}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-07T16:06:11.843654" elapsed="3.160763"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-07T16:06:15.004756" elapsed="0.041345"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-01-07T16:06:15.046418" elapsed="0.001614"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:25.255583" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-07T16:06:25.255733" level="FAIL">Element with locator 'id=relogin' not found.</msg>
+<arg>id=relogin</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-01-07T16:06:15.048650" elapsed="10.212478">Element with locator 'id=relogin' not found.</status>
+</kw>
+<msg time="2026-01-07T16:06:25.261254" level="INFO">${relogin_present} = False</msg>
+<var>${relogin_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>id=relogin</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-01-07T16:06:15.048351" elapsed="10.212926"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-07T16:06:25.261909" level="INFO">ℹ️ Re-Login button not present on this load</msg>
+<arg>ℹ️ Re-Login button not present on this load</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-07T16:06:25.261563" elapsed="0.000399"/>
+</kw>
+<arg>${relogin_present}</arg>
+<arg>Log</arg>
+<arg>✅ Re-Login button found on page</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>ℹ️ Re-Login button not present on this load</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-07T16:06:25.261403" elapsed="0.000612"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-07T16:06:25.428383" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="relogin_button_check.png"&gt;&lt;img src="relogin_button_check.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>relogin_button_check.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-07T16:06:25.262114" elapsed="0.166366"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-07T16:06:25.428613" elapsed="2.184454"/>
+</kw>
+<doc>Specifically test Re-Login button functionality</doc>
+<tag>button</tag>
+<tag>relogin</tag>
+<status status="PASS" start="2026-01-07T16:06:11.842134" elapsed="15.771503"/>
+</test>
+<doc>KFIC Login Automation with Correct Elements</doc>
+<status status="PASS" start="2026-01-07T16:05:39.365417" elapsed="48.249613"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">button</stat>
+<stat pass="1" fail="0" skip="0">kfic</stat>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">relogin</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Kfic Login Test" id="s1" pass="2" fail="0" skip="0">Kfic Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

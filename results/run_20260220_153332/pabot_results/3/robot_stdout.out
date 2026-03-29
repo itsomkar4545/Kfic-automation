@@ -1,0 +1,22 @@
+==============================================================================
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                             
+==============================================================================
+TC004_Update Lead :: Test PUT update lead API                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:50
+    T:  TC004_Update Lead    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:55
+      PUT On Session    kfic_api    ${API_ENDPOINT}/${CREATED_LEAD_ID}    json=${update_data}    headers=${headers}
+      |  ${API_ENDPOINT}/${CREATED_LEAD_ID} = <Unable to define variable value>
+      |  json=${update_data} = json={'email': 'john.updated@test.com'} (str)
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9', 'Content-Type': 'application/json'} (str)
+______________________________________________________________________________
+| FAIL |
+Variable '${CREATED_LEAD_ID}' not found.
+------------------------------------------------------------------------------
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  D:\New_automation_\kfic-automation-framework\results\run_20260220_153332\pabot_results\3\output-20260220-153334.xml

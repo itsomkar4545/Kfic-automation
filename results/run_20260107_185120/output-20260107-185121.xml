@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.1 on win32)" generated="20260107 18:51:21.348" rpa="false" schemaversion="4">
+<suite id="s1" name="Simple Receipt Master Test" source="D:\New_automation_\kfic-automation-framework\tests\simple_receipt_master_test.robot">
+<test id="s1-t1" name="TC001_Receipt_Master_Complete_Flow" line="25">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URLS.qc}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260107 18:51:21.537" level="INFO">Opening browser 'chrome' to base url 'http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en'.</msg>
+<status status="PASS" starttime="20260107 18:51:21.536" endtime="20260107 18:51:25.303"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20260107 18:51:25.303" endtime="20260107 18:51:25.347"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>15</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20260107 18:51:25.348" endtime="20260107 18:51:25.349"/>
+</kw>
+<kw name="Handle Re-Login If Present">
+<doc>Handle Re-Login button if present</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${relogin_present}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id=relogin</arg>
+<arg>timeout=3s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=relogin</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20260107 18:51:40.740" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260107 18:51:40.740" level="FAIL">Element 'id=relogin' not visible after 3 seconds.</msg>
+<status status="FAIL" starttime="20260107 18:51:25.350" endtime="20260107 18:51:40.744"/>
+</kw>
+<msg timestamp="20260107 18:51:40.744" level="INFO">${relogin_present} = False</msg>
+<status status="PASS" starttime="20260107 18:51:25.350" endtime="20260107 18:51:40.744"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${relogin_present}</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Re-Login button found, clicking it</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>id=relogin</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>3s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260107 18:51:40.745" endtime="20260107 18:51:40.745"/>
+</kw>
+<status status="PASS" starttime="20260107 18:51:25.349" endtime="20260107 18:51:40.745"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=loginId</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:51:40.745" endtime="20260107 18:51:40.771"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=loginId</arg>
+<arg>${LOGIN_ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260107 18:51:40.772" level="INFO">Typing text 'infraadmin' into text field 'id=loginId'.</msg>
+<status status="PASS" starttime="20260107 18:51:40.771" endtime="20260107 18:51:40.857"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260107 18:51:41.858" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260107 18:51:40.857" endtime="20260107 18:51:41.858"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=uiPwd</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260107 18:51:41.859" level="INFO">Typing text 'Abcd@123' into text field 'id=uiPwd'.</msg>
+<status status="PASS" starttime="20260107 18:51:41.858" endtime="20260107 18:51:42.028"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260107 18:51:43.029" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260107 18:51:42.028" endtime="20260107 18:51:43.029"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=userLogin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260107 18:51:43.030" level="INFO">Clicking element 'id=userLogin'.</msg>
+<status status="PASS" starttime="20260107 18:51:43.029" endtime="20260107 18:51:52.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260107 18:51:57.359" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20260107 18:51:52.358" endtime="20260107 18:51:57.359"/>
+</kw>
+<kw name="Execute Receipt Master Flow">
+<doc>Execute complete Receipt Master workflow</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MENU_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:51:57.360" endtime="20260107 18:51:57.385"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MENU_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260107 18:51:57.386" level="INFO">Clicking element 'xpath=//a[@data-original-title="Menu"]'.</msg>
+<status status="PASS" starttime="20260107 18:51:57.385" endtime="20260107 18:51:57.478"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>01_menu_clicked.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:51:57.652" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="01_menu_clicked.png"&gt;&lt;img src="01_menu_clicked.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:51:57.478" endtime="20260107 18:51:57.652"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#Transaction').scrollIntoView(true);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20260107 18:51:57.653" level="INFO">Executing JavaScript:
+document.querySelector('#Transaction').scrollIntoView(true);
+Without any arguments.</msg>
+<status status="PASS" starttime="20260107 18:51:57.652" endtime="20260107 18:51:57.662"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260107 18:51:59.662" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260107 18:51:57.662" endtime="20260107 18:51:59.663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CONFIGURATION_MENU}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:51:59.663" endtime="20260107 18:51:59.700"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONFIGURATION_MENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260107 18:51:59.700" level="INFO">Clicking element 'xpath=//li[@id="Configuration"]'.</msg>
+<status status="PASS" starttime="20260107 18:51:59.700" endtime="20260107 18:51:59.775"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>02_configuration_clicked.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:51:59.934" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="02_configuration_clicked.png"&gt;&lt;img src="02_configuration_clicked.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:51:59.775" endtime="20260107 18:51:59.934"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RECEIPT_MANAGEMENT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:51:59.934" endtime="20260107 18:51:59.958"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RECEIPT_MANAGEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260107 18:51:59.959" level="INFO">Clicking element 'xpath=//li[@id="RECEIPTMANAGEMENT"]'.</msg>
+<status status="PASS" starttime="20260107 18:51:59.958" endtime="20260107 18:52:00.043"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>03_receipt_management_clicked.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:00.195" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="03_receipt_management_clicked.png"&gt;&lt;img src="03_receipt_management_clicked.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:00.043" endtime="20260107 18:52:00.195"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RECEIPT_GENERATION}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:00.195" endtime="20260107 18:52:00.220"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RECEIPT_GENERATION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260107 18:52:00.221" level="INFO">Clicking element 'xpath=//li[@id="RECEIPTGENERATION"]'.</msg>
+<status status="PASS" starttime="20260107 18:52:00.220" endtime="20260107 18:52:04.497"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>04_receipt_generation_clicked.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:04.667" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="04_receipt_generation_clicked.png"&gt;&lt;img src="04_receipt_generation_clicked.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:04.497" endtime="20260107 18:52:04.667"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ADD_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:04.667" endtime="20260107 18:52:04.690"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260107 18:52:04.691" level="INFO">Clicking element 'xpath=//button[@id="addButton"]'.</msg>
+<status status="PASS" starttime="20260107 18:52:04.690" endtime="20260107 18:52:05.232"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>05_add_button_clicked.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:09.816" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="05_add_button_clicked.png"&gt;&lt;img src="05_add_button_clicked.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:05.232" endtime="20260107 18:52:09.816"/>
+</kw>
+<kw name="Fill Receipt Form">
+<doc>Fill the receipt generation form</doc>
+<kw name="Get Current Date" library="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20260107 18:52:09.817" level="INFO">${timestamp} = 20260107185209</msg>
+<status status="PASS" starttime="20260107 18:52:09.816" endtime="20260107 18:52:09.817"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOOK_SIZE_DROPDOWN}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:09.817" endtime="20260107 18:52:09.839"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Selecting bookSize: 50</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:09.839" endtime="20260107 18:52:09.839"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>${BOOK_SIZE_DROPDOWN}</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20260107 18:52:09.840" level="INFO">Selecting options from selection list 'xpath=//select[@id="bookSize"]' by index 1.</msg>
+<status status="PASS" starttime="20260107 18:52:09.839" endtime="20260107 18:52:09.951"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>06_book_size_selected.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:10.119" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="06_book_size_selected.png"&gt;&lt;img src="06_book_size_selected.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:09.951" endtime="20260107 18:52:10.120"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NO_OF_BOOKS_INPUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:10.120" endtime="20260107 18:52:10.145"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Entering noOfBooks: 5</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:10.145" endtime="20260107 18:52:10.146"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NO_OF_BOOKS_INPUT}</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260107 18:52:10.146" level="INFO">Typing text '5' into text field 'xpath=//input[@name="noOfBooks"]'.</msg>
+<status status="PASS" starttime="20260107 18:52:10.146" endtime="20260107 18:52:10.219"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>07_no_of_books_entered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:10.382" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="07_no_of_books_entered.png"&gt;&lt;img src="07_no_of_books_entered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:10.219" endtime="20260107 18:52:10.382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${START_RECEIPT_NO_INPUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:10.383" endtime="20260107 18:52:10.410"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Entering startReceiptNo: RCP1${timestamp}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:10.410" endtime="20260107 18:52:10.410"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${START_RECEIPT_NO_INPUT}</arg>
+<arg>RCP2${timestamp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260107 18:52:10.411" level="INFO">Typing text 'RCP220260107185209' into text field 'xpath=//input[@name="startReceiptNo"]'.</msg>
+<status status="PASS" starttime="20260107 18:52:10.410" endtime="20260107 18:52:10.489"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260107 18:52:13.490" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20260107 18:52:10.489" endtime="20260107 18:52:13.490"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>08_start_receipt_no_entered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:13.637" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="08_start_receipt_no_entered.png"&gt;&lt;img src="08_start_receipt_no_entered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:13.491" endtime="20260107 18:52:13.637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOOK_PREFIX_INPUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:13.638" endtime="20260107 18:52:13.658"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Entering bookPrefix: BK1${timestamp}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:13.658" endtime="20260107 18:52:13.659"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${BOOK_PREFIX_INPUT}</arg>
+<arg>BK2${timestamp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260107 18:52:13.659" level="INFO">Typing text 'BK220260107185209' into text field 'xpath=//input[@name="bookPrefix"]'.</msg>
+<status status="PASS" starttime="20260107 18:52:13.659" endtime="20260107 18:52:13.738"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>09_book_prefix_entered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:13.900" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="09_book_prefix_entered.png"&gt;&lt;img src="09_book_prefix_entered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:13.738" endtime="20260107 18:52:13.900"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RECEIPT_PREFIX_INPUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:13.901" endtime="20260107 18:52:13.926"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Entering receiptPrefix: RCP1${timestamp}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:13.926" endtime="20260107 18:52:13.926"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${RECEIPT_PREFIX_INPUT}</arg>
+<arg>RCP2${timestamp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260107 18:52:13.927" level="INFO">Typing text 'RCP220260107185209' into text field 'xpath=//input[@name="receiptPrefix"]'.</msg>
+<status status="PASS" starttime="20260107 18:52:13.927" endtime="20260107 18:52:14.006"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>10_receipt_prefix_entered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:14.150" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="10_receipt_prefix_entered.png"&gt;&lt;img src="10_receipt_prefix_entered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:14.006" endtime="20260107 18:52:14.150"/>
+</kw>
+<status status="PASS" starttime="20260107 18:52:09.816" endtime="20260107 18:52:14.150"/>
+</kw>
+<kw name="Generate And Save Receipt">
+<doc>Generate and save the receipt</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${GENERATE_RECEIPT_BTN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:14.151" endtime="20260107 18:52:14.178"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Clicking on Generate_Receipt</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:14.178" endtime="20260107 18:52:14.178"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${GENERATE_RECEIPT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260107 18:52:14.178" level="INFO">Clicking element 'xpath=//button[@id='Generate_Receipt']'.</msg>
+<status status="PASS" starttime="20260107 18:52:14.178" endtime="20260107 18:52:14.270"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>11_generate_receipt_clicked.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:14.433" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="11_generate_receipt_clicked.png"&gt;&lt;img src="11_generate_receipt_clicked.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:14.270" endtime="20260107 18:52:14.433"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260107 18:52:17.434" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20260107 18:52:14.433" endtime="20260107 18:52:17.434"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SAVE_CUSTOMER_BTN}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:17.434" endtime="20260107 18:52:17.474"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Clicking on Save Customer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:17.474" endtime="20260107 18:52:17.474"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("saveCustomer").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20260107 18:52:17.475" level="INFO">Executing JavaScript:
+document.getElementById("saveCustomer").click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20260107 18:52:17.474" endtime="20260107 18:52:17.508"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>12_save_customer_clicked.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:17.659" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="12_save_customer_clicked.png"&gt;&lt;img src="12_save_customer_clicked.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:17.508" endtime="20260107 18:52:17.659"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SUBMIT_FORM_LINK}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260107 18:52:17.659" endtime="20260107 18:52:17.678"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Clicking on Submit Form</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:17.678" endtime="20260107 18:52:17.678"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SUBMIT_FORM_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260107 18:52:17.678" level="INFO">Clicking element 'xpath=//a[@id="submitForm"]'.</msg>
+<status status="PASS" starttime="20260107 18:52:17.678" endtime="20260107 18:52:17.739"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>13_submit_form_clicked.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:17.889" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="13_submit_form_clicked.png"&gt;&lt;img src="13_submit_form_clicked.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:17.739" endtime="20260107 18:52:17.889"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260107 18:52:20.890" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20260107 18:52:17.889" endtime="20260107 18:52:20.890"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>14_receipt_flow_completed.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20260107 18:52:21.044" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="14_receipt_flow_completed.png"&gt;&lt;img src="14_receipt_flow_completed.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20260107 18:52:20.890" endtime="20260107 18:52:21.044"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Receipt Master Flow Completed Successfully!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20260107 18:52:21.044" endtime="20260107 18:52:21.044"/>
+</kw>
+<status status="PASS" starttime="20260107 18:52:14.150" endtime="20260107 18:52:21.044"/>
+</kw>
+<status status="PASS" starttime="20260107 18:51:57.360" endtime="20260107 18:52:21.044"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20260107 18:52:21.044" endtime="20260107 18:52:23.333"/>
+</kw>
+<doc>Complete Receipt Master flow execution</doc>
+<tag>flow</tag>
+<tag>master</tag>
+<tag>receipt</tag>
+<status status="PASS" starttime="20260107 18:51:21.535" endtime="20260107 18:52:23.333"/>
+</test>
+<doc>Simple Receipt Master Flow Test</doc>
+<status status="PASS" starttime="20260107 18:51:21.349" endtime="20260107 18:52:23.334"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">flow</stat>
+<stat pass="1" fail="0" skip="0">master</stat>
+<stat pass="1" fail="0" skip="0">receipt</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Simple Receipt Master Test">Simple Receipt Master Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

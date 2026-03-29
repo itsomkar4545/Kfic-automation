@@ -1,0 +1,21 @@
+==============================================================================
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                             
+==============================================================================
+TC001_Get All Leads :: Test GET all leads API                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:16
+    T:  TC001_Get All Leads    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:20
+      GET On Session    kfic_api    ${API_ENDPOINT}    headers=${headers}
+      |  ${API_ENDPOINT} = /leads (str)
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'} (str)
+______________________________________________________________________________
+| FAIL |
+ConnectionError: HTTPConnectionPool(host='172.21.0.123', port=8080): Max retries exceeded with url: /api/v1/leads (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001848C3CD5B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+------------------------------------------------------------------------------
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  D:\New_automation_\kfic-automation-framework\results\run_20260220_153332\pabot_results\0\output-20260220-153334.xml

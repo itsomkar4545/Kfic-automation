@@ -1,0 +1,21 @@
+==============================================================================
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                             
+==============================================================================
+TC003_Get Lead By ID :: Test GET lead by ID API                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:41
+    T:  TC003_Get Lead By ID    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:45
+      GET On Session    kfic_api    ${API_ENDPOINT}/${CREATED_LEAD_ID}    headers=${headers}
+      |  ${API_ENDPOINT}/${CREATED_LEAD_ID} = <Unable to define variable value>
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'} (str)
+______________________________________________________________________________
+| FAIL |
+Variable '${CREATED_LEAD_ID}' not found.
+------------------------------------------------------------------------------
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  D:\New_automation_\kfic-automation-framework\results\run_20260220_153332\pabot_results\2\output-20260220-153334.xml

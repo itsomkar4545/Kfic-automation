@@ -1,0 +1,94 @@
+==============================================================================
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                             
+==============================================================================
+TC001_Get All Leads :: Test GET all leads API                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:16
+    T:  TC001_Get All Leads    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:20
+      GET On Session    kfic_api    ${API_ENDPOINT}    headers=${headers}
+      |  ${API_ENDPOINT} = /leads (str)
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'} (str)
+______________________________________________________________________________
+| FAIL |
+ConnectionError: HTTPConnectionPool(host='172.21.0.123', port=8080): Max retries exceeded with url: /api/v1/leads (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B3D480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+------------------------------------------------------------------------------
+TC002_Create New Lead :: Test POST create new lead API                  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:25
+    T:  TC002_Create New Lead    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:35
+      POST On Session    kfic_api    ${API_ENDPOINT}    json=${lead_data}    headers=${headers}
+      |  ${API_ENDPOINT} = /leads (str)
+      |  json=${lead_data} = json={'applicantType': 'Individual', 'firstName': 'John', 'lastName': 'Doe', 'email': 'john.doe@test.com', 'phone': '+96512345678'} (str)
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9', 'Content-Type': 'application/json'} (str)
+______________________________________________________________________________
+| FAIL |
+ConnectionError: HTTPConnectionPool(host='172.21.0.123', port=8080): Max retries exceeded with url: /api/v1/leads (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B119D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+------------------------------------------------------------------------------
+TC003_Get Lead By ID :: Test GET lead by ID API                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:41
+    T:  TC003_Get Lead By ID    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:45
+      GET On Session    kfic_api    ${API_ENDPOINT}/${CREATED_LEAD_ID}    headers=${headers}
+      |  ${API_ENDPOINT}/${CREATED_LEAD_ID} = <Unable to define variable value>
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'} (str)
+______________________________________________________________________________
+| FAIL |
+Variable '${CREATED_LEAD_ID}' not found.
+------------------------------------------------------------------------------
+TC004_Update Lead :: Test PUT update lead API                           
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:50
+    T:  TC004_Update Lead    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:55
+      PUT On Session    kfic_api    ${API_ENDPOINT}/${CREATED_LEAD_ID}    json=${update_data}    headers=${headers}
+      |  ${API_ENDPOINT}/${CREATED_LEAD_ID} = <Unable to define variable value>
+      |  json=${update_data} = json={'email': 'john.updated@test.com'} (str)
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9', 'Content-Type': 'application/json'} (str)
+______________________________________________________________________________
+| FAIL |
+Variable '${CREATED_LEAD_ID}' not found.
+------------------------------------------------------------------------------
+TC005_Delete Lead :: Test DELETE lead API                               
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:60
+    T:  TC005_Delete Lead    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:64
+      DELETE On Session    kfic_api    ${API_ENDPOINT}/${CREATED_LEAD_ID}    headers=${headers}
+      |  ${API_ENDPOINT}/${CREATED_LEAD_ID} = <Unable to define variable value>
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'} (str)
+______________________________________________________________________________
+| FAIL |
+Variable '${CREATED_LEAD_ID}' not found.
+------------------------------------------------------------------------------
+TC006_Lead Status Workflow API :: Test lead status workflow throug...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:67
+    T:  TC006_Lead Status Workflow API    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:73
+      POST On Session    kfic_api    ${API_ENDPOINT}    json=${lead_data}    headers=${headers}
+      |  ${API_ENDPOINT} = /leads (str)
+      |  json=${lead_data} = json={'applicantType': 'Individual', 'firstName': 'Test', 'lastName': 'User'} (str)
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9', 'Content-Type': 'application/json'} (str)
+______________________________________________________________________________
+| FAIL |
+ConnectionError: HTTPConnectionPool(host='172.21.0.123', port=8080): Max retries exceeded with url: /api/v1/leads (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020220B13240>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+------------------------------------------------------------------------------
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                     | FAIL |
+6 tests, 0 passed, 6 failed
+==============================================================================
+Output:  D:\New_automation_\kfic-automation-framework\results\run_20260107_200856\pabot_results\0\output-20260107-200857.xml

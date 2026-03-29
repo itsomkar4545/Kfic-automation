@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.1 on win32)" generated="20260213 16:39:22.823" rpa="false" schemaversion="4">
+<suite id="s1" name="Receipt Management" source="D:\New_automation_\kfic-automation-framework\tests\lms\receipt_management.robot">
+<kw name="Open Application" library="base_page" type="SETUP">
+<doc>Opens the application with enhanced browser configuration</doc>
+<kw name="Validate Environment" library="framework_config">
+<doc>Validates if environment configuration is correct</doc>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${URLS}</arg>
+<arg>${ENVIRONMENT}</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20260213 16:39:23.239" endtime="20260213 16:39:23.240"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${URLS.${ENVIRONMENT}}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20260213 16:39:23.241" level="INFO">Length is 67</msg>
+<status status="PASS" starttime="20260213 16:39:23.240" endtime="20260213 16:39:23.241"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Environment validation passed for: ${ENVIRONMENT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:23.242" level="INFO">Environment validation passed for: qc</msg>
+<status status="PASS" starttime="20260213 16:39:23.242" endtime="20260213 16:39:23.242"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:23.238" endtime="20260213 16:39:23.242"/>
+</kw>
+<kw name="Get Environment URL" library="framework_config">
+<var>${url}</var>
+<doc>Returns URL based on current environment</doc>
+<kw name="Get From Dictionary" library="Collections">
+<var>${url}</var>
+<arg>${URLS}</arg>
+<arg>${ENVIRONMENT}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20260213 16:39:23.243" level="INFO">${url} = http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<status status="PASS" starttime="20260213 16:39:23.243" endtime="20260213 16:39:23.243"/>
+</kw>
+<return>
+<value>${url}</value>
+<status status="PASS" starttime="20260213 16:39:23.243" endtime="20260213 16:39:23.244"/>
+</return>
+<msg timestamp="20260213 16:39:23.244" level="INFO">${url} = http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<status status="PASS" starttime="20260213 16:39:23.242" endtime="20260213 16:39:23.244"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Opening application: ${url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:23.244" level="INFO">Opening application: http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<status status="PASS" starttime="20260213 16:39:23.244" endtime="20260213 16:39:23.245"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260213 16:39:23.245" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001F514460830&gt;</msg>
+<status status="PASS" starttime="20260213 16:39:23.245" endtime="20260213 16:39:23.245"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${headless}</arg>
+<arg>Call Method</arg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260213 16:39:23.246" endtime="20260213 16:39:23.246"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260213 16:39:23.246" endtime="20260213 16:39:23.247"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260213 16:39:23.247" endtime="20260213 16:39:23.247"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260213 16:39:23.247" endtime="20260213 16:39:23.247"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-web-security</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260213 16:39:23.248" endtime="20260213 16:39:23.248"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-running-insecure-content</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260213 16:39:23.248" endtime="20260213 16:39:23.248"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260213 16:39:23.249" level="INFO">Opening browser 'chrome' to base url 'http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en'.</msg>
+<status status="PASS" starttime="20260213 16:39:23.248" endtime="20260213 16:39:39.069"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20260213 16:39:39.069" endtime="20260213 16:39:39.118"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20260213 16:39:39.118" endtime="20260213 16:39:39.133"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${PAGE_LOAD_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20260213 16:39:39.133" endtime="20260213 16:39:39.138"/>
+</kw>
+<kw name="Setup Test Environment" library="base_page">
+<doc>Setup test environment directories and logging</doc>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${SCREENSHOTS_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20260213 16:39:39.140" level="INFO" html="true">Directory '&lt;a href="file://D:\New_automation_\kfic-automation-framework\results\screenshots"&gt;D:\New_automation_\kfic-automation-framework\results\screenshots&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20260213 16:39:39.139" endtime="20260213 16:39:39.140"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${REPORTS_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20260213 16:39:39.141" level="INFO" html="true">Directory '&lt;a href="file://D:\New_automation_\kfic-automation-framework\results\reports"&gt;D:\New_automation_\kfic-automation-framework\results\reports&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20260213 16:39:39.140" endtime="20260213 16:39:39.141"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${LOGS_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20260213 16:39:39.142" level="INFO" html="true">Directory '&lt;a href="file://D:\New_automation_\kfic-automation-framework\results\logs"&gt;D:\New_automation_\kfic-automation-framework\results\logs&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20260213 16:39:39.141" endtime="20260213 16:39:39.142"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test environment setup completed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:39.143" level="INFO">Test environment setup completed</msg>
+<status status="PASS" starttime="20260213 16:39:39.142" endtime="20260213 16:39:39.143"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Screenshots directory: ${SCREENSHOTS_DIR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:39.145" level="INFO">Screenshots directory: D:\New_automation_\kfic-automation-framework\config/../results/screenshots</msg>
+<status status="PASS" starttime="20260213 16:39:39.143" endtime="20260213 16:39:39.145"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Reports directory: ${REPORTS_DIR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:39.145" level="INFO">Reports directory: D:\New_automation_\kfic-automation-framework\config/../results/reports</msg>
+<status status="PASS" starttime="20260213 16:39:39.145" endtime="20260213 16:39:39.146"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Logs directory: ${LOGS_DIR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:39.146" level="INFO">Logs directory: D:\New_automation_\kfic-automation-framework\config/../results/logs</msg>
+<status status="PASS" starttime="20260213 16:39:39.146" endtime="20260213 16:39:39.146"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:39.138" endtime="20260213 16:39:39.147"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:23.237" endtime="20260213 16:39:39.147"/>
+</kw>
+<test id="s1-t1" name="TC003_Approve_Receipt_Only" line="26">
+<kw name="Load Test Data From JSON" library="data_utils">
+<var>${receipt_data}</var>
+<arg>receipt_data.json</arg>
+<doc>Loads test data from JSON file with error handling</doc>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${TEST_DATA_PATH}</arg>
+<arg>${file_name}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20260213 16:39:39.150" level="INFO">${file_path} = D:\New_automation_\kfic-automation-framework\data\receipt_data.json</msg>
+<status status="PASS" starttime="20260213 16:39:39.149" endtime="20260213 16:39:39.150"/>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>${file_path}</arg>
+<arg>Test data file not found: ${file_path}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20260213 16:39:39.151" level="INFO" html="true">File '&lt;a href="file://D:\New_automation_\kfic-automation-framework\data\receipt_data.json"&gt;D:\New_automation_\kfic-automation-framework\data\receipt_data.json&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20260213 16:39:39.150" endtime="20260213 16:39:39.151"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${json_string}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20260213 16:39:39.151" level="INFO" html="true">Getting file '&lt;a href="file://D:\New_automation_\kfic-automation-framework\data\receipt_data.json"&gt;D:\New_automation_\kfic-automation-framework\data\receipt_data.json&lt;/a&gt;'.</msg>
+<msg timestamp="20260213 16:39:39.152" level="INFO">${json_string} = {
+  "receipt_data": {
+    "bookSize": "1",
+    "noOfBooks": "5",
+    "startReceiptNo": "RCP001001",
+    "bookPrefix": "BK",
+    "receiptPrefix": "RCP"
+  },
+  "receipt_data_variant_a": {
+    "bookSize"...</msg>
+<status status="PASS" starttime="20260213 16:39:39.151" endtime="20260213 16:39:39.152"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${json_data}</var>
+<arg>json.loads('''${json_string}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260213 16:39:39.153" level="INFO">${json_data} = {'receipt_data': {'bookSize': '1', 'noOfBooks': '5', 'startReceiptNo': 'RCP001001', 'bookPrefix': 'BK', 'receiptPrefix': 'RCP'}, 'receipt_data_variant_a': {'bookSize': '1', 'noOfBooks': '3', 'startRec...</msg>
+<status status="PASS" starttime="20260213 16:39:39.152" endtime="20260213 16:39:39.153"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Loaded test data from: ${file_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:39.153" level="INFO">Loaded test data from: receipt_data.json</msg>
+<status status="PASS" starttime="20260213 16:39:39.153" endtime="20260213 16:39:39.153"/>
+</kw>
+<return>
+<value>${json_data}</value>
+<status status="PASS" starttime="20260213 16:39:39.153" endtime="20260213 16:39:39.154"/>
+</return>
+<msg timestamp="20260213 16:39:39.154" level="INFO">${receipt_data} = {'receipt_data': {'bookSize': '1', 'noOfBooks': '5', 'startReceiptNo': 'RCP001001', 'bookPrefix': 'BK', 'receiptPrefix': 'RCP'}, 'receipt_data_variant_a': {'bookSize': '1', 'noOfBooks': '3', 'startRec...</msg>
+<status status="PASS" starttime="20260213 16:39:39.148" endtime="20260213 16:39:39.154"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${checker_user}</var>
+<arg>${receipt_data['users']}</arg>
+<arg>checker</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20260213 16:39:39.156" level="INFO">${checker_user} = {'username': 'kiyaadmin', 'password': 'Abcd#123'}</msg>
+<status status="PASS" starttime="20260213 16:39:39.154" endtime="20260213 16:39:39.156"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${receipt_no}</var>
+<arg>RCP001001</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20260213 16:39:39.156" level="INFO">${receipt_no} = RCP001001</msg>
+<status status="PASS" starttime="20260213 16:39:39.156" endtime="20260213 16:39:39.157"/>
+</kw>
+<kw name="Approve Receipt Only" library="receipt_workflow">
+<arg>${receipt_no}</arg>
+<arg>${checker_user}</arg>
+<doc>Approves existing receipt</doc>
+<kw name="Login To Application" library="login_page">
+<arg>${user_data['username']}</arg>
+<arg>${user_data['password']}</arg>
+<doc>Complete login process with Re-Login handling</doc>
+<kw name="Handle Re-Login If Present" library="login_page">
+<doc>Handles Re-Login button if it appears</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${relogin_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${RELOGIN_BUTTON}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${RELOGIN_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20260213 16:39:54.464" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260213 16:39:54.464" level="FAIL">Element with locator 'id=relogin' not found.</msg>
+<status status="FAIL" starttime="20260213 16:39:39.161" endtime="20260213 16:39:54.471"/>
+</kw>
+<msg timestamp="20260213 16:39:54.472" level="INFO">${relogin_present} = False</msg>
+<status status="PASS" starttime="20260213 16:39:39.161" endtime="20260213 16:39:54.472"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${relogin_present}</arg>
+<arg>Click Element</arg>
+<arg>${RELOGIN_BUTTON}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260213 16:39:54.473" endtime="20260213 16:39:54.474"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${relogin_present}</arg>
+<arg>Wait For Page Load</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260213 16:39:54.474" endtime="20260213 16:39:54.475"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:39.160" endtime="20260213 16:39:54.475"/>
+</kw>
+<kw name="Enter Username" library="login_page">
+<arg>${username}</arg>
+<doc>Enters username in the login field</doc>
+<kw name="Wait For Element And Input Text" library="base_page">
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Enhanced text input with validation</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260213 16:39:54.479" endtime="20260213 16:39:54.528"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260213 16:39:54.528" endtime="20260213 16:39:54.572"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20260213 16:39:54.573" endtime="20260213 16:39:54.647"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:39:55.148" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260213 16:39:54.647" endtime="20260213 16:39:55.148"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${text_string}</var>
+<arg>${text}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20260213 16:39:55.150" level="INFO">${text_string} = kiyaadmin</msg>
+<status status="PASS" starttime="20260213 16:39:55.149" endtime="20260213 16:39:55.150"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${text_length}</var>
+<arg>${text_string}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20260213 16:39:55.150" level="INFO">Length is 9</msg>
+<msg timestamp="20260213 16:39:55.151" level="INFO">${text_length} = 9</msg>
+<status status="PASS" starttime="20260213 16:39:55.150" endtime="20260213 16:39:55.151"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${text_length} &gt; 10</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<arg>ELSE</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260213 16:39:55.154" level="INFO">Typing text 'kiyaadmin' into text field 'id=loginId'.</msg>
+<status status="PASS" starttime="20260213 16:39:55.152" endtime="20260213 16:39:55.290"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:55.151" endtime="20260213 16:39:55.290"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:39:55.791" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260213 16:39:55.290" endtime="20260213 16:39:55.791"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Text entered: ${text_string}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:55.793" level="INFO">Text entered: kiyaadmin</msg>
+<status status="PASS" starttime="20260213 16:39:55.792" endtime="20260213 16:39:55.793"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:54.477" endtime="20260213 16:39:55.793"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:54.476" endtime="20260213 16:39:55.793"/>
+</kw>
+<kw name="Enter Password" library="login_page">
+<arg>${password}</arg>
+<doc>Enters password in the login field</doc>
+<kw name="Wait For Element And Input Text" library="base_page">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Enhanced text input with validation</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260213 16:39:55.796" endtime="20260213 16:39:55.830"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260213 16:39:55.830" endtime="20260213 16:39:55.861"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20260213 16:39:55.861" endtime="20260213 16:39:55.907"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:39:56.409" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260213 16:39:55.908" endtime="20260213 16:39:56.409"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${text_string}</var>
+<arg>${text}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20260213 16:39:56.410" level="INFO">${text_string} = Abcd#123</msg>
+<status status="PASS" starttime="20260213 16:39:56.409" endtime="20260213 16:39:56.410"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${text_length}</var>
+<arg>${text_string}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20260213 16:39:56.410" level="INFO">Length is 8</msg>
+<msg timestamp="20260213 16:39:56.410" level="INFO">${text_length} = 8</msg>
+<status status="PASS" starttime="20260213 16:39:56.410" endtime="20260213 16:39:56.410"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${text_length} &gt; 10</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<arg>ELSE</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260213 16:39:56.412" level="INFO">Typing text 'Abcd#123' into text field 'id=uiPwd'.</msg>
+<status status="PASS" starttime="20260213 16:39:56.411" endtime="20260213 16:39:57.541"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:56.410" endtime="20260213 16:39:57.541"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:39:58.042" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260213 16:39:57.541" endtime="20260213 16:39:58.043"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Text entered: ${text_string}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:39:58.043" level="INFO">Text entered: Abcd#123</msg>
+<status status="PASS" starttime="20260213 16:39:58.043" endtime="20260213 16:39:58.043"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:55.794" endtime="20260213 16:39:58.044"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:55.793" endtime="20260213 16:39:58.044"/>
+</kw>
+<kw name="Click Login Button" library="login_page">
+<doc>Clicks the login button</doc>
+<kw name="Wait For Element And Click" library="base_page">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Enhanced element clicking with retry mechanism</doc>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${retry_count}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${success}</var>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260213 16:39:58.049" endtime="20260213 16:39:58.082"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260213 16:39:58.082" endtime="20260213 16:39:58.117"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260213 16:39:58.118" level="INFO">Clicking element 'id=userLogin'.</msg>
+<status status="PASS" starttime="20260213 16:39:58.118" endtime="20260213 16:40:56.663"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:58.048" endtime="20260213 16:40:56.663"/>
+</kw>
+<msg timestamp="20260213 16:40:56.663" level="INFO">${success} = True</msg>
+<status status="PASS" starttime="20260213 16:39:58.048" endtime="20260213 16:40:56.663"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20260213 16:40:56.664" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20260213 16:40:56.664" endtime="20260213 16:40:56.665"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${i} &lt; ${retry_count}-1</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260213 16:40:56.665" endtime="20260213 16:40:56.666"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:58.047" endtime="20260213 16:40:56.666"/>
+</iter>
+<status status="PASS" starttime="20260213 16:39:58.046" endtime="20260213 16:40:56.666"/>
+</for>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<arg>${success}</arg>
+<arg>Fail</arg>
+<arg>Failed to click element ${locator} after ${retry_count} attempts</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<msg timestamp="20260213 16:40:56.667" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<status status="PASS" starttime="20260213 16:40:56.667" endtime="20260213 16:40:56.668"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:58.045" endtime="20260213 16:40:56.669"/>
+</kw>
+<kw name="Wait For Loading To Complete" library="base_page">
+<doc>Wait for loading indicators to disappear</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${loading_present}</var>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>${LOADING_SPINNER}</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${LOADING_SPINNER}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20260213 16:40:56.671" endtime="20260213 16:41:11.717"/>
+</kw>
+<msg timestamp="20260213 16:41:11.717" level="INFO">${loading_present} = True</msg>
+<status status="PASS" starttime="20260213 16:40:56.670" endtime="20260213 16:41:11.717"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:41:12.719" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260213 16:41:11.718" endtime="20260213 16:41:12.720"/>
+</kw>
+<status status="PASS" starttime="20260213 16:40:56.669" endtime="20260213 16:41:12.720"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:58.044" endtime="20260213 16:41:12.720"/>
+</kw>
+<kw name="Wait For Page Load" library="base_page">
+<doc>Enhanced page load waiting with multiple checks</doc>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<arg>timeout=${PAGE_LOAD_TIMEOUT}s</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20260213 16:41:12.721" endtime="20260213 16:41:12.734"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:41:13.734" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260213 16:41:12.734" endtime="20260213 16:41:13.735"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${spinner_present}</var>
+<arg>Wait Until Element Is Not Visible</arg>
+<arg>${LOADING_SPINNER}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${LOADING_SPINNER}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20260213 16:41:13.737" endtime="20260213 16:41:28.817"/>
+</kw>
+<msg timestamp="20260213 16:41:28.817" level="INFO">${spinner_present} = True</msg>
+<status status="PASS" starttime="20260213 16:41:13.735" endtime="20260213 16:41:28.818"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:12.720" endtime="20260213 16:41:28.818"/>
+</kw>
+<status status="PASS" starttime="20260213 16:39:39.157" endtime="20260213 16:41:28.818"/>
+</kw>
+<kw name="Navigate To Receipt Generation" library="receipt_management_page">
+<doc>Navigates to receipt generation page</doc>
+<kw name="Wait For Element And Click" library="base_page">
+<arg>${MENU_BUTTON}</arg>
+<doc>Enhanced element clicking with retry mechanism</doc>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${retry_count}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${success}</var>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260213 16:41:28.825" endtime="20260213 16:41:28.911"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260213 16:41:28.911" endtime="20260213 16:41:28.976"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260213 16:41:28.978" level="INFO">Clicking element 'xpath=//a[@data-original-title="Menu"]'.</msg>
+<status status="PASS" starttime="20260213 16:41:28.976" endtime="20260213 16:41:29.359"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:28.824" endtime="20260213 16:41:29.360"/>
+</kw>
+<msg timestamp="20260213 16:41:29.360" level="INFO">${success} = True</msg>
+<status status="PASS" starttime="20260213 16:41:28.824" endtime="20260213 16:41:29.360"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20260213 16:41:29.361" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20260213 16:41:29.361" endtime="20260213 16:41:29.361"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${i} &lt; ${retry_count}-1</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260213 16:41:29.362" endtime="20260213 16:41:29.362"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:28.823" endtime="20260213 16:41:29.362"/>
+</iter>
+<status status="PASS" starttime="20260213 16:41:28.822" endtime="20260213 16:41:29.363"/>
+</for>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<arg>${success}</arg>
+<arg>Fail</arg>
+<arg>Failed to click element ${locator} after ${retry_count} attempts</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<msg timestamp="20260213 16:41:29.364" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<status status="PASS" starttime="20260213 16:41:29.363" endtime="20260213 16:41:29.364"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:28.819" endtime="20260213 16:41:29.365"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#Transaction').scrollIntoView(true);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20260213 16:41:29.366" level="INFO">Executing JavaScript:
+document.querySelector('#Transaction').scrollIntoView(true);
+Without any arguments.</msg>
+<status status="PASS" starttime="20260213 16:41:29.365" endtime="20260213 16:41:29.412"/>
+</kw>
+<kw name="Wait For Element And Click" library="base_page">
+<arg>${CONFIGURATION_MENU}</arg>
+<doc>Enhanced element clicking with retry mechanism</doc>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${retry_count}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${success}</var>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260213 16:41:29.417" endtime="20260213 16:41:29.493"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260213 16:41:29.494" endtime="20260213 16:41:29.564"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260213 16:41:29.566" level="INFO">Clicking element 'id=Configuration'.</msg>
+<status status="PASS" starttime="20260213 16:41:29.564" endtime="20260213 16:41:29.987"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:29.416" endtime="20260213 16:41:29.988"/>
+</kw>
+<msg timestamp="20260213 16:41:29.988" level="INFO">${success} = True</msg>
+<status status="PASS" starttime="20260213 16:41:29.416" endtime="20260213 16:41:29.988"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20260213 16:41:29.989" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20260213 16:41:29.988" endtime="20260213 16:41:29.989"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${i} &lt; ${retry_count}-1</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260213 16:41:29.989" endtime="20260213 16:41:29.989"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:29.415" endtime="20260213 16:41:29.989"/>
+</iter>
+<status status="PASS" starttime="20260213 16:41:29.414" endtime="20260213 16:41:29.990"/>
+</for>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<arg>${success}</arg>
+<arg>Fail</arg>
+<arg>Failed to click element ${locator} after ${retry_count} attempts</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<msg timestamp="20260213 16:41:29.990" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<status status="PASS" starttime="20260213 16:41:29.990" endtime="20260213 16:41:29.991"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:29.412" endtime="20260213 16:41:29.991"/>
+</kw>
+<kw name="Wait For Element And Click" library="base_page">
+<arg>${RECEIPT_MANAGEMENT_MENU}</arg>
+<doc>Enhanced element clicking with retry mechanism</doc>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${retry_count}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${success}</var>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260213 16:41:29.994" endtime="20260213 16:41:30.038"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260213 16:41:30.038" endtime="20260213 16:41:30.093"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260213 16:41:30.094" level="INFO">Clicking element 'id=RECEIPTMANAGEMENT'.</msg>
+<status status="PASS" starttime="20260213 16:41:30.093" endtime="20260213 16:41:30.457"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:29.993" endtime="20260213 16:41:30.458"/>
+</kw>
+<msg timestamp="20260213 16:41:30.458" level="INFO">${success} = True</msg>
+<status status="PASS" starttime="20260213 16:41:29.993" endtime="20260213 16:41:30.458"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20260213 16:41:30.459" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20260213 16:41:30.459" endtime="20260213 16:41:30.459"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${i} &lt; ${retry_count}-1</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260213 16:41:30.460" endtime="20260213 16:41:30.460"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:29.992" endtime="20260213 16:41:30.460"/>
+</iter>
+<status status="PASS" starttime="20260213 16:41:29.992" endtime="20260213 16:41:30.460"/>
+</for>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<arg>${success}</arg>
+<arg>Fail</arg>
+<arg>Failed to click element ${locator} after ${retry_count} attempts</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<msg timestamp="20260213 16:41:30.461" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<status status="PASS" starttime="20260213 16:41:30.461" endtime="20260213 16:41:30.461"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:29.991" endtime="20260213 16:41:30.462"/>
+</kw>
+<kw name="Wait For Element And Click" library="base_page">
+<arg>${RECEIPT_GENERATION_MENU}</arg>
+<doc>Enhanced element clicking with retry mechanism</doc>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${retry_count}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${success}</var>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260213 16:41:30.466" endtime="20260213 16:41:30.529"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260213 16:41:30.529" endtime="20260213 16:41:30.656"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260213 16:41:30.658" level="INFO">Clicking element 'id=RECEIPTGENERATION'.</msg>
+<status status="PASS" starttime="20260213 16:41:30.657" endtime="20260213 16:41:38.512"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:30.465" endtime="20260213 16:41:38.513"/>
+</kw>
+<msg timestamp="20260213 16:41:38.513" level="INFO">${success} = True</msg>
+<status status="PASS" starttime="20260213 16:41:30.465" endtime="20260213 16:41:38.513"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20260213 16:41:38.514" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20260213 16:41:38.513" endtime="20260213 16:41:38.514"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${i} &lt; ${retry_count}-1</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260213 16:41:38.514" endtime="20260213 16:41:38.515"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:30.464" endtime="20260213 16:41:38.515"/>
+</iter>
+<status status="PASS" starttime="20260213 16:41:30.464" endtime="20260213 16:41:38.515"/>
+</for>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<arg>${success}</arg>
+<arg>Fail</arg>
+<arg>Failed to click element ${locator} after ${retry_count} attempts</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<msg timestamp="20260213 16:41:38.517" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<status status="PASS" starttime="20260213 16:41:38.516" endtime="20260213 16:41:38.517"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:30.462" endtime="20260213 16:41:38.518"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:28.818" endtime="20260213 16:41:38.518"/>
+</kw>
+<kw name="Search And Approve Receipt" library="receipt_management_page">
+<arg>${receipt_no}</arg>
+<doc>Searches and approves receipt</doc>
+<kw name="Wait For Element And Input Text" library="base_page">
+<arg>${SEARCH_INPUT}</arg>
+<arg>${receipt_no}</arg>
+<doc>Enhanced text input with validation</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20260213 16:41:38.522" endtime="20260213 16:41:38.712"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20260213 16:41:38.712" endtime="20260213 16:41:38.780"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20260213 16:41:38.780" endtime="20260213 16:41:38.879"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:41:39.381" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260213 16:41:38.879" endtime="20260213 16:41:39.381"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${text_string}</var>
+<arg>${text}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20260213 16:41:39.383" level="INFO">${text_string} = RCP001001</msg>
+<status status="PASS" starttime="20260213 16:41:39.381" endtime="20260213 16:41:39.383"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${text_length}</var>
+<arg>${text_string}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20260213 16:41:39.384" level="INFO">Length is 9</msg>
+<msg timestamp="20260213 16:41:39.384" level="INFO">${text_length} = 9</msg>
+<status status="PASS" starttime="20260213 16:41:39.383" endtime="20260213 16:41:39.384"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${text_length} &gt; 10</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<arg>ELSE</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text_string}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20260213 16:41:39.387" level="INFO">Typing text 'RCP001001' into text field 'xpath=//input[@type='search']'.</msg>
+<status status="PASS" starttime="20260213 16:41:39.385" endtime="20260213 16:41:39.678"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:39.384" endtime="20260213 16:41:39.678"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:41:40.179" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20260213 16:41:39.678" endtime="20260213 16:41:40.180"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Text entered: ${text_string}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:41:40.181" level="INFO">Text entered: RCP001001</msg>
+<status status="PASS" starttime="20260213 16:41:40.180" endtime="20260213 16:41:40.181"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:38.521" endtime="20260213 16:41:40.181"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:41:42.182" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260213 16:41:40.181" endtime="20260213 16:41:42.182"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:dt-pendingdata</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20260213 16:41:42.184" level="INFO">Clicking element 'id:dt-pendingdata'.</msg>
+<status status="PASS" starttime="20260213 16:41:42.183" endtime="20260213 16:41:42.385"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${approve_locator}</var>
+<arg>xpath=//tr[td[text()="${receipt_no}"]]//a[contains(@class, 'auth-reject')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20260213 16:41:42.387" level="INFO">${approve_locator} = xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')]</msg>
+<status status="PASS" starttime="20260213 16:41:42.386" endtime="20260213 16:41:42.387"/>
+</kw>
+<kw name="Wait For Element And Click" library="base_page">
+<arg>${approve_locator}</arg>
+<doc>Enhanced element clicking with retry mechanism</doc>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${retry_count}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${success}</var>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20260213 16:41:57.812" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260213 16:41:57.812" level="FAIL">Element 'xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')]' not visible after 10 seconds.</msg>
+<status status="FAIL" starttime="20260213 16:41:42.390" endtime="20260213 16:41:57.815"/>
+</kw>
+<status status="FAIL" starttime="20260213 16:41:42.390" endtime="20260213 16:41:57.815"/>
+</kw>
+<msg timestamp="20260213 16:41:57.815" level="INFO">${success} = False</msg>
+<status status="PASS" starttime="20260213 16:41:42.389" endtime="20260213 16:41:57.816"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20260213 16:41:57.816" endtime="20260213 16:41:57.816"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${i} &lt; ${retry_count}-1</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:41:57.820" level="INFO">Retry 1: Element click failed, retrying...</msg>
+<status status="PASS" starttime="20260213 16:41:57.818" endtime="20260213 16:41:57.820"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${RETRY_DELAY}s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:41:59.821" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260213 16:41:57.820" endtime="20260213 16:41:59.822"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:57.817" endtime="20260213 16:41:59.822"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:57.817" endtime="20260213 16:41:59.822"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:42.388" endtime="20260213 16:41:59.823"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${success}</var>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20260213 16:42:15.204" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260213 16:42:15.204" level="FAIL">Element 'xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')]' not visible after 10 seconds.</msg>
+<status status="FAIL" starttime="20260213 16:41:59.826" endtime="20260213 16:42:15.205"/>
+</kw>
+<status status="FAIL" starttime="20260213 16:41:59.825" endtime="20260213 16:42:15.206"/>
+</kw>
+<msg timestamp="20260213 16:42:15.206" level="INFO">${success} = False</msg>
+<status status="PASS" starttime="20260213 16:41:59.824" endtime="20260213 16:42:15.206"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20260213 16:42:15.206" endtime="20260213 16:42:15.206"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${i} &lt; ${retry_count}-1</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:42:15.209" level="INFO">Retry 2: Element click failed, retrying...</msg>
+<status status="PASS" starttime="20260213 16:42:15.208" endtime="20260213 16:42:15.209"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${RETRY_DELAY}s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20260213 16:42:17.210" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260213 16:42:15.209" endtime="20260213 16:42:17.210"/>
+</kw>
+<status status="PASS" starttime="20260213 16:42:15.207" endtime="20260213 16:42:17.210"/>
+</kw>
+<status status="PASS" starttime="20260213 16:42:15.207" endtime="20260213 16:42:17.210"/>
+</kw>
+<status status="PASS" starttime="20260213 16:41:59.823" endtime="20260213 16:42:17.210"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${success}</var>
+<arg>Run Keywords</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Wait Until Element Is Enabled</arg>
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20260213 16:42:32.602" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260213 16:42:32.602" level="FAIL">Element 'xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')]' not visible after 10 seconds.</msg>
+<status status="FAIL" starttime="20260213 16:42:17.212" endtime="20260213 16:42:32.603"/>
+</kw>
+<status status="FAIL" starttime="20260213 16:42:17.212" endtime="20260213 16:42:32.603"/>
+</kw>
+<msg timestamp="20260213 16:42:32.603" level="INFO">${success} = False</msg>
+<status status="PASS" starttime="20260213 16:42:17.211" endtime="20260213 16:42:32.603"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${success}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20260213 16:42:32.603" endtime="20260213 16:42:32.604"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${i} &lt; ${retry_count}-1</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>Retry ${i+1}: Element click failed, retrying...</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>${RETRY_DELAY}s</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260213 16:42:32.604" endtime="20260213 16:42:32.604"/>
+</kw>
+<status status="PASS" starttime="20260213 16:42:17.211" endtime="20260213 16:42:32.604"/>
+</iter>
+<status status="PASS" starttime="20260213 16:41:42.388" endtime="20260213 16:42:32.604"/>
+</for>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<arg>${success}</arg>
+<arg>Fail</arg>
+<arg>Failed to click element ${locator} after ${retry_count} attempts</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<msg timestamp="20260213 16:42:32.604" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Fail" library="BuiltIn">
+<arg>Failed to click element ${locator} after ${retry_count} attempts</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20260213 16:42:32.605" level="FAIL">Failed to click element xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')] after 3 attempts</msg>
+<status status="FAIL" starttime="20260213 16:42:32.605" endtime="20260213 16:42:32.605"/>
+</kw>
+<status status="FAIL" starttime="20260213 16:42:32.604" endtime="20260213 16:42:32.613"/>
+</kw>
+<status status="FAIL" starttime="20260213 16:41:42.387" endtime="20260213 16:42:32.613"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById("idApprove").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20260213 16:42:32.614" endtime="20260213 16:42:32.614"/>
+</kw>
+<kw name="Wait For Element And Click" library="base_page">
+<arg>${APPROVE_SUBMIT_BUTTON}</arg>
+<doc>Enhanced element clicking with retry mechanism</doc>
+<status status="NOT RUN" starttime="20260213 16:42:32.614" endtime="20260213 16:42:32.614"/>
+</kw>
+<status status="FAIL" starttime="20260213 16:41:38.519" endtime="20260213 16:42:32.614"/>
+</kw>
+<kw name="Logout From Application">
+<status status="NOT RUN" starttime="20260213 16:42:32.621" endtime="20260213 16:42:32.621"/>
+</kw>
+<status status="FAIL" starttime="20260213 16:39:39.157" endtime="20260213 16:42:32.621"/>
+</kw>
+<doc>Test receipt approval only</doc>
+<tag>approval</tag>
+<tag>lms</tag>
+<tag>receipt_management</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20260213 16:39:39.147" endtime="20260213 16:42:32.622">Failed to click element xpath=//tr[td[text()="RCP001001"]]//a[contains(@class, 'auth-reject')] after 3 attempts</status>
+</test>
+<kw name="Close Application" library="base_page" type="TEARDOWN">
+<doc>Enhanced browser cleanup</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${browsers_open}</var>
+<arg>Get Window Handles</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" starttime="20260213 16:42:32.623" endtime="20260213 16:42:32.625"/>
+</kw>
+<msg timestamp="20260213 16:42:32.625" level="INFO">${browsers_open} = True</msg>
+<status status="PASS" starttime="20260213 16:42:32.623" endtime="20260213 16:42:32.625"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${browsers_open}</arg>
+<arg>Close All Browsers</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20260213 16:42:32.626" endtime="20260213 16:42:38.983"/>
+</kw>
+<status status="PASS" starttime="20260213 16:42:32.625" endtime="20260213 16:42:38.983"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Application closed successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260213 16:42:38.984" level="INFO">Application closed successfully</msg>
+<status status="PASS" starttime="20260213 16:42:38.983" endtime="20260213 16:42:38.984"/>
+</kw>
+<status status="PASS" starttime="20260213 16:42:32.622" endtime="20260213 16:42:38.985"/>
+</kw>
+<doc>Receipt Management Test Suite</doc>
+<status status="FAIL" starttime="20260213 16:39:22.847" endtime="20260213 16:42:38.985"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">approval</stat>
+<stat pass="0" fail="1" skip="0">lms</stat>
+<stat pass="0" fail="1" skip="0">receipt_management</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Receipt Management">Receipt Management</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260213 16:40:56.667" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg timestamp="20260213 16:41:29.364" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg timestamp="20260213 16:41:29.990" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg timestamp="20260213 16:41:30.461" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg timestamp="20260213 16:41:38.517" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg timestamp="20260213 16:42:32.604" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+</errors>
+</robot>

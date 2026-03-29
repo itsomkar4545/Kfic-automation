@@ -1,0 +1,22 @@
+==============================================================================
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                             
+==============================================================================
+TC006_Lead Status Workflow API :: Test lead status workflow throug...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  d:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:67
+    T:  TC006_Lead Status Workflow API    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  d:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:73
+      POST On Session    kfic_api    ${API_ENDPOINT}    json=${lead_data}    headers=${headers}
+      |  ${API_ENDPOINT} = /leads (str)
+      |  json=${lead_data} = json={'applicantType': 'Individual', 'firstName': 'Test', 'lastName': 'User'} (str)
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9', 'Content-Type': 'application/json'} (str)
+______________________________________________________________________________
+| FAIL |
+ConnectionError: HTTPConnectionPool(host='172.21.0.123', port=8080): Max retries exceeded with url: /api/v1/leads (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029E0F029940>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+------------------------------------------------------------------------------
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  d:\New_automation_\kfic-automation-framework\results\run_20260107_204414\pabot_results\5\output-20260107-204418.xml

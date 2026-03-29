@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.1 on win32)" generated="20260220 15:33:36.566" rpa="false" schemaversion="4">
+<suite id="s1" name="Lead Api Tests" source="D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot">
+<kw name="Create Session" library="RequestsLibrary" type="SETUP">
+<arg>kfic_api</arg>
+<arg>${API_CONFIG.base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20260220 15:33:36.960" level="INFO">Creating Session using : alias=kfic_api, url=http://172.21.0.123:8080/api/v1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20260220 15:33:36.958" endtime="20260220 15:33:36.960"/>
+</kw>
+<test id="s1-t1" name="TC005_Delete Lead" line="60">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Authorization=${AUTH_TOKEN}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20260220 15:33:36.962" level="INFO">${headers} = {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'}</msg>
+<status status="PASS" starttime="20260220 15:33:36.961" endtime="20260220 15:33:36.962"/>
+</kw>
+<kw name="DELETE On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>kfic_api</arg>
+<arg>${API_ENDPOINT}/${CREATED_LEAD_ID}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<msg timestamp="20260220 15:33:36.964" level="FAIL">Variable '${CREATED_LEAD_ID}' not found.</msg>
+<status status="FAIL" starttime="20260220 15:33:36.962" endtime="20260220 15:33:36.964"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>204</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20260220 15:33:36.965" endtime="20260220 15:33:36.965"/>
+</kw>
+<doc>Test DELETE lead API</doc>
+<tag>api</tag>
+<tag>delete</tag>
+<tag>integration</tag>
+<tag>remove_lead</tag>
+<status status="FAIL" starttime="20260220 15:33:36.960" endtime="20260220 15:33:36.966">Variable '${CREATED_LEAD_ID}' not found.</status>
+</test>
+<kw name="Delete All Sessions" library="RequestsLibrary" type="TEARDOWN">
+<doc>Removes all the session objects</doc>
+<msg timestamp="20260220 15:33:36.967" level="INFO">Deleting All Sessions</msg>
+<status status="PASS" starttime="20260220 15:33:36.966" endtime="20260220 15:33:36.967"/>
+</kw>
+<doc>API Test Suite for KFIC LOS/LMS</doc>
+<status status="FAIL" starttime="20260220 15:33:36.614" endtime="20260220 15:33:36.967"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">api</stat>
+<stat pass="0" fail="1" skip="0">delete</stat>
+<stat pass="0" fail="1" skip="0">integration</stat>
+<stat pass="0" fail="1" skip="0">remove_lead</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Lead Api Tests">Lead Api Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260220 15:33:36.948" level="ERROR">Error in file 'D:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot' on line 5: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Scripts\robot.exe
+  D:\New_automation_\kfic-automation-framework
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\win32\lib
+  C:\Users\akarshit.raj\AppData\Local\Programs\Python\Python313\Lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

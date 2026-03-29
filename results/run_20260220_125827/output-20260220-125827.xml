@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.1 on win32)" generated="20260220 12:58:27.985" rpa="false" schemaversion="4">
+<suite id="s1" name="Login Test" source="D:\New_automation_\kfic-automation-framework\tests\login_test.robot">
+<test id="s1-t1" name="TC001_Login_Test" line="10">
+<kw name="Get User Data By Environment" library="data_utils">
+<var>${user_data}</var>
+<arg>admin</arg>
+<doc>Gets user data based on current environment</doc>
+<kw name="Load Test Data From JSON" library="data_utils">
+<var>${users_data}</var>
+<arg>users.json</arg>
+<doc>Loads test data from JSON file with error handling</doc>
+<kw name="Join Path" library="OperatingSystem">
+<var>${file_path}</var>
+<arg>${TEST_DATA_PATH}</arg>
+<arg>${file_name}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<msg timestamp="20260220 12:58:29.273" level="INFO">${file_path} = D:\New_automation_\kfic-automation-framework\data\users.json</msg>
+<status status="PASS" starttime="20260220 12:58:29.272" endtime="20260220 12:58:29.273"/>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<arg>${file_path}</arg>
+<arg>Test data file not found: ${file_path}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<msg timestamp="20260220 12:58:29.273" level="INFO" html="true">File '&lt;a href="file://D:\New_automation_\kfic-automation-framework\data\users.json"&gt;D:\New_automation_\kfic-automation-framework\data\users.json&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20260220 12:58:29.273" endtime="20260220 12:58:29.273"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${json_string}</var>
+<arg>${file_path}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20260220 12:58:29.274" level="INFO" html="true">Getting file '&lt;a href="file://D:\New_automation_\kfic-automation-framework\data\users.json"&gt;D:\New_automation_\kfic-automation-framework\data\users.json&lt;/a&gt;'.</msg>
+<msg timestamp="20260220 12:58:29.282" level="INFO">${json_string} = {
+  "credit_approver": {
+    "username": "credit_user1",
+    "password": "password123",
+    "role": "Credit Approver",
+    "remark": "Credit approved after verification"
+  },
+  "offer_manager": {
+    ...</msg>
+<status status="PASS" starttime="20260220 12:58:29.273" endtime="20260220 12:58:29.282"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${json_data}</var>
+<arg>json.loads('''${json_string}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260220 12:58:29.283" level="INFO">${json_data} = {'credit_approver': {'username': 'credit_user1', 'password': 'password123', 'role': 'Credit Approver', 'remark': 'Credit approved after verification'}, 'offer_manager': {'username': 'offer_user1', 'pa...</msg>
+<status status="PASS" starttime="20260220 12:58:29.282" endtime="20260220 12:58:29.283"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Loaded test data from: ${file_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260220 12:58:29.283" level="INFO">Loaded test data from: users.json</msg>
+<status status="PASS" starttime="20260220 12:58:29.283" endtime="20260220 12:58:29.283"/>
+</kw>
+<return>
+<value>${json_data}</value>
+<status status="PASS" starttime="20260220 12:58:29.283" endtime="20260220 12:58:29.283"/>
+</return>
+<msg timestamp="20260220 12:58:29.283" level="INFO">${users_data} = {'credit_approver': {'username': 'credit_user1', 'password': 'password123', 'role': 'Credit Approver', 'remark': 'Credit approved after verification'}, 'offer_manager': {'username': 'offer_user1', 'pa...</msg>
+<status status="PASS" starttime="20260220 12:58:29.272" endtime="20260220 12:58:29.283"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${user_data}</var>
+<arg>${users_data}</arg>
+<arg>${role}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20260220 12:58:29.283" level="INFO">${user_data} = {'username': 'infraadmin', 'password': 'Abcd@123', 'role': 'Administrator', 'remark': 'Administrative action completed'}</msg>
+<status status="PASS" starttime="20260220 12:58:29.283" endtime="20260220 12:58:29.283"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Retrieved user data for role: ${role}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260220 12:58:29.283" level="INFO">Retrieved user data for role: admin</msg>
+<status status="PASS" starttime="20260220 12:58:29.283" endtime="20260220 12:58:29.284"/>
+</kw>
+<return>
+<value>${user_data}</value>
+<status status="PASS" starttime="20260220 12:58:29.284" endtime="20260220 12:58:29.284"/>
+</return>
+<msg timestamp="20260220 12:58:29.284" level="INFO">${user_data} = {'username': 'infraadmin', 'password': 'Abcd@123', 'role': 'Administrator', 'remark': 'Administrative action completed'}</msg>
+<status status="PASS" starttime="20260220 12:58:29.272" endtime="20260220 12:58:29.284"/>
+</kw>
+<kw name="Open Application" library="base_page">
+<doc>Opens the application with enhanced browser configuration</doc>
+<kw name="Validate Environment" library="framework_config">
+<doc>Validates if environment configuration is correct</doc>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${URLS}</arg>
+<arg>${ENVIRONMENT}</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20260220 12:58:29.284" endtime="20260220 12:58:29.284"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${URLS.${ENVIRONMENT}}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20260220 12:58:29.285" level="INFO">Length is 67</msg>
+<status status="PASS" starttime="20260220 12:58:29.284" endtime="20260220 12:58:29.285"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Environment validation passed for: ${ENVIRONMENT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260220 12:58:29.285" level="INFO">Environment validation passed for: qc</msg>
+<status status="PASS" starttime="20260220 12:58:29.285" endtime="20260220 12:58:29.285"/>
+</kw>
+<status status="PASS" starttime="20260220 12:58:29.284" endtime="20260220 12:58:29.285"/>
+</kw>
+<kw name="Get Environment URL">
+<var>${url}</var>
+<msg timestamp="20260220 12:58:29.285" level="FAIL">Multiple keywords with name 'Get Environment URL' found. Give the full name of the keyword you want to use:
+    environment.Get Environment URL
+    framework_config.Get Environment URL</msg>
+<status status="FAIL" starttime="20260220 12:58:29.285" endtime="20260220 12:58:29.285"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Opening application: ${url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.285" endtime="20260220 12:58:29.285"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.285" endtime="20260220 12:58:29.285"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${headless}</arg>
+<arg>Call Method</arg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.285" endtime="20260220 12:58:29.285"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-web-security</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-running-insecure-content</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${PAGE_LOAD_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Setup Test Environment" library="base_page">
+<doc>Setup test environment directories and logging</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.286" endtime="20260220 12:58:29.286"/>
+</kw>
+<status status="FAIL" starttime="20260220 12:58:29.284" endtime="20260220 12:58:29.286"/>
+</kw>
+<kw name="Login To Application" library="login_page">
+<arg>${user_data['username']}</arg>
+<arg>${user_data['password']}</arg>
+<doc>Complete login process with Re-Login handling</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.287" endtime="20260220 12:58:29.287"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.287" endtime="20260220 12:58:29.287"/>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<arg>${current_url}</arg>
+<arg>LoginPage</arg>
+<arg>Login Failed</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.287" endtime="20260220 12:58:29.287"/>
+</kw>
+<kw name="Close Application" library="base_page">
+<doc>Enhanced browser cleanup</doc>
+<status status="NOT RUN" starttime="20260220 12:58:29.287" endtime="20260220 12:58:29.287"/>
+</kw>
+<doc>Login test using framework structure</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20260220 12:58:29.271" endtime="20260220 12:58:29.287">Multiple keywords with name 'Get Environment URL' found. Give the full name of the keyword you want to use:
+    environment.Get Environment URL
+    framework_config.Get Environment URL</status>
+</test>
+<doc>Login Test Following Framework Structure</doc>
+<status status="FAIL" starttime="20260220 12:58:27.987" endtime="20260220 12:58:29.287"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

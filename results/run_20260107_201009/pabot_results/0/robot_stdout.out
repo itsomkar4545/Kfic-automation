@@ -1,0 +1,183 @@
+==============================================================================
+Receipt Test :: Receipt Master Test Following Framework Structure             
+==============================================================================
+TC001_Receipt_Master_Flow :: Complete Receipt Master flow using fr...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:13
+    T:  TC001_Receipt_Master_Flow    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:24
+      Fill Receipt Form    ${receipt_data}
+      |  ${receipt_data} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_page.robot:60
+      Wait For Element And Input Text    ${START_RECEIPT_NO_INPUT}    ${unique_receipt_no}
+      |  ${START_RECEIPT_NO_INPUT} = xpath=//input[@name="startReceiptNo"] (str)
+      |  ${unique_receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:97
+      Get Length    ${text}
+      |  ${text} = 11403287452 (int)
+______________________________________________________________________________
+| FAIL |
+Could not get length of '11403287452'.
+------------------------------------------------------------------------------
+TC002_Receipt_Master_Flow_Variant_A :: Receipt Master flow with va...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:30
+    T:  TC002_Receipt_Master_Flow_Variant_A    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:41
+      Fill Receipt Form    ${receipt_data}
+      |  ${receipt_data} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_page.robot:60
+      Wait For Element And Input Text    ${START_RECEIPT_NO_INPUT}    ${unique_receipt_no}
+      |  ${START_RECEIPT_NO_INPUT} = xpath=//input[@name="startReceiptNo"] (str)
+      |  ${unique_receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:97
+      Get Length    ${text}
+      |  ${text} = 207980997152 (int)
+______________________________________________________________________________
+| FAIL |
+Could not get length of '207980997152'.
+------------------------------------------------------------------------------
+TC003_Receipt_Master_Flow_Variant_B :: Receipt Master flow with va...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:47
+    T:  TC003_Receipt_Master_Flow_Variant_B    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:58
+      Fill Receipt Form    ${receipt_data}
+      |  ${receipt_data} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_page.robot:60
+      Wait For Element And Input Text    ${START_RECEIPT_NO_INPUT}    ${unique_receipt_no}
+      |  ${START_RECEIPT_NO_INPUT} = xpath=//input[@name="startReceiptNo"] (str)
+      |  ${unique_receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:97
+      Get Length    ${text}
+      |  ${text} = 948139435552 (int)
+______________________________________________________________________________
+| FAIL |
+Could not get length of '948139435552'.
+------------------------------------------------------------------------------
+TC004_Receipt_Master_Flow_Variant_C :: Receipt Master flow with va...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:64
+    T:  TC004_Receipt_Master_Flow_Variant_C    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:75
+      Fill Receipt Form    ${receipt_data}
+      |  ${receipt_data} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_page.robot:60
+      Wait For Element And Input Text    ${START_RECEIPT_NO_INPUT}    ${unique_receipt_no}
+      |  ${START_RECEIPT_NO_INPUT} = xpath=//input[@name="startReceiptNo"] (str)
+      |  ${unique_receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:97
+      Get Length    ${text}
+      |  ${text} = 709489896052 (int)
+______________________________________________________________________________
+| FAIL |
+Could not get length of '709489896052'.
+------------------------------------------------------------------------------
+TC005_Receipt_Master_Flow_Variant_D :: Receipt Master flow with va...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:81
+    T:  TC005_Receipt_Master_Flow_Variant_D    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:92
+      Fill Receipt Form    ${receipt_data}
+      |  ${receipt_data} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_page.robot:60
+      Wait For Element And Input Text    ${START_RECEIPT_NO_INPUT}    ${unique_receipt_no}
+      |  ${START_RECEIPT_NO_INPUT} = xpath=//input[@name="startReceiptNo"] (str)
+      |  ${unique_receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:97
+      Get Length    ${text}
+      |  ${text} = 656986627952 (int)
+______________________________________________________________________________
+| FAIL |
+Could not get length of '656986627952'.
+------------------------------------------------------------------------------
+TC006_Receipt_Master_Flow_Extra_1 :: Receipt Master flow with extr...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:98
+    T:  TC006_Receipt_Master_Flow_Extra_1    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:109
+      Fill Receipt Form    ${receipt_data}
+      |  ${receipt_data} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_page.robot:60
+      Wait For Element And Input Text    ${START_RECEIPT_NO_INPUT}    ${unique_receipt_no}
+      |  ${START_RECEIPT_NO_INPUT} = xpath=//input[@name="startReceiptNo"] (str)
+      |  ${unique_receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:97
+      Get Length    ${text}
+      |  ${text} = 933740709252 (int)
+______________________________________________________________________________
+| FAIL |
+Could not get length of '933740709252'.
+------------------------------------------------------------------------------
+TC007_Receipt_Master_Flow_Extra_2 :: Receipt Master flow with extr...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:115
+    T:  TC007_Receipt_Master_Flow_Extra_2    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:126
+      Fill Receipt Form    ${receipt_data}
+      |  ${receipt_data} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_page.robot:60
+      Wait For Element And Input Text    ${START_RECEIPT_NO_INPUT}    ${unique_receipt_no}
+      |  ${START_RECEIPT_NO_INPUT} = xpath=//input[@name="startReceiptNo"] (str)
+      |  ${unique_receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:97
+      Get Length    ${text}
+      |  ${text} = 317785757152 (int)
+______________________________________________________________________________
+| FAIL |
+Could not get length of '317785757152'.
+------------------------------------------------------------------------------
+TC008_Receipt_Master_Flow_Extra_3 :: Receipt Master flow with extr...   
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:132
+    T:  TC008_Receipt_Master_Flow_Extra_3    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\tests\receipt_test.robot:143
+      Fill Receipt Form    ${receipt_data}
+      |  ${receipt_data} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\receipt_page.robot:60
+      Wait For Element And Input Text    ${START_RECEIPT_NO_INPUT}    ${unique_receipt_no}
+      |  ${START_RECEIPT_NO_INPUT} = xpath=//input[@name="startReceiptNo"] (str)
+      |  ${unique_receipt_no} = <Unable to define variable value>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  D:\New_automation_\kfic-automation-framework\pages\base_page.robot:97
+      Get Length    ${text}
+      |  ${text} = 837002590052 (int)
+______________________________________________________________________________
+| FAIL |
+Could not get length of '837002590052'.
+------------------------------------------------------------------------------
+Receipt Test :: Receipt Master Test Following Framework Structure     | FAIL |
+8 tests, 0 passed, 8 failed
+==============================================================================
+Output:  D:\New_automation_\kfic-automation-framework\results\run_20260107_201009\pabot_results\0\output-20260107-201010.xml

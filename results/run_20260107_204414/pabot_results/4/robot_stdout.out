@@ -1,0 +1,21 @@
+==============================================================================
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                             
+==============================================================================
+TC005_Delete Lead :: Test DELETE lead API                               
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  d:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:60
+    T:  TC005_Delete Lead    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  d:\New_automation_\kfic-automation-framework\tests\api\lead_api_tests.robot:64
+      DELETE On Session    kfic_api    ${API_ENDPOINT}/${CREATED_LEAD_ID}    headers=${headers}
+      |  ${API_ENDPOINT}/${CREATED_LEAD_ID} = <Unable to define variable value>
+      |  headers=${headers} = headers={'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'} (str)
+______________________________________________________________________________
+| FAIL |
+Variable '${CREATED_LEAD_ID}' not found.
+------------------------------------------------------------------------------
+Lead Api Tests :: API Test Suite for KFIC LOS/LMS                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  d:\New_automation_\kfic-automation-framework\results\run_20260107_204414\pabot_results\4\output-20260107-204418.xml

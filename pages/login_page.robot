@@ -3,13 +3,13 @@ Documentation    Login Page Object for KFIC Application
 Resource         base_page.robot
 
 *** Variables ***
-# Login Page Locators
-${USERNAME_FIELD}     id=username
-${PASSWORD_FIELD}     id=password
-${LOGIN_BUTTON}       id=loginBtn
-${FORGOT_PASSWORD}    xpath=//a[text()='Forgot Password?']
-${REMEMBER_ME}        id=rememberMe
-${LOGIN_ERROR}        xpath=//div[@class='login-error']
+# Login Page Locators - Updated for actual KFIC page
+${USERNAME_FIELD}     id=loginId
+${PASSWORD_FIELD}     id=uiPwd
+${LOGIN_BUTTON}       id=userLogin
+${RELOGIN_BUTTON}     id=relogin
+${FORGOT_PASSWORD}    id=forgetPassword
+${LOGIN_ERROR}        xpath=//div[contains(@class,'alert') or contains(@class,'error')]
 
 *** Keywords ***
 Enter Username
@@ -28,12 +28,19 @@ Click Login Button
     Wait For Loading To Complete
 
 Login To Application
-    [Documentation]    Complete login process
+    [Documentation]    Complete login process with Re-Login handling
     [Arguments]    ${username}    ${password}
+    Handle Re-Login If Present
     Enter Username    ${username}
     Enter Password    ${password}
     Click Login Button
     Wait For Page Load
+
+Handle Re-Login If Present
+    [Documentation]    Handles Re-Login button if it appears
+    ${relogin_present}=    Run Keyword And Return Status    Element Should Be Visible    ${RELOGIN_BUTTON}
+    Run Keyword If    ${relogin_present}    Click Element    ${RELOGIN_BUTTON}
+    Run Keyword If    ${relogin_present}    Wait For Page Load
 
 Verify Login Error
     [Documentation]    Verifies login error message

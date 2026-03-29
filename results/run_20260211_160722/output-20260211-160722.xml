@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.1 on win32)" generated="20260211 16:07:22.793" rpa="false" schemaversion="4">
+<suite id="s1" name="Receipt Management" source="D:\New_automation_\kfic-automation-framework\tests\lms\receipt_management.robot">
+<kw name="Open Application" library="base_page" type="SETUP">
+<doc>Opens the application with enhanced browser configuration</doc>
+<kw name="Validate Environment" library="framework_config">
+<doc>Validates if environment configuration is correct</doc>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${URLS}</arg>
+<arg>${ENVIRONMENT}</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20260211 16:07:23.082" endtime="20260211 16:07:23.082"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${URLS.${ENVIRONMENT}}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20260211 16:07:23.084" level="INFO">Length is 67</msg>
+<status status="PASS" starttime="20260211 16:07:23.083" endtime="20260211 16:07:23.084"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Environment validation passed for: ${ENVIRONMENT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260211 16:07:23.084" level="INFO">Environment validation passed for: qc</msg>
+<status status="PASS" starttime="20260211 16:07:23.084" endtime="20260211 16:07:23.084"/>
+</kw>
+<status status="PASS" starttime="20260211 16:07:23.082" endtime="20260211 16:07:23.084"/>
+</kw>
+<kw name="Get Environment URL" library="framework_config">
+<var>${url}</var>
+<doc>Returns URL based on current environment</doc>
+<kw name="Get From Dictionary" library="Collections">
+<var>${url}</var>
+<arg>${URLS}</arg>
+<arg>${ENVIRONMENT}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20260211 16:07:23.085" level="INFO">${url} = http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<status status="PASS" starttime="20260211 16:07:23.084" endtime="20260211 16:07:23.085"/>
+</kw>
+<return>
+<value>${url}</value>
+<status status="PASS" starttime="20260211 16:07:23.085" endtime="20260211 16:07:23.085"/>
+</return>
+<msg timestamp="20260211 16:07:23.085" level="INFO">${url} = http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<status status="PASS" starttime="20260211 16:07:23.084" endtime="20260211 16:07:23.085"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Opening application: ${url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260211 16:07:23.085" level="INFO">Opening application: http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<status status="PASS" starttime="20260211 16:07:23.085" endtime="20260211 16:07:23.085"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260211 16:07:23.086" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000281E43E4590&gt;</msg>
+<status status="PASS" starttime="20260211 16:07:23.086" endtime="20260211 16:07:23.086"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${headless}</arg>
+<arg>Call Method</arg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260211 16:07:23.086" endtime="20260211 16:07:23.086"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260211 16:07:23.086" endtime="20260211 16:07:23.086"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260211 16:07:23.087" endtime="20260211 16:07:23.087"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260211 16:07:23.087" endtime="20260211 16:07:23.087"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-web-security</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260211 16:07:23.087" endtime="20260211 16:07:23.087"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-running-insecure-content</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20260211 16:07:23.087" endtime="20260211 16:07:23.087"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260211 16:07:23.088" level="INFO">Opening browser 'chrome' to base url 'http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en'.</msg>
+<status status="PASS" starttime="20260211 16:07:23.087" endtime="20260211 16:07:32.642"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20260211 16:07:32.649" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff760bff3d5
+	0x7ff760bff430
+	0x7ff7609a10bd
+	0x7ff760977c22
+	0x7ff760a2d2a6
+	0x7ff760a49652
+	0x7ff7609ecb0c
+	0x7ff7609eda53
+	0x7ff760edb470
+	0x7ff760ed586d
+	0x7ff760ef621a
+	0x7ff760c1b235
+	0x7ff760c23a5c
+	0x7ff760c08844
+	0x7ff760c089f6
+	0x7ff760beeb87
+	0x7ff9b725259d
+	0x7ff9b892af78
+</msg>
+<msg timestamp="20260211 16:07:32.649" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff760bff3d5
+	0x7ff760bff430
+	0x7ff7609a10bd
+	0x7ff760977c22
+	0x7ff760a2d2a6
+	0x7ff760a49652
+	0x7ff7609ecb0c
+	0x7ff7609eda53
+	0x7ff760edb470
+	0x7ff760ed586d
+	0x7ff760ef621a
+	0x7ff760c1b235
+	0x7ff760c23a5c
+	0x7ff760c08844
+	0x7ff760c089f6
+	0x7ff760beeb87
+	0x7ff9b725259d
+	0x7ff9b892af78
+</msg>
+<status status="FAIL" starttime="20260211 16:07:32.642" endtime="20260211 16:07:32.663"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20260211 16:07:32.664" endtime="20260211 16:07:32.664"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${PAGE_LOAD_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" starttime="20260211 16:07:32.665" endtime="20260211 16:07:32.665"/>
+</kw>
+<kw name="Setup Test Environment" library="base_page">
+<doc>Setup test environment directories and logging</doc>
+<status status="NOT RUN" starttime="20260211 16:07:32.665" endtime="20260211 16:07:32.665"/>
+</kw>
+<status status="FAIL" starttime="20260211 16:07:23.081" endtime="20260211 16:07:32.666"/>
+</kw>
+<test id="s1-t1" name="TC001_Complete_Receipt_Generation_Workflow" line="10">
+<doc>Test complete receipt generation and approval workflow</doc>
+<tag>critical</tag>
+<tag>lms</tag>
+<tag>receipt_management</tag>
+<tag>workflow</tag>
+<status status="FAIL" starttime="20260211 16:07:32.666" endtime="20260211 16:07:32.669">Parent suite setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff760bff3d5
+	0x7ff760bff430
+	0x7ff7609a10bd
+	0x7ff760977c22
+	0x7ff760a2d2a6
+	0x7ff760a49652
+	0x7ff7609ecb0c
+	0x7ff7609eda53
+	0x7ff760edb470
+	0x7ff760ed586d
+	0x7ff760ef621a
+	0x7ff760c1b235
+	0x7ff760c23a5c
+	0x7ff760c08844
+	0x7ff760c089f6
+	0x7ff760beeb87
+	0x7ff9b725259d
+	0x7ff9b892af78
+</status>
+</test>
+<test id="s1-t2" name="TC002_Generate_Receipt_Only" line="18">
+<doc>Test receipt generation only</doc>
+<tag>generation</tag>
+<tag>lms</tag>
+<tag>receipt_management</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20260211 16:07:32.670" endtime="20260211 16:07:32.671">Parent suite setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff760bff3d5
+	0x7ff760bff430
+	0x7ff7609a10bd
+	0x7ff760977c22
+	0x7ff760a2d2a6
+	0x7ff760a49652
+	0x7ff7609ecb0c
+	0x7ff7609eda53
+	0x7ff760edb470
+	0x7ff760ed586d
+	0x7ff760ef621a
+	0x7ff760c1b235
+	0x7ff760c23a5c
+	0x7ff760c08844
+	0x7ff760c089f6
+	0x7ff760beeb87
+	0x7ff9b725259d
+	0x7ff9b892af78
+</status>
+</test>
+<test id="s1-t3" name="TC003_Approve_Receipt_Only" line="26">
+<doc>Test receipt approval only</doc>
+<tag>approval</tag>
+<tag>lms</tag>
+<tag>receipt_management</tag>
+<tag>smoke</tag>
+<status status="FAIL" starttime="20260211 16:07:32.672" endtime="20260211 16:07:32.672">Parent suite setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff760bff3d5
+	0x7ff760bff430
+	0x7ff7609a10bd
+	0x7ff760977c22
+	0x7ff760a2d2a6
+	0x7ff760a49652
+	0x7ff7609ecb0c
+	0x7ff7609eda53
+	0x7ff760edb470
+	0x7ff760ed586d
+	0x7ff760ef621a
+	0x7ff760c1b235
+	0x7ff760c23a5c
+	0x7ff760c08844
+	0x7ff760c089f6
+	0x7ff760beeb87
+	0x7ff9b725259d
+	0x7ff9b892af78
+</status>
+</test>
+<kw name="Close Application" library="base_page" type="TEARDOWN">
+<doc>Enhanced browser cleanup</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${browsers_open}</var>
+<arg>Get Window Handles</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" starttime="20260211 16:07:32.674" endtime="20260211 16:07:32.685"/>
+</kw>
+<msg timestamp="20260211 16:07:32.685" level="INFO">${browsers_open} = True</msg>
+<status status="PASS" starttime="20260211 16:07:32.674" endtime="20260211 16:07:32.685"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${browsers_open}</arg>
+<arg>Close All Browsers</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20260211 16:07:32.686" endtime="20260211 16:07:35.017"/>
+</kw>
+<status status="PASS" starttime="20260211 16:07:32.686" endtime="20260211 16:07:35.018"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Application closed successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260211 16:07:35.018" level="INFO">Application closed successfully</msg>
+<status status="PASS" starttime="20260211 16:07:35.018" endtime="20260211 16:07:35.018"/>
+</kw>
+<status status="PASS" starttime="20260211 16:07:32.673" endtime="20260211 16:07:35.018"/>
+</kw>
+<doc>Receipt Management Test Suite</doc>
+<status status="FAIL" starttime="20260211 16:07:22.795" endtime="20260211 16:07:35.018">Suite setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff760bff3d5
+	0x7ff760bff430
+	0x7ff7609a10bd
+	0x7ff760977c22
+	0x7ff760a2d2a6
+	0x7ff760a49652
+	0x7ff7609ecb0c
+	0x7ff7609eda53
+	0x7ff760edb470
+	0x7ff760ed586d
+	0x7ff760ef621a
+	0x7ff760c1b235
+	0x7ff760c23a5c
+	0x7ff760c08844
+	0x7ff760c089f6
+	0x7ff760beeb87
+	0x7ff9b725259d
+	0x7ff9b892af78
+</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">approval</stat>
+<stat pass="0" fail="1" skip="0">critical</stat>
+<stat pass="0" fail="1" skip="0">generation</stat>
+<stat pass="0" fail="3" skip="0">lms</stat>
+<stat pass="0" fail="3" skip="0">receipt_management</stat>
+<stat pass="0" fail="2" skip="0">smoke</stat>
+<stat pass="0" fail="1" skip="0">workflow</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Receipt Management">Receipt Management</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20260211 16:07:32.649" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.133)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff760bff3d5
+	0x7ff760bff430
+	0x7ff7609a10bd
+	0x7ff760977c22
+	0x7ff760a2d2a6
+	0x7ff760a49652
+	0x7ff7609ecb0c
+	0x7ff7609eda53
+	0x7ff760edb470
+	0x7ff760ed586d
+	0x7ff760ef621a
+	0x7ff760c1b235
+	0x7ff760c23a5c
+	0x7ff760c08844
+	0x7ff760c089f6
+	0x7ff760beeb87
+	0x7ff9b725259d
+	0x7ff9b892af78
+</msg>
+</errors>
+</robot>

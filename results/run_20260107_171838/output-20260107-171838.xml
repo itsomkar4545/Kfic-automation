@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2026-01-07T17:18:38.893655" rpa="false" schemaversion="5">
+<suite id="s1" name="Receipt Master Enhanced Test" source="D:\New_automation_\kfic-automation-framework\tests\receipt_master_enhanced_test.robot">
+<kw name="Open Application" owner="base_page" type="SETUP">
+<kw name="Validate Environment" owner="framework_config">
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${URLS}</arg>
+<arg>${ENVIRONMENT}</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.090094" elapsed="0.000211"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-01-07T17:18:39.091257" level="INFO">Length is 67.</msg>
+<arg>${URLS.${ENVIRONMENT}}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.090490" elapsed="0.000840"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-07T17:18:39.091585" level="INFO">Environment validation passed for: qc</msg>
+<arg>Environment validation passed for: ${ENVIRONMENT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.091456" elapsed="0.000183"/>
+</kw>
+<doc>Validates if environment configuration is correct</doc>
+<status status="PASS" start="2026-01-07T17:18:39.089429" elapsed="0.002275"/>
+</kw>
+<kw name="Get Environment URL" owner="framework_config">
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-07T17:18:39.092141" level="INFO">${url} = http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<var>${url}</var>
+<arg>${URLS}</arg>
+<arg>${ENVIRONMENT}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.092002" elapsed="0.000165"/>
+</kw>
+<return>
+<value>${url}</value>
+<status status="PASS" start="2026-01-07T17:18:39.092217" elapsed="0.000056"/>
+</return>
+<msg time="2026-01-07T17:18:39.092412" level="INFO">${url} = http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<var>${url}</var>
+<doc>Returns URL based on current environment</doc>
+<status status="PASS" start="2026-01-07T17:18:39.091864" elapsed="0.000570"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-07T17:18:39.092717" level="INFO">Opening application: http://172.21.0.93:9092/Kiya.aiCBS-10.2.0/LoginPage?tid=139&amp;lang=en</msg>
+<arg>Opening application: ${url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.092567" elapsed="0.000204"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-07T17:18:39.093141" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001CCD6AE17F0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.092899" elapsed="0.000281"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${headless}</arg>
+<arg>Call Method</arg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.093310" elapsed="0.000145"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.093549" elapsed="0.000173"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.093885" elapsed="0.000163"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.094182" elapsed="0.000111"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-web-security</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.094381" elapsed="0.000093"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-running-insecure-content</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.094564" elapsed="0.000091"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2026-01-07T17:18:39.094978" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</msg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size=${BROWSER_WIDTH},${BROWSER_HEIGHT}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2026-01-07T17:18:39.094761" elapsed="0.000401">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-01-07T17:18:39.095308" elapsed="0.000025"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-01-07T17:18:39.095420" elapsed="0.000020"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-01-07T17:18:39.095513" elapsed="0.000019"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${PAGE_LOAD_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2026-01-07T17:18:39.095601" elapsed="0.000018"/>
+</kw>
+<kw name="Setup Test Environment" owner="base_page">
+<doc>Setup test environment directories and logging</doc>
+<status status="NOT RUN" start="2026-01-07T17:18:39.095754" elapsed="0.000024"/>
+</kw>
+<doc>Opens the application with enhanced browser configuration</doc>
+<status status="FAIL" start="2026-01-07T17:18:39.089127" elapsed="0.006742">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+</kw>
+<test id="s1-t1" name="TC001_Receipt_Master_Complete_Flow" line="20">
+<doc>Complete Receipt Master flow with all steps</doc>
+<tag>critical</tag>
+<tag>flow</tag>
+<tag>master</tag>
+<tag>receipt</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-01-07T17:18:39.095945" elapsed="0.000378">Parent suite setup failed:
+Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+</test>
+<test id="s1-t2" name="TC002_Receipt_Master_Multiple_Entries" line="37">
+<doc>Create multiple receipt entries</doc>
+<tag>master</tag>
+<tag>multiple</tag>
+<tag>receipt</tag>
+<tag>regression</tag>
+<status status="FAIL" start="2026-01-07T17:18:39.096512" elapsed="0.000311">Parent suite setup failed:
+Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+</test>
+<test id="s1-t3" name="TC003_Receipt_Master_Data_Validation" line="52">
+<doc>Test receipt master with different data combinations</doc>
+<tag>master</tag>
+<tag>receipt</tag>
+<tag>regression</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2026-01-07T17:18:39.096975" elapsed="0.000224">Parent suite setup failed:
+Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+</test>
+<kw name="Close Application" owner="base_page" type="TEARDOWN">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2026-01-07T17:18:39.098383" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-01-07T17:18:39.098483" level="FAIL">No browser is open.</msg>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="FAIL" start="2026-01-07T17:18:39.098249" elapsed="0.009641">No browser is open.</status>
+</kw>
+<msg time="2026-01-07T17:18:39.108029" level="INFO">${browsers_open} = False</msg>
+<var>${browsers_open}</var>
+<arg>Get Window Handles</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.098092" elapsed="0.009963"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${browsers_open}</arg>
+<arg>Close All Browsers</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.108193" elapsed="0.000121"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-07T17:18:39.108498" level="INFO">Application closed successfully</msg>
+<arg>Application closed successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-07T17:18:39.108418" elapsed="0.000115"/>
+</kw>
+<doc>Enhanced browser cleanup</doc>
+<status status="PASS" start="2026-01-07T17:18:39.097857" elapsed="0.010728"/>
+</kw>
+<doc>Enhanced Receipt Master Flow Test using Page Objects</doc>
+<status status="FAIL" start="2026-01-07T17:18:38.895663" elapsed="0.212956">Suite setup failed:
+Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--window-size'</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">critical</stat>
+<stat pass="0" fail="1" skip="0">flow</stat>
+<stat pass="0" fail="3" skip="0">master</stat>
+<stat pass="0" fail="1" skip="0">multiple</stat>
+<stat pass="0" fail="3" skip="0">receipt</stat>
+<stat pass="0" fail="2" skip="0">regression</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+<stat pass="0" fail="1" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Receipt Master Enhanced Test" id="s1" pass="0" fail="3" skip="0">Receipt Master Enhanced Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

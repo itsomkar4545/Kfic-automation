@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2026-02-24T19:45:31.603261" rpa="false" schemaversion="5">
+<suite id="s1" name="LOS Retail Flow" source="C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\tests\los\LOS_Retail_Flow.robot">
+<test id="s1-t1" name="TC002_Lead_Creation_To_Application_Conversion" line="44">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n⚠️ WARNING: Opening Excel file for you to update test data...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-24T19:45:32.015702" elapsed="0.000489"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-24T19:45:32.016758" level="INFO">${excel_path} = C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\tests\los/../../data/retail_flow_input.xlsx</msg>
+<var>${excel_path}</var>
+<arg>C:\\Users\\omkar.patil\\Downloads\\kfic-automation-framework\\kfic-automation-framework\\tests\\los/../../data/retail_flow_input.xlsx</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-24T19:45:32.016554" elapsed="0.000242"/>
+</kw>
+<kw name="Get Modified Time" owner="OperatingSystem">
+<msg time="2026-02-24T19:45:32.017626" level="INFO" html="true">Last modified time of '&lt;a href="file://C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx"&gt;C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx&lt;/a&gt;' is 2026-02-24 19:43:25.</msg>
+<msg time="2026-02-24T19:45:32.017757" level="INFO">${original_time} = 2026-02-24 19:43:25</msg>
+<var>${original_time}</var>
+<arg>${excel_path}</arg>
+<doc>Returns the last modification time of a file or directory.</doc>
+<status status="PASS" start="2026-02-24T19:45:32.017125" elapsed="0.000668"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Original file time: ${original_time}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-24T19:45:32.018169" elapsed="0.000358"/>
+</kw>
+<kw name="Run" owner="OperatingSystem">
+<msg time="2026-02-24T19:45:32.062336" level="INFO">Running command 'start excel "C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\tests\los/../../data/retail_flow_input.xlsx" 2&gt;&amp;1'.</msg>
+<arg>start excel "${excel_path}"</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<status status="PASS" start="2026-02-24T19:45:32.018956" elapsed="0.287473"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nPlease update the Excel file and press CTRL+S to save.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-24T19:45:32.306946" elapsed="0.000442"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Waiting for file to be saved...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-24T19:45:32.307826" elapsed="0.000511"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-24T19:45:33.309696" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-24T19:45:32.309172" elapsed="1.000664"/>
+</kw>
+<kw name="Get Modified Time" owner="OperatingSystem">
+<msg time="2026-02-24T19:45:33.310876" level="INFO" html="true">Last modified time of '&lt;a href="file://C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx"&gt;C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx&lt;/a&gt;' is 2026-02-24 19:43:25.</msg>
+<msg time="2026-02-24T19:45:33.311102" level="INFO">${current_time} = 2026-02-24 19:43:25</msg>
+<var>${current_time}</var>
+<arg>${excel_path}</arg>
+<doc>Returns the last modification time of a file or directory.</doc>
+<status status="PASS" start="2026-02-24T19:45:33.310100" elapsed="0.001069"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-02-24T19:45:33.312536" level="FAIL">2026-02-24 19:43:25 == 2026-02-24 19:43:25</msg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="FAIL" start="2026-02-24T19:45:33.311931" elapsed="0.001005">2026-02-24 19:43:25 == 2026-02-24 19:43:25</status>
+</kw>
+<msg time="2026-02-24T19:45:33.313205" level="INFO">${saved} = False</msg>
+<var>${saved}</var>
+<arg>Should Not Be Equal</arg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-24T19:45:33.311507" elapsed="0.001743"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${saved}</arg>
+<arg>Log To Console</arg>
+<arg>\nFile modified at: ${current_time}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:33.313494" elapsed="0.000309"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${saved}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:33.314081" elapsed="0.000364"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Still waiting... (${i}s)</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-24T19:45:33.315458" elapsed="0.000535"/>
+</kw>
+<arg>${i} % 10 == 0</arg>
+<arg>Log To Console</arg>
+<arg>Still waiting... (${i}s)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:33.314827" elapsed="0.001304"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2026-02-24T19:45:32.309031" elapsed="1.007187"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-24T19:45:34.317310" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-24T19:45:33.316682" elapsed="1.000816"/>
+</kw>
+<kw name="Get Modified Time" owner="OperatingSystem">
+<msg time="2026-02-24T19:45:34.318393" level="INFO" html="true">Last modified time of '&lt;a href="file://C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx"&gt;C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx&lt;/a&gt;' is 2026-02-24 19:43:25.</msg>
+<msg time="2026-02-24T19:45:34.318578" level="INFO">${current_time} = 2026-02-24 19:43:25</msg>
+<var>${current_time}</var>
+<arg>${excel_path}</arg>
+<doc>Returns the last modification time of a file or directory.</doc>
+<status status="PASS" start="2026-02-24T19:45:34.317825" elapsed="0.000809"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-02-24T19:45:34.319981" level="FAIL">2026-02-24 19:43:25 == 2026-02-24 19:43:25</msg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="FAIL" start="2026-02-24T19:45:34.319440" elapsed="0.000739">2026-02-24 19:43:25 == 2026-02-24 19:43:25</status>
+</kw>
+<msg time="2026-02-24T19:45:34.320674" level="INFO">${saved} = False</msg>
+<var>${saved}</var>
+<arg>Should Not Be Equal</arg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-24T19:45:34.319053" elapsed="0.002137"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${saved}</arg>
+<arg>Log To Console</arg>
+<arg>\nFile modified at: ${current_time}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:34.321533" elapsed="0.000283"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${saved}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:34.322343" elapsed="0.000357"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i} % 10 == 0</arg>
+<arg>Log To Console</arg>
+<arg>Still waiting... (${i}s)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:34.322957" elapsed="0.000336"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2026-02-24T19:45:33.316498" elapsed="1.006908"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-24T19:45:35.325225" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-24T19:45:34.323864" elapsed="1.001634"/>
+</kw>
+<kw name="Get Modified Time" owner="OperatingSystem">
+<msg time="2026-02-24T19:45:35.328316" level="INFO" html="true">Last modified time of '&lt;a href="file://C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx"&gt;C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx&lt;/a&gt;' is 2026-02-24 19:43:25.</msg>
+<msg time="2026-02-24T19:45:35.328997" level="INFO">${current_time} = 2026-02-24 19:43:25</msg>
+<var>${current_time}</var>
+<arg>${excel_path}</arg>
+<doc>Returns the last modification time of a file or directory.</doc>
+<status status="PASS" start="2026-02-24T19:45:35.326042" elapsed="0.003035"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-02-24T19:45:35.332441" level="FAIL">2026-02-24 19:43:25 == 2026-02-24 19:43:25</msg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="FAIL" start="2026-02-24T19:45:35.330626" elapsed="0.002092">2026-02-24 19:43:25 == 2026-02-24 19:43:25</status>
+</kw>
+<msg time="2026-02-24T19:45:35.334225" level="INFO">${saved} = False</msg>
+<var>${saved}</var>
+<arg>Should Not Be Equal</arg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-24T19:45:35.329595" elapsed="0.004827"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${saved}</arg>
+<arg>Log To Console</arg>
+<arg>\nFile modified at: ${current_time}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:35.334988" elapsed="0.000481"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${saved}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:35.336207" elapsed="0.000425"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i} % 10 == 0</arg>
+<arg>Log To Console</arg>
+<arg>Still waiting... (${i}s)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:35.337342" elapsed="0.000671"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2026-02-24T19:45:34.323677" elapsed="1.014620"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-24T19:45:36.339711" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-24T19:45:35.339104" elapsed="1.000779"/>
+</kw>
+<kw name="Get Modified Time" owner="OperatingSystem">
+<msg time="2026-02-24T19:45:36.340720" level="INFO" html="true">Last modified time of '&lt;a href="file://C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx"&gt;C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx&lt;/a&gt;' is 2026-02-24 19:43:25.</msg>
+<msg time="2026-02-24T19:45:36.340858" level="INFO">${current_time} = 2026-02-24 19:43:25</msg>
+<var>${current_time}</var>
+<arg>${excel_path}</arg>
+<doc>Returns the last modification time of a file or directory.</doc>
+<status status="PASS" start="2026-02-24T19:45:36.340149" elapsed="0.000750"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-02-24T19:45:36.341639" level="FAIL">2026-02-24 19:43:25 == 2026-02-24 19:43:25</msg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="FAIL" start="2026-02-24T19:45:36.341310" elapsed="0.000426">2026-02-24 19:43:25 == 2026-02-24 19:43:25</status>
+</kw>
+<msg time="2026-02-24T19:45:36.341870" level="INFO">${saved} = False</msg>
+<var>${saved}</var>
+<arg>Should Not Be Equal</arg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-24T19:45:36.341107" elapsed="0.000798"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${saved}</arg>
+<arg>Log To Console</arg>
+<arg>\nFile modified at: ${current_time}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:36.342087" elapsed="0.000155"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${saved}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:36.342400" elapsed="0.000179"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i} % 10 == 0</arg>
+<arg>Log To Console</arg>
+<arg>Still waiting... (${i}s)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:36.342740" elapsed="0.000223"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2026-02-24T19:45:35.338727" elapsed="1.004315"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-24T19:45:37.344079" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-24T19:45:36.343348" elapsed="1.001086"/>
+</kw>
+<kw name="Get Modified Time" owner="OperatingSystem">
+<msg time="2026-02-24T19:45:37.345662" level="INFO" html="true">Last modified time of '&lt;a href="file://C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx"&gt;C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\data\retail_flow_input.xlsx&lt;/a&gt;' is 2026-02-24 19:45:37.</msg>
+<msg time="2026-02-24T19:45:37.345889" level="INFO">${current_time} = 2026-02-24 19:45:37</msg>
+<var>${current_time}</var>
+<arg>${excel_path}</arg>
+<doc>Returns the last modification time of a file or directory.</doc>
+<status status="PASS" start="2026-02-24T19:45:37.344955" elapsed="0.000998"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-02-24T19:45:37.346709" elapsed="0.000412"/>
+</kw>
+<msg time="2026-02-24T19:45:37.347306" level="INFO">${saved} = True</msg>
+<var>${saved}</var>
+<arg>Should Not Be Equal</arg>
+<arg>${original_time}</arg>
+<arg>${current_time}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-24T19:45:37.346374" elapsed="0.000976"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nFile modified at: ${current_time}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-24T19:45:37.347963" elapsed="0.003789"/>
+</kw>
+<arg>${saved}</arg>
+<arg>Log To Console</arg>
+<arg>\nFile modified at: ${current_time}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:37.347602" elapsed="0.004357"/>
+</kw>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<msg time="2026-02-24T19:45:37.352678" level="INFO">Exiting for loop altogether.</msg>
+<arg>${saved}</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:37.352244" elapsed="0.000657"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${i} % 10 == 0</arg>
+<arg>Log To Console</arg>
+<arg>Still waiting... (${i}s)</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2026-02-24T19:45:37.353234" elapsed="0.000074"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2026-02-24T19:45:36.343231" elapsed="1.010182"/>
+</iter>
+<var>${i}</var>
+<value>120</value>
+<status status="PASS" start="2026-02-24T19:45:32.308714" elapsed="5.044825"/>
+</for>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nFile saved! Closing Excel and continuing test...</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-24T19:45:37.354277" elapsed="0.000731"/>
+</kw>
+<kw name="Run" owner="OperatingSystem">
+<msg time="2026-02-24T19:45:37.416415" level="INFO">Running command 'taskkill /F /IM EXCEL.EXE 2&gt;&amp;1'.</msg>
+<arg>taskkill /F /IM EXCEL.EXE</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<status status="PASS" start="2026-02-24T19:45:37.355595" elapsed="0.857411"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-24T19:45:40.214604" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-24T19:45:38.213793" elapsed="2.001138"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-24T19:45:40.216772" level="INFO">Opening browser 'chrome' to base url 'http://172.21.0.93:6661/finairoLending-1.0.1/LoginPage?tid=139&amp;lang=en'.</msg>
+<arg>${LOS_QC_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-24T19:45:40.215780" elapsed="5.062292"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-24T19:45:45.278897" elapsed="0.048044"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-24T19:45:45.327446" elapsed="0.002587"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-02-24T19:45:55.862228" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-24T19:45:55.862534" level="FAIL">Element 'id=relogin' not visible after 2 seconds.</msg>
+<arg>id=relogin</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-02-24T19:45:45.331183" elapsed="10.540503">Element 'id=relogin' not visible after 2 seconds.</status>
+</kw>
+<msg time="2026-02-24T19:45:55.871984" level="INFO">${relogin_present} = False</msg>
+<var>${relogin_present}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id=relogin</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-24T19:45:45.330688" elapsed="10.541363"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${relogin_present}</arg>
+<arg>Click Element</arg>
+<arg>id=relogin</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-24T19:45:55.872785" elapsed="0.000392"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginId</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-24T19:45:55.874551" elapsed="0.052358"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-24T19:45:55.927971" level="INFO">Typing text 'user1' into text field 'id=loginId'.</msg>
+<arg>id=loginId</arg>
+<arg>${LOGIN_ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-24T19:45:55.927530" elapsed="0.230762"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-24T19:45:56.159211" level="INFO">Typing text 'abcd@1234' into text field 'id=uiPwd'.</msg>
+<arg>id=uiPwd</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-24T19:45:56.158785" elapsed="0.171622"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-24T19:45:56.331253" level="INFO">Clicking element 'id=userLogin'.</msg>
+<arg>id=userLogin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-24T19:45:56.330910" elapsed="8.346240"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-24T19:46:07.679463" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-24T19:46:04.678167" elapsed="3.001895"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-24T19:46:07.682806" level="INFO">Clicking element 'xpath=//*[@id="htmlRoot"]/body/div[1]/header/div/div/div/div/div/div[2]/ul[2]/li[4]/a'.</msg>
+<arg>xpath=//*[@id="htmlRoot"]/body/div[1]/header/div/div/div/div/div/div[2]/ul[2]/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-24T19:46:07.681710" elapsed="9.280026"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-24T19:46:18.964735" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-24T19:46:16.963056" elapsed="2.002300"/>
+</kw>
+<kw name="Fill Lead Details From CSV">
+<kw name="Read CSV Data">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-24T19:46:18.973944" level="INFO">${excel_path} = C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\tests\los/../../data/retail_flow_input.xlsx</msg>
+<var>${excel_path}</var>
+<arg>C:\\Users\\omkar.patil\\Downloads\\kfic-automation-framework\\kfic-automation-framework\\tests\\los/../../data/retail_flow_input.xlsx</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-24T19:46:18.972848" elapsed="0.001349"/>
+</kw>
+<kw name="Open Excel Document">
+<msg time="2026-02-24T19:46:18.987997" level="FAIL">No keyword with name 'Open Excel Document' found.</msg>
+<arg>${excel_path}</arg>
+<arg>doc_id=retail_input</arg>
+<status status="FAIL" start="2026-02-24T19:46:18.987789" elapsed="0.000376">No keyword with name 'Open Excel Document' found.</status>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<var>${data}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.988683" elapsed="0.000097"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Read Excel Cell">
+<var>${field}</var>
+<arg>${row}</arg>
+<arg>1</arg>
+<arg>doc_id=retail_input</arg>
+<status status="NOT RUN" start="2026-02-24T19:46:18.989660" elapsed="0.000095"/>
+</kw>
+<kw name="Read Excel Cell">
+<var>${value}</var>
+<arg>${row}</arg>
+<arg>2</arg>
+<arg>doc_id=retail_input</arg>
+<status status="NOT RUN" start="2026-02-24T19:46:18.991017" elapsed="0.000142"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${field}' != 'None'</arg>
+<arg>Set To Dictionary</arg>
+<arg>${data}</arg>
+<arg>${field}</arg>
+<arg>${value}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.991602" elapsed="0.000116"/>
+</kw>
+<var name="${row}"/>
+<status status="NOT RUN" start="2026-02-24T19:46:18.989307" elapsed="0.002586"/>
+</iter>
+<var>${row}</var>
+<value>2</value>
+<value>20</value>
+<status status="NOT RUN" start="2026-02-24T19:46:18.989016" elapsed="0.003044"/>
+</for>
+<kw name="Close Current Excel Document">
+<status status="NOT RUN" start="2026-02-24T19:46:18.992498" elapsed="0.000088"/>
+</kw>
+<return>
+<value>${data}</value>
+<status status="NOT RUN" start="2026-02-24T19:46:18.992748" elapsed="0.000104"/>
+</return>
+<var>${data}</var>
+<doc>Reads data from Excel file</doc>
+<status status="FAIL" start="2026-02-24T19:46:18.971616" elapsed="0.021753">No keyword with name 'Open Excel Document' found.</status>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${id_type}</var>
+<arg>${data}</arg>
+<arg>ID_Type</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.993971" elapsed="0.000153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=idTypeDiv</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.994706" elapsed="0.000146"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.995190" elapsed="0.000250"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${id_type}' == 'Civil ID Number'</arg>
+<arg>Click Element</arg>
+<arg>xpath=/html/body/span/span/span[2]/ul/li[2]</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>xpath=/html/body/span/span/span[2]/ul/li[3]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.996137" elapsed="0.000172"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.996767" elapsed="0.000092"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${id_number}</var>
+<arg>${data}</arg>
+<arg>ID_Number</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.997181" elapsed="0.000086"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=idNumberDiv</arg>
+<arg>${id_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.997585" elapsed="0.000060"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.997871" elapsed="0.000059"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${customer_name}</var>
+<arg>${data}</arg>
+<arg>Customer_Name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.998141" elapsed="0.000059"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[4]/div[1]/div/input</arg>
+<arg>${customer_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.998439" elapsed="0.000084"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.998924" elapsed="0.000102"/>
+</kw>
+<kw name="Translate To Arabic" owner="arabic_translator">
+<var>${arabic_name}</var>
+<arg>${customer_name}</arg>
+<doc>Simple English to Arabic transliteration
+For proper translation, use Google Translate API</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.999292" elapsed="0.000060"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[4]/div[2]/div/input</arg>
+<arg>${arabic_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.999578" elapsed="0.000059"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:18.999845" elapsed="0.000061"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${nationality}</var>
+<arg>${data}</arg>
+<arg>Nationality</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.000262" elapsed="0.000102"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=nationalityId</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.000655" elapsed="0.000082"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.001090" elapsed="0.000117"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@class='select2-search__field']</arg>
+<arg>${nationality}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.001617" elapsed="0.000110"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.002147" elapsed="0.000130"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>xpath=//input[@class='select2-search__field']</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.002698" elapsed="0.000080"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.003018" elapsed="0.000060"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${email}</var>
+<arg>${data}</arg>
+<arg>Email</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.003297" elapsed="0.000058"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[5]/div[5]/div/input</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.003683" elapsed="0.000088"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.004123" elapsed="0.000101"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${mobile}</var>
+<arg>${data}</arg>
+<arg>Mobile_Number</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.004600" elapsed="0.000096"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[5]/div[6]/div/div/div[2]/div/input</arg>
+<arg>${mobile}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.005029" elapsed="0.000065"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.005563" elapsed="0.000066"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${product}</var>
+<arg>${data}</arg>
+<arg>Product</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.005855" elapsed="0.000058"/>
+</kw>
+<kw name="Map Product To Value">
+<var>${product_value}</var>
+<arg>${product}</arg>
+<doc>Maps product name to value</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.006279" elapsed="0.000067"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id=product</arg>
+<arg>${product_value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.006595" elapsed="0.000061"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.006869" elapsed="0.000059"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${subproduct}</var>
+<arg>${data}</arg>
+<arg>SubProduct</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.007138" elapsed="0.000058"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>id=subProduct</arg>
+<arg>${subproduct}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.007427" elapsed="0.000060"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.007692" elapsed="0.000057"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[5]/div[10]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.007966" elapsed="0.000056"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.008217" elapsed="0.000055"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.008487" elapsed="0.000055"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.008732" elapsed="0.000055"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[5]/div[11]/div/input</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.009000" elapsed="0.000057"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.009260" elapsed="0.000056"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[5]/div[11]/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.009529" elapsed="0.000055"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.009779" elapsed="0.000055"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.010044" elapsed="0.000056"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.010292" elapsed="0.000055"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[5]/div[12]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.010557" elapsed="0.000055"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.010806" elapsed="0.000056"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.011068" elapsed="0.000057"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.011415" elapsed="0.000097"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[5]/div[13]/div/input</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.011900" elapsed="0.000101"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.012373" elapsed="0.000105"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[5]/div[13]/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.012833" elapsed="0.000132"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.013257" elapsed="0.000075"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.013598" elapsed="0.000070"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.013908" elapsed="0.000071"/>
+</kw>
+<doc>Fills lead form with CSV data</doc>
+<status status="FAIL" start="2026-02-24T19:46:18.969195" elapsed="0.045141">No keyword with name 'Open Excel Document' found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/main/div[2]/div/div/div/div[1]/div/form/div/div/div/div/div[2]/div/div[3]/div[2]/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.014896" elapsed="0.000070"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.015758" elapsed="0.000081"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${alert_present}</var>
+<arg>Alert Should Be Present</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.016306" elapsed="0.000092"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${alert_present}</arg>
+<arg>Run Keywords</arg>
+<arg>Log</arg>
+<arg>No duplicate record found - Alert handled</arg>
+<arg>AND</arg>
+<arg>Handle Alert</arg>
+<arg>action=ACCEPT</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Duplicate record found in LMS</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.017138" elapsed="0.000095"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.018266" elapsed="0.000105"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//button[text()='Save']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.018988" elapsed="0.000087"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.019585" elapsed="0.000080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//button[text()='Convert to Application']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.020123" elapsed="0.000072"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.020608" elapsed="0.000070"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Lead converted to application successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.021334" elapsed="0.000073"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-02-24T19:46:19.021821" elapsed="0.000068"/>
+</kw>
+<doc>Create lead and convert to application</doc>
+<tag>application_conversion</tag>
+<tag>lead_creation</tag>
+<status status="FAIL" start="2026-02-24T19:45:32.014298" elapsed="47.008141">No keyword with name 'Open Excel Document' found.</status>
+</test>
+<doc>LOS Retail Flow - ⚠️ UPDATE data/retail_flow_input.csv BEFORE RUNNING!</doc>
+<status status="FAIL" start="2026-02-24T19:45:31.605664" elapsed="47.418790"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">application_conversion</stat>
+<stat pass="0" fail="1" skip="0">lead_creation</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="LOS Retail Flow">LOS Retail Flow</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-24T19:45:32.004645" level="ERROR">Error in file 'C:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\tests\los\LOS_Retail_Flow.robot' on line 7: Importing library 'ExcelLibrary' failed: ModuleNotFoundError: No module named 'ExcelLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\omkar.patil\AppData\Local\Programs\Python\Python313\Scripts\robot.exe
+  C:\Users\omkar.patil\AppData\Local\Programs\Python\Python313\python313.zip
+  C:\Users\omkar.patil\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\omkar.patil\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\omkar.patil\AppData\Local\Programs\Python\Python313
+  C:\Users\omkar.patil\AppData\Local\Programs\Python\Python313\Lib\site-packages</msg>
+</errors>
+</robot>
