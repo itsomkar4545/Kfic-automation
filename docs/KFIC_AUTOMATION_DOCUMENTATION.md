@@ -876,6 +876,408 @@ python send_email_report.py
 
 ---
 
+## Section 13: Coding Concepts - Robot Framework, Python & How It All Works
+
+### 13.1 Robot Framework Kya Hai?
+Robot Framework ek **test automation tool** hai jismein tum English jaisi language mein test likhte ho. Yeh Python pe based hai.
+
+**Normal Python:**
+```python
+driver.find_element(By.ID, "loginId").send_keys("20")
+```
+**Robot Framework (same kaam, easy language):**
+```robot
+Input Text    id=loginId    20
+```
+Dono same kaam karte hain — but Robot Framework padhne mein easy hai.
+
+### 13.2 Robot File ka Structure (.robot file)
+Har `.robot` file mein **4 sections** hote hain:
+
+```robot
+*** Settings ***        # Section 1: Imports (libraries, resources)
+*** Variables ***       # Section 2: Variables (data store)
+*** Test Cases ***      # Section 3: Actual tests (yeh run hote hain)
+*** Keywords ***        # Section 4: Custom functions (reusable steps)
+```
+
+**Real Example:**
+```robot
+*** Settings ***
+Library    SeleniumLibrary              # Browser control library import
+Resource   ../../pages/common_keywords.robot   # Apni keywords file import
+
+*** Variables ***
+${LOGIN_ID}    20                       # Variable — value store karta hai
+${PASSWORD}    abcd@1234
+
+*** Test Cases ***
+My First Test                           # Test case name
+    Open Browser    https://google.com    chrome    # Step 1
+    Input Text    name=q    Robot Framework          # Step 2
+    Close Browser                                     # Step 3
+
+*** Keywords ***
+My Custom Keyword                       # Apna function banaya
+    Log    Hello World                  # Print karta hai
+```
+
+### 13.3 Variables (Data Store Karna)
+
+Robot Framework mein 4 type ke variables hain:
+
+| Type | Syntax | Example | Kya store karta hai |
+|---|---|---|---|
+| **Scalar** | `${NAME}` | `${LOGIN_ID}    20` | Ek single value (string, number) |
+| **List** | `@{NAME}` | `@{USERS}    USER1    USER2    USER3` | Multiple values (array) |
+| **Dictionary** | `&{NAME}` | `&{MAP}    key1=val1    key2=val2` | Key-value pairs |
+| **Empty** | `${EMPTY}` | `${CUSTOMER_ID}    ${EMPTY}` | Khaali value |
+
+**Variable kaise use karte hain:**
+```robot
+*** Variables ***
+${NAME}      Omkar                    # Define karo
+${AGE}       25
+
+*** Test Cases ***
+Test Variable
+    Log    My name is ${NAME}         # Use karo — Output: My name is Omkar
+    Log    Age is ${AGE}
+```
+
+**Global Variable (sab jagah accessible):**
+```robot
+Set Global Variable    ${CUSTOMER_ID}    200125
+# Ab ${CUSTOMER_ID} kisi bhi keyword mein use ho sakta hai
+```
+
+**Test Variable (sirf current test mein):**
+```robot
+Set Test Variable    ${day}    15
+# Sirf is test case mein accessible hai
+```
+
+### 13.4 Keywords (Functions/Methods)
+
+Keyword = Function. Reusable steps jo baar baar use ho sakti hain.
+
+**Simple Keyword (no arguments):**
+```robot
+*** Keywords ***
+Logout From Application
+    Click Element    ${XPATH_LOGOUT}     # Step 1
+    Sleep    2s                           # Step 2
+```
+**Call kaise karo:** Bas naam likho
+```robot
+Logout From Application
+```
+
+**Keyword with Arguments (inputs):**
+```robot
+*** Keywords ***
+Login To Application
+    [Arguments]    ${username}    ${password}       # 2 inputs accept karta hai
+    Input Text    id=loginId    ${username}
+    Input Text    id=uiPwd    ${password}
+    Click Element    id=userLogin
+```
+**Call kaise karo:**
+```robot
+Login To Application    20    abcd@1234
+#                       ↑↑    ↑↑↑↑↑↑↑↑↑
+#                    username  password
+```
+
+**Keyword with Return Value:**
+```robot
+*** Keywords ***
+Read Customer Search Data From Excel
+    [Arguments]    ${excel_path}
+    ${data}=    Read Excel Data    ${excel_path}    # Python function call
+    RETURN    ${data}                                # Value return karo
+```
+**Call kaise karo:**
+```robot
+${data}=    Read Customer Search Data From Excel    ${excel_path}
+# Ab ${data} mein Excel ka data hai
+```
+
+### 13.5 Built-in Keywords (Robot Framework ke apne)
+
+Yeh keywords pehle se bane hue hain — bas use karo:
+
+| Keyword | Kya karta hai | Example |
+|---|---|---|
+| `Log` | Console/log mein print karta hai | `Log    Hello World` |
+| `Sleep` | Wait karta hai | `Sleep    3s` |
+| `Set Variable` | Variable set karta hai | `${x}=    Set Variable    hello` |
+| `Should Be Equal` | 2 values compare karta hai | `Should Be Equal    ${a}    ${b}` |
+| `Should Be True` | Condition check karta hai | `Should Be True    ${is_checked}` |
+| `Run Keyword If` | If condition | `Run Keyword If    ${x}    Do Something` |
+| `Run Keyword And Return Status` | Try-catch jaisa | Returns True/False |
+| `FOR ... IN` | Loop | `FOR    ${item}    IN    @{list}` |
+| `Get From Dictionary` | Dictionary se value lo | `${val}=    Get From Dictionary    ${dict}    key` |
+| `Convert To String` | Type convert | `${str}=    Convert To String    ${number}` |
+| `Convert To Upper Case` | Uppercase | `${upper}=    Convert To Upper Case    hello` |
+| `Create List` | List banao | `@{list}=    Create List    a    b    c` |
+| `Get Length` | Length nikalo | `${len}=    Get Length    ${list}` |
+| `Evaluate` | Python expression run karo | `${rand}=    Evaluate    random.randint(0,5)    modules=random` |
+
+### 13.6 SeleniumLibrary Keywords (Browser Control)
+
+Yeh keywords browser control karte hain:
+
+| Keyword | Kya karta hai | Example |
+|---|---|---|
+| `Open Browser` | Browser open karo | `Open Browser    ${URL}    chrome` |
+| `Close Browser` | Browser band karo | `Close Browser` |
+| `Maximize Browser Window` | Full screen | `Maximize Browser Window` |
+| `Click Element` | Element pe click | `Click Element    id=loginBtn` |
+| `Input Text` | Text type karo | `Input Text    id=name    Omkar` |
+| `Clear Element Text` | Field khaali karo | `Clear Element Text    id=name` |
+| `Select From List By Value` | Dropdown select (value se) | `Select From List By Value    id=country    KWT` |
+| `Select From List By Label` | Dropdown select (text se) | `Select From List By Label    id=area    SALMIYA` |
+| `Wait Until Element Is Visible` | Element dikhne tak wait | `Wait Until Element Is Visible    id=btn    timeout=15s` |
+| `Get Element Attribute` | Attribute read karo | `${val}=    Get Element Attribute    id=name    value` |
+| `Get Text` | Element ka text lo | `${txt}=    Get Text    id=label` |
+| `Execute JavaScript` | JS code run karo | `Execute JavaScript    document.body.style.zoom='75%'` |
+| `Choose File` | File upload | `Choose File    id=upload    C:\\file.pdf` |
+| `Select Frame` | iframe mein jao | `Select Frame    id=myFrame` |
+| `Unselect Frame` | iframe se bahar aao | `Unselect Frame` |
+| `Press Keys` | Keyboard keys press | `Press Keys    id=field    CTRL+a` |
+| `Capture Page Screenshot` | Screenshot lo | `Capture Page Screenshot` |
+| `Set Selenium Implicit Wait` | Default wait set | `Set Selenium Implicit Wait    10` |
+
+### 13.7 Element Locators (Element Kaise Dhundhte Hain)
+
+Browser mein har element ka ek address hota hai. Robot Framework mein yeh locators use hote hain:
+
+| Locator | Syntax | Example | Kab use karo |
+|---|---|---|---|
+| **id** | `id=value` | `id=loginId` | Jab element ka unique id ho |
+| **name** | `name=value` | `name=cifNo` | Jab name attribute ho |
+| **xpath** | `xpath=//path` | `xpath=//button[@id='save']` | Jab complex path chahiye |
+| **css** | `css=selector` | `css=#loginBtn` | CSS selector se |
+| **class** | `class=value` | `class=item-nav` | Class name se |
+
+**XPATH Examples (sabse zyada use hota hai):**
+```
+//button[@id='save']                    → id se dhundho
+//input[@type='radio']                  → type se dhundho
+//li[@id='SERVICE']/a                   → parent ke andar child
+//table//tr[td[contains(text(),'200')]] → text contain karta ho
+//span[@aria-labelledby='select2-country-container']  → attribute se
+```
+
+### 13.8 Resource & Library (Import Karna)
+
+```robot
+*** Settings ***
+Library    SeleniumLibrary                    # Built-in library import
+Library    Collections                         # Dictionary/List operations
+Library    String                              # String operations
+Library    OperatingSystem                     # File operations
+Library    ../../utils/excel_reader.py         # Custom Python file import
+Resource   ../../pages/common_keywords.robot   # Another .robot file import
+Resource   ../../config/environment.robot      # Config file import
+```
+
+| Keyword | Kya import karta hai | Kab use karo |
+|---|---|---|
+| `Library` | Python library ya .py file | SeleniumLibrary, Collections, custom .py |
+| `Resource` | Another .robot file | Keywords, variables share karne ke liye |
+
+### 13.9 Python Integration (Robot + Python)
+
+Robot Framework Python pe chalta hai. Tum apni Python functions directly Robot mein use kar sakte ho.
+
+**Step 1: Python file banao** (`utils/excel_reader.py`)
+```python
+import openpyxl
+
+def read_excel_data(file_path):          # Function name = Robot keyword name
+    wb = openpyxl.load_workbook(file_path)
+    ws = wb.active
+    data = {}
+    headers = [cell.value for cell in ws[1]]
+    values = [cell.value for cell in ws[2]]
+    for i, header in enumerate(headers):
+        if header and i < len(values):
+            data[str(header)] = str(values[i]) if values[i] is not None else ''
+    wb.close()
+    return data                           # Dictionary return karta hai
+```
+
+**Step 2: Robot mein import karo**
+```robot
+*** Settings ***
+Library    ../../utils/excel_reader.py
+```
+
+**Step 3: Robot mein use karo**
+```robot
+${data}=    Read Excel Data    ${excel_path}
+#           ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+#    Python function name (underscores → spaces, auto convert)
+```
+
+**Important Rule:** Python function `read_excel_data` Robot mein `Read Excel Data` ban jaata hai (underscores spaces ban jaate hain, case insensitive).
+
+### 13.10 Python Concepts Used in This Project
+
+**openpyxl (Excel Library):**
+```python
+import openpyxl
+wb = openpyxl.load_workbook('file.xlsx')   # Excel file open
+ws = wb.active                              # Active sheet lo
+cell_value = ws.cell(row=1, column=1).value # Cell read karo (A1)
+ws['A1'] = 'Hello'                          # Cell mein likho
+wb.save('file.xlsx')                        # Save karo
+wb.close()                                  # Band karo
+```
+
+**Dictionary (key-value pairs):**
+```python
+data = {'Customer ID': '200125', 'Name': 'Omkar'}
+print(data['Customer ID'])    # Output: 200125
+```
+
+**String operations:**
+```python
+str(value)                    # Kuch bhi string mein convert
+value.strip()                 # Extra spaces hatao
+value.lower()                 # Lowercase
+date_str.split('-')           # Split karo: '01-02-2024' → ['01','02','2024']
+```
+
+**datetime (Date handling):**
+```python
+from datetime import datetime
+dt = datetime.strptime('01/02/2024', '%d/%m/%Y')   # String → Date object
+formatted = dt.strftime('%d-%m-%Y')                  # Date → String (01-02-2024)
+```
+
+**os (File paths):**
+```python
+import os
+filepath = os.path.join(folder, 'file.xlsx')   # Path banao safely
+```
+
+**random (Random selection):**
+```python
+import random
+random.randint(0, 5)          # 0 se 5 ke beech random number
+```
+
+### 13.11 FOR Loop (Robot Framework)
+```robot
+# List pe loop
+FOR    ${item}    IN    apple    banana    cherry
+    Log    Fruit: ${item}
+END
+
+# Humne kaise use kiya (change_address.robot):
+FOR    ${addr_type}    IN    RESIDENTIAL    PERMANENT    BUSINESS
+    ${addr_data}=    Get From Dictionary    ${addresses}    ${addr_type}
+    Route Address Action    ${addr_type}    ${addr_data}
+END
+```
+
+### 13.12 IF Condition (Robot Framework)
+```robot
+# Simple if
+Run Keyword If    '${action}' == 'Create'    Create Address Section    ${data}
+
+# If-Else
+Run Keyword If    '${action}' == 'Create'    Create Address Section    ${data}
+...    ELSE IF    '${action}' == 'Edit'    Edit Address Section    ${addr_type}    ${data}
+...    ELSE    Log    Skipping
+
+# Try-Catch jaisa (error handle karo)
+${status}=    Run Keyword And Return Status    Click Element    id=someBtn
+# ${status} = True agar click hua, False agar element nahi mila
+Run Keyword If    ${status}    Log    Button clicked!
+```
+
+### 13.13 Test Case Tags
+```robot
+*** Test Cases ***
+Change Address Request
+    [Documentation]    Service request for address change
+    [Tags]    change_address                    # Tag lagao
+    [Teardown]    Run Keyword If Test Failed    Capture Page Screenshot   # Fail pe screenshot
+```
+
+| Setting | Kya karta hai |
+|---|---|
+| `[Documentation]` | Test ka description |
+| `[Tags]` | Labels — filter karne ke liye (`--include tag_name`) |
+| `[Teardown]` | Test end hone pe (pass ya fail) yeh run hoga |
+| `[Arguments]` | Keyword ke inputs define karo |
+
+### 13.14 Sleep vs Wait (Important Difference)
+```robot
+Sleep    3s
+# HARD WAIT — 3 second rukega chahe element aa jaye ya na aaye. Slow but safe.
+
+Wait Until Element Is Visible    id=btn    timeout=15s
+# SMART WAIT — jaise hi element dikhe, aage badh jayega. Max 15 sec wait karega.
+```
+**Best Practice:** `Wait Until Element Is Visible` use karo jab bhi possible ho. `Sleep` sirf tab use karo jab koi aur option na ho.
+
+### 13.15 Execute JavaScript (Kab aur Kyun)
+Kabhi kabhi normal Selenium commands kaam nahi karte — tab JavaScript directly run karte hain:
+
+```robot
+# Element click nahi ho raha (hidden hai ya covered hai)
+Execute JavaScript    document.getElementById('accountNumber1').click()
+
+# Page zoom set karna
+Execute JavaScript    document.body.style.zoom='75%'
+
+# Field value clear karna
+Execute JavaScript    document.getElementById('addressStartDate').value = ''
+
+# Element scroll karna
+Execute JavaScript    var elem = document.getElementById('btn'); elem.scrollIntoView({block: 'center'});
+
+# Value read karna
+${is_checked}=    Execute JavaScript    return document.getElementById('accountNumber1').checked
+```
+
+### 13.16 Dictionary Operations (Bahut Use Hota Hai)
+```robot
+# Dictionary banao
+&{MY_MAP}    key1=value1    key2=value2
+
+# Value nikalo
+${val}=    Get From Dictionary    ${MY_MAP}    key1
+# ${val} = value1
+
+# Check ki key hai ya nahi
+${has_key}=    Run Keyword And Return Status
+...    Dictionary Should Contain Key    ${MY_MAP}    key1
+
+# Humne kaise use kiya:
+${cust_type_val}=    Get From Dictionary    ${CUST_TYPE_MAP}    Main Applicant
+# ${cust_type_val} = 101
+```
+
+### 13.17 File Structure Summary — Kya Kahan Likhte Hain
+
+| Kya likhna hai | Kahan likhte hain | Example |
+|---|---|---|
+| XPATHs / Locators | `pages/*.robot` ke Variables section | `${XPATH_LOGIN_BTN}    //button[@id='login']` |
+| Shared Keywords | `pages/common_keywords.robot` | Login, Search, Logout |
+| Test-specific Keywords | Test file ke Keywords section | Process Address Changes |
+| Test Cases | `tests/*.robot` ke Test Cases section | Change Address Request |
+| Python helpers | `utils/*.py` | excel_reader.py, address_reader.py |
+| Test Data | `data/*.xlsx` | customer_search.xlsx |
+| Config/URLs | `config/*.robot` | environment.robot |
+
+---
+
 **Document maintained by:** Omkar Patil
 **GitHub:** https://github.com/itsomkar4545/Kfic-automation
 **Framework:** Robot Framework + Selenium + Python
