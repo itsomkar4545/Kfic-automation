@@ -11,7 +11,7 @@ Resource         ../../pages/service_request_page.robot
 
 *** Variables ***
 ${LOGIN_ID}      20
-${PASSWORD}      abcd@1234
+# PASSWORD is loaded from environment.robot via common_keywords.robot
 ${DOCUMENT_FOLDER}    C:\\Users\\omkar.patil\\OneDrive - KIYA.AI\\Desktop\\Omkar\\Customer ID Proof
 ${CUSTOMER_ID}   ${EMPTY}
 ${SELECTED_MANAGER_USER}    ${EMPTY}

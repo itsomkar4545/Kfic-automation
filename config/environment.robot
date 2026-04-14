@@ -25,6 +25,10 @@ ${LOS_QC_URL}    http://172.21.0.93:6661/finairoLending-1.0.1/LoginPage?tid=139&
 ...    uat_port=3306
 ...    uat_name=kfic_uat
 
+# Credentials (override via env vars or command line --variable)
+${PASSWORD}       %{KFIC_PASSWORD=abcd@1234}
+${DOCUMENT_FOLDER}    %{KFIC_DOC_FOLDER=C:\\Users\\omkar.patil\\OneDrive - KIYA.AI\\Desktop\\Omkar\\Customer ID Proof}
+
 # Browser Configuration
 ${BROWSER}        chrome
 ${HEADLESS}       False

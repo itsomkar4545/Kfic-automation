@@ -5,7 +5,7 @@ Resource         ../../pages/common_keywords.robot
 
 *** Variables ***
 ${LOGIN_ID}      20
-${PASSWORD}      abcd@1234
+# PASSWORD is loaded from environment.robot via common_keywords.robot
 ${CUSTOMER_ID}   ${EMPTY}
 ${EXCEL_PATH}    ${CURDIR}/../../data/partial_settlement.xlsx
 

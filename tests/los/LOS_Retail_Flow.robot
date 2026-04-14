@@ -11,7 +11,7 @@ Resource         ../../config/environment.robot
 *** Variables ***
 ${LOS_QC_URL}    http://172.21.0.93:6661/finairoLending-1.0.1/LoginPage?tid=139&lang=en
 ${LOGIN_ID}      user1
-${PASSWORD}      abcd@1234
+# PASSWORD is loaded from environment.robot
 ${SCREENSHOT_DIR}    ${CURDIR}/../../screenshots
 
 # Relative XPath Variables

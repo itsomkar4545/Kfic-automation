@@ -1,0 +1,899 @@
+    INFO: 2026-03-29 12:25:30,175:               log.py:   20: Logging to c:\Users\omkar.patil\Downloads\kfic-automation-framework\kfic-automation-framework\mdpdf.log
+   DEBUG: 2026-03-29 12:25:30,176:               cli.py:  103: docs\KFIC_AUTOMATION_DOCUMENTATION_EN.md
+    INFO: 2026-03-29 12:25:30,176:         converter.py:   14: docs\KFIC_AUTOMATION_DOCUMENTATION_EN.md
+   DEBUG: 2026-03-29 12:25:30,193:      pdf_renderer.py:  470: printSegment: KFIC Automation Framework — Technical Documentation
+   DEBUG: 2026-03-29 12:25:30,213:      pdf_renderer.py:  470: printSegment: Author:
+   DEBUG: 2026-03-29 12:25:30,218:      pdf_renderer.py:  470: printSegment:  Omkar Patil
+   DEBUG: 2026-03-29 12:25:30,222:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,224:      pdf_renderer.py:  470: printSegment: GitHub:
+   DEBUG: 2026-03-29 12:25:30,226:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,227:      pdf_renderer.py:  470: printSegment: https://github.com/itsomkar4545/Kfic-automation
+   DEBUG: 2026-03-29 12:25:30,229:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,230:      pdf_renderer.py:  470: printSegment: Version:
+   DEBUG: 2026-03-29 12:25:30,232:      pdf_renderer.py:  470: printSegment:  1.0
+   DEBUG: 2026-03-29 12:25:30,233:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,234:      pdf_renderer.py:  470: printSegment: Last
+   DEBUG: 2026-03-29 12:25:30,235:      pdf_renderer.py:  470: printSegment: Updated:
+   DEBUG: 2026-03-29 12:25:30,236:      pdf_renderer.py:  470: printSegment:  February 2026
+   DEBUG: 2026-03-29 12:25:30,239:      pdf_renderer.py:  470: printSegment: Table of Contents
+   DEBUG: 2026-03-29 12:25:30,240:      pdf_renderer.py:  470: printSegment:  1 
+   DEBUG: 2026-03-29 12:25:30,241:      pdf_renderer.py:  470: printSegment: Project Overview
+   DEBUG: 2026-03-29 12:25:30,242:      pdf_renderer.py:  470: printSegment:  2 
+   DEBUG: 2026-03-29 12:25:30,244:      pdf_renderer.py:  470: printSegment: Setup 
+   DEBUG: 2026-03-29 12:25:30,245:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-03-29 12:25:30,247:      pdf_renderer.py:  470: printSegment:  Installation
+   DEBUG: 2026-03-29 12:25:30,248:      pdf_renderer.py:  470: printSegment:  3 
+   DEBUG: 2026-03-29 12:25:30,249:      pdf_renderer.py:  470: printSegment: Project Structure
+   DEBUG: 2026-03-29 12:25:30,250:      pdf_renderer.py:  470: printSegment:  4 
+   DEBUG: 2026-03-29 12:25:30,250:      pdf_renderer.py:  470: printSegment: Common Keywords
+   DEBUG: 2026-03-29 12:25:30,251:      pdf_renderer.py:  470: printSegment:  5 
+   DEBUG: 2026-03-29 12:25:30,252:      pdf_renderer.py:  470: printSegment: Service Request Page — Locators
+   DEBUG: 2026-03-29 12:25:30,266:      pdf_renderer.py:  470: printSegment:  6 
+   DEBUG: 2026-03-29 12:25:30,267:      pdf_renderer.py:  470: printSegment: Change Address — Full Implementation
+   DEBUG: 2026-03-29 12:25:30,268:      pdf_renderer.py:  470: printSegment:  7 
+   DEBUG: 2026-03-29 12:25:30,268:      pdf_renderer.py:  470: printSegment: All 25 Service Requests — Status
+   DEBUG: 2026-03-29 12:25:30,269:      pdf_renderer.py:  470: printSegment:  8 
+   DEBUG: 2026-03-29 12:25:30,270:      pdf_renderer.py:  470: printSegment: Excel Input Files 
+   DEBUG: 2026-03-29 12:25:30,271:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-03-29 12:25:30,272:      pdf_renderer.py:  470: printSegment:  Python Readers
+   DEBUG: 2026-03-29 12:25:30,273:      pdf_renderer.py:  470: printSegment:  9 
+   DEBUG: 2026-03-29 12:25:30,273:      pdf_renderer.py:  470: printSegment: Validation Logic
+   DEBUG: 2026-03-29 12:25:30,274:      pdf_renderer.py:  470: printSegment:  10 
+   DEBUG: 2026-03-29 12:25:30,275:      pdf_renderer.py:  470: printSegment: Test Execution
+   DEBUG: 2026-03-29 12:25:30,276:      pdf_renderer.py:  470: printSegment:  11 
+   DEBUG: 2026-03-29 12:25:30,276:      pdf_renderer.py:  470: printSegment: CI/CD — Jenkins 
+   DEBUG: 2026-03-29 12:25:30,277:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-03-29 12:25:30,278:      pdf_renderer.py:  470: printSegment:  Email
+   DEBUG: 2026-03-29 12:25:30,279:      pdf_renderer.py:  470: printSegment:  12 
+   DEBUG: 2026-03-29 12:25:30,280:      pdf_renderer.py:  470: printSegment: Coding Concepts
+   DEBUG: 2026-03-29 12:25:30,281:      pdf_renderer.py:  470: printSegment:  13 
+   DEBUG: 2026-03-29 12:25:30,282:      pdf_renderer.py:  470: printSegment: Change Log
+   DEBUG: 2026-03-29 12:25:30,285:      pdf_renderer.py:  470: printSegment: 1. Project Overview
+   DEBUG: 2026-03-29 12:25:30,289:      pdf_renderer.py:  470: printSegment: 1.1 Purpose
+   DEBUG: 2026-03-29 12:25:30,292:      pdf_renderer.py:  470: printSegment: A Test Automation Framework for the 
+   DEBUG: 2026-03-29 12:25:30,295:      pdf_renderer.py:  470: printSegment: KFIC Loan Origination System (LOS)
+   DEBUG: 2026-03-29 12:25:30,325:      pdf_renderer.py:  470: printSegment: . Automates browser-based
+   DEBUG: 2026-03-29 12:25:30,330:      pdf_renderer.py:  470: printSegment: operations — login, form filling, approvals, and closures — that were previously performed manually.
+   DEBUG: 2026-03-29 12:25:30,331:      pdf_renderer.py:  470: printSegment: 1.2 Objectives
+   DEBUG: 2026-03-29 12:25:30,333:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-03-29 12:25:30,335:      pdf_renderer.py:  470: printSegment: Eliminate repetitive manual testing.
+   DEBUG: 2026-03-29 12:25:30,338:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-03-29 12:25:30,340:      pdf_renderer.py:  470: printSegment: Reduce human errors.
+   DEBUG: 2026-03-29 12:25:30,342:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-03-29 12:25:30,344:      pdf_renderer.py:  470: printSegment: Enable fast, accurate, and repeatable test execution.
+   DEBUG: 2026-03-29 12:25:30,346:      pdf_renderer.py:  470: printSegment: 1.3 Technology Stack
+   DEBUG: 2026-03-29 12:25:30,348:      pdf_renderer.py:  470: printSegment: | # | Technology | Purpose |
+   DEBUG: 2026-03-29 12:25:30,350:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,352:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,353:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,355:      pdf_renderer.py:  470: printSegment: | 1 | Robot Framework 6.1 | Keyword-driven test automation |
+   DEBUG: 2026-03-29 12:25:30,357:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,360:      pdf_renderer.py:  470: printSegment: | 2 |
+   DEBUG: 2026-03-29 12:25:30,363:      pdf_renderer.py:  470: printSegment: SeleniumLibrary | Browser automation |
+   DEBUG: 2026-03-29 12:25:30,365:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,367:      pdf_renderer.py:  470: printSegment: | 3 | Python 3.13 | Helper scripts and data processing |
+   DEBUG: 2026-03-29 12:25:30,369:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,372:      pdf_renderer.py:  470: printSegment: | 4 | openpyxl | Excel
+   DEBUG: 2026-03-29 12:25:30,374:      pdf_renderer.py:  470: printSegment: file operations |
+   DEBUG: 2026-03-29 12:25:30,376:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,378:      pdf_renderer.py:  470: printSegment: | 5 | Chrome | Primary test browser |
+   DEBUG: 2026-03-29 12:25:30,380:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,382:      pdf_renderer.py:  470: printSegment: | 6 | Jenkins | CI/CD pipeline and email reports |
+   DEBUG: 2026-03-29 12:25:30,384:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,386:      pdf_renderer.py:  470: printSegment: | 7 | Git /
+   DEBUG: 2026-03-29 12:25:30,387:      pdf_renderer.py:  470: printSegment: GitHub | Version control |
+   DEBUG: 2026-03-29 12:25:30,388:      pdf_renderer.py:  470: printSegment: 1.4 Application Under Test
+   DEBUG: 2026-03-29 12:25:30,390:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-03-29 12:25:30,391:      pdf_renderer.py:  470: printSegment: URL:
+   DEBUG: 2026-03-29 12:25:30,392:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,394:      pdf_renderer.py:  470: printSegment: http://172.21.0.93:6661/finairoLending-1.0.1/LoginPage?tid=139&lang=en
+   DEBUG: 2026-03-29 12:25:30,396:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-03-29 12:25:30,398:      pdf_renderer.py:  470: printSegment: Environment:
+   DEBUG: 2026-03-29 12:25:30,400:      pdf_renderer.py:  470: printSegment:  QC | 
+   DEBUG: 2026-03-29 12:25:30,401:      pdf_renderer.py:  470: printSegment: Browser:
+   DEBUG: 2026-03-29 12:25:30,402:      pdf_renderer.py:  470: printSegment:  Chrome at 75% zoom
+   DEBUG: 2026-03-29 12:25:30,403:      pdf_renderer.py:  470: printSegment: 1.5 Workflow
+   DEBUG: 2026-03-29 12:25:30,405:      pdf_renderer.py:  470: printSegment: | Step | Action |
+   DEBUG: 2026-03-29 12:25:30,406:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,407:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:30,407:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,408:      pdf_renderer.py:  470: printSegment: | 1 | Read test data from Excel |
+   DEBUG: 2026-03-29 12:25:30,409:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,410:      pdf_renderer.py:  470: printSegment: | 2 | Open browser and login |
+   DEBUG: 2026-03-29 12:25:30,411:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,412:      pdf_renderer.py:  470: printSegment: | 3 | Navigate to Service
+   DEBUG: 2026-03-29 12:25:30,413:      pdf_renderer.py:  470: printSegment: Request |
+   DEBUG: 2026-03-29 12:25:30,414:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,414:      pdf_renderer.py:  470: printSegment: | 4 | Search customer by CIF |
+   DEBUG: 2026-03-29 12:25:30,415:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,416:      pdf_renderer.py:  470: printSegment: | 5 | Select account |
+   DEBUG: 2026-03-29 12:25:30,417:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,418:      pdf_renderer.py:  470: printSegment: | 6 | Fill SR-specific form |
+   DEBUG: 2026-03-29 12:25:30,418:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,420:      pdf_renderer.py:  470: printSegment: | 7 | Send for Verification to
+   DEBUG: 2026-03-29 12:25:30,421:      pdf_renderer.py:  470: printSegment: Manager |
+   DEBUG: 2026-03-29 12:25:30,421:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,422:      pdf_renderer.py:  470: printSegment: | 8 | Manager approves |
+   DEBUG: 2026-03-29 12:25:30,423:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,424:      pdf_renderer.py:  470: printSegment: | 9 | Maker closes |
+   DEBUG: 2026-03-29 12:25:30,425:      pdf_renderer.py:  470: printSegment: 1.6 User Roles
+   DEBUG: 2026-03-29 12:25:30,426:      pdf_renderer.py:  470: printSegment: | Role | Responsibility | Example |
+   DEBUG: 2026-03-29 12:25:30,427:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,428:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,428:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,429:      pdf_renderer.py:  470: printSegment: | Maker | Creates requests, fills forms | User ID: 20 |
+   DEBUG: 2026-03-29 12:25:30,430:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,433:      pdf_renderer.py:  470: printSegment: | Manager |
+   DEBUG: 2026-03-29 12:25:30,434:      pdf_renderer.py:  470: printSegment: Reviews and approves/rejects | USER2, n.wisa, h.aldosari, a.ali |
+   DEBUG: 2026-03-29 12:25:30,435:      pdf_renderer.py:  470: printSegment: 2. Setup 
+   DEBUG: 2026-03-29 12:25:30,436:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-03-29 12:25:30,437:      pdf_renderer.py:  470: printSegment:  Installation
+   DEBUG: 2026-03-29 12:25:30,438:      pdf_renderer.py:  470: printSegment: | Step | Action |
+   DEBUG: 2026-03-29 12:25:30,438:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,439:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:30,440:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,441:      pdf_renderer.py:  470: printSegment: | Install Python | Download from 
+   DEBUG: 2026-03-29 12:25:30,442:      pdf_renderer.py:  470: printSegment: python.org
+   DEBUG: 2026-03-29 12:25:30,442:      pdf_renderer.py:  470: printSegment:  — check 
+   DEBUG: 2026-03-29 12:25:30,443:      pdf_renderer.py:  470: printSegment: "
+   DEBUG: 2026-03-29 12:25:30,444:      pdf_renderer.py:  470: printSegment: Add to PATH
+   DEBUG: 2026-03-29 12:25:30,445:      pdf_renderer.py:  470: printSegment: "
+   DEBUG: 2026-03-29 12:25:30,445:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,446:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,447:      pdf_renderer.py:  470: printSegment: | Clone repository | 
+   DEBUG: 2026-03-29 12:25:30,448:      pdf_renderer.py:  470: printSegment: git
+   DEBUG: 2026-03-29 12:25:30,450:      pdf_renderer.py:  470: printSegment: clone https://github.com/itsomkar4545/Kfic-automation.git
+   DEBUG: 2026-03-29 12:25:30,450:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,451:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,452:      pdf_renderer.py:  470: printSegment: | Install dependencies | 
+   DEBUG: 2026-03-29 12:25:30,453:      pdf_renderer.py:  470: printSegment: pip
+   DEBUG: 2026-03-29 12:25:30,454:      pdf_renderer.py:  470: printSegment: install -r requirements.txt
+   DEBUG: 2026-03-29 12:25:30,455:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,456:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,457:      pdf_renderer.py:  470: printSegment: | Verify | 
+   DEBUG: 2026-03-29 12:25:30,458:      pdf_renderer.py:  470: printSegment: robot --version
+   DEBUG: 2026-03-29 12:25:30,458:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,459:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,460:      pdf_renderer.py:  470: printSegment: | First test run | 
+   DEBUG: 2026-03-29 12:25:30,461:      pdf_renderer.py:  470: printSegment: robot
+   DEBUG: 2026-03-29 12:25:30,463:      pdf_renderer.py:  470: printSegment: tests/service_request/change_address.robot
+   DEBUG: 2026-03-29 12:25:30,464:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,465:      pdf_renderer.py:  470: printSegment: Troubleshooting
+   DEBUG: 2026-03-29 12:25:30,467:      pdf_renderer.py:  470: printSegment: | Issue | Resolution |
+   DEBUG: 2026-03-29 12:25:30,469:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,470:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:30,471:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,472:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,474:      pdf_renderer.py:  470: printSegment: python not found
+   DEBUG: 2026-03-29 12:25:30,475:      pdf_renderer.py:  470: printSegment:  | Add Python to system PATH |
+   DEBUG: 2026-03-29 12:25:30,476:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,477:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,478:      pdf_renderer.py:  470: printSegment: robot not found
+   DEBUG: 2026-03-29 12:25:30,479:      pdf_renderer.py:  470: printSegment:  | 
+   DEBUG: 2026-03-29 12:25:30,480:      pdf_renderer.py:  470: printSegment: pip
+   DEBUG: 2026-03-29 12:25:30,481:      pdf_renderer.py:  470: printSegment: install robotframework
+   DEBUG: 2026-03-29 12:25:30,482:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,482:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,483:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,485:      pdf_renderer.py:  470: printSegment: ChromeDriver error
+   DEBUG: 2026-03-29 12:25:30,486:      pdf_renderer.py:  470: printSegment:  | Update Chrome browser |
+   DEBUG: 2026-03-29 12:25:30,487:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,489:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,490:      pdf_renderer.py:  470: printSegment: openpyxl not
+   DEBUG: 2026-03-29 12:25:30,491:      pdf_renderer.py:  470: printSegment: found
+   DEBUG: 2026-03-29 12:25:30,492:      pdf_renderer.py:  470: printSegment:  | 
+   DEBUG: 2026-03-29 12:25:30,493:      pdf_renderer.py:  470: printSegment: pip install openpyxl
+   DEBUG: 2026-03-29 12:25:30,494:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,496:      pdf_renderer.py:  470: printSegment: 3. Project Structure
+   DEBUG: 2026-03-29 12:25:30,498:      pdf_renderer.py:  470: printSegment: | Folder | Purpose |
+   DEBUG: 2026-03-29 12:25:30,499:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,500:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:30,501:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,502:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,503:      pdf_renderer.py:  470: printSegment: config/
+   DEBUG: 2026-03-29 12:25:30,505:      pdf_renderer.py:  470: printSegment:  | Environment URLs, browser settings |
+   DEBUG: 2026-03-29 12:25:30,506:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,507:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,508:      pdf_renderer.py:  470: printSegment: data/
+   DEBUG: 2026-03-29 12:25:30,510:      pdf_renderer.py:  470: printSegment:  | Excel input files (25 — one per
+   DEBUG: 2026-03-29 12:25:30,511:      pdf_renderer.py:  470: printSegment: SR) |
+   DEBUG: 2026-03-29 12:25:30,512:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,513:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,514:      pdf_renderer.py:  470: printSegment: pages/
+   DEBUG: 2026-03-29 12:25:30,515:      pdf_renderer.py:  470: printSegment:  | Page locators and shared keywords |
+   DEBUG: 2026-03-29 12:25:30,516:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,518:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,521:      pdf_renderer.py:  470: printSegment: tests/service_request/
+   DEBUG: 2026-03-29 12:25:30,523:      pdf_renderer.py:  470: printSegment:  | 25 service request test
+   DEBUG: 2026-03-29 12:25:30,524:      pdf_renderer.py:  470: printSegment: files |
+   DEBUG: 2026-03-29 12:25:30,525:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,526:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,527:      pdf_renderer.py:  470: printSegment: utils/
+   DEBUG: 2026-03-29 12:25:30,528:      pdf_renderer.py:  470: printSegment:  | Python helper scripts |
+   DEBUG: 2026-03-29 12:25:30,529:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,530:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,532:      pdf_renderer.py:  470: printSegment: results/
+   DEBUG: 2026-03-29 12:25:30,533:      pdf_renderer.py:  470: printSegment:  | Auto-generated reports and logs |
+   DEBUG: 2026-03-29 12:25:30,534:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,535:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,536:      pdf_renderer.py:  470: printSegment: docs/
+   DEBUG: 2026-03-29 12:25:30,538:      pdf_renderer.py:  470: printSegment:  | Documentation |
+   DEBUG: 2026-03-29 12:25:30,540:      pdf_renderer.py:  470: printSegment: Key Files
+   DEBUG: 2026-03-29 12:25:30,541:      pdf_renderer.py:  470: printSegment: | File | Role |
+   DEBUG: 2026-03-29 12:25:30,542:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,543:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:30,544:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,545:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,546:      pdf_renderer.py:  470: printSegment: common_keywords.robot
+   DEBUG: 2026-03-29 12:25:30,548:      pdf_renderer.py:  470: printSegment:  | Shared keywords used by all 24 SR tests |
+   DEBUG: 2026-03-29 12:25:30,549:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,550:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,551:      pdf_renderer.py:  470: printSegment: service_request_page.robot
+   DEBUG: 2026-03-29 12:25:30,553:      pdf_renderer.py:  470: printSegment:  | All SR page element locators |
+   DEBUG: 2026-03-29 12:25:30,555:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,556:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,557:      pdf_renderer.py:  470: printSegment: environment.robot
+   DEBUG: 2026-03-29 12:25:30,559:      pdf_renderer.py:  470: printSegment:  | Application
+   DEBUG: 2026-03-29 12:25:30,560:      pdf_renderer.py:  470: printSegment: URL and configuration |
+   DEBUG: 2026-03-29 12:25:30,562:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,563:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,564:      pdf_renderer.py:  470: printSegment: excel_reader.py
+   DEBUG: 2026-03-29 12:25:30,566:      pdf_renderer.py:  470: printSegment:  | Reads Excel and returns dictionary |
+   DEBUG: 2026-03-29 12:25:30,567:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,568:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,569:      pdf_renderer.py:  470: printSegment: address_reader.py
+   DEBUG: 2026-03-29 12:25:30,572:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,573:      pdf_renderer.py:  470: printSegment: Reads Change Address Excel (3 sections) |
+   DEBUG: 2026-03-29 12:25:30,575:      pdf_renderer.py:  470: printSegment: 4. Common Keywords
+   DEBUG: 2026-03-29 12:25:30,577:      pdf_renderer.py:  470: printSegment: File: 
+   DEBUG: 2026-03-29 12:25:30,578:      pdf_renderer.py:  470: printSegment: pages/common_keywords.robot
+   DEBUG: 2026-03-29 12:25:30,579:      pdf_renderer.py:  470: printSegment:  — used by all 24 service request tests.
+   DEBUG: 2026-03-29 12:25:30,581:      pdf_renderer.py:  470: printSegment: | # | Keyword | Purpose |
+   DEBUG: 2026-03-29 12:25:30,582:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,583:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,584:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,586:      pdf_renderer.py:  470: printSegment: | 1 | Open Browser And Setup | Opens Chrome, maximizes, sets zoom and wait |
+   DEBUG: 2026-03-29 12:25:30,588:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,592:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2026-03-29 12:25:30,594:      pdf_renderer.py:  470: printSegment: 2 | Login To Application | Handles re-login, enters credentials, logs in |
+   DEBUG: 2026-03-29 12:25:30,595:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,599:      pdf_renderer.py:  470: printSegment: | 3 | Navigate To Service Request Menu |
+   DEBUG: 2026-03-29 12:25:30,600:      pdf_renderer.py:  470: printSegment: Navigates through menu to specific SR |
+   DEBUG: 2026-03-29 12:25:30,601:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,604:      pdf_renderer.py:  470: printSegment: | 4 | Search And Select Customer | Inputs CIF, validates, searches, selects
+   DEBUG: 2026-03-29 12:25:30,606:      pdf_renderer.py:  470: printSegment: result |
+   DEBUG: 2026-03-29 12:25:30,607:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,609:      pdf_renderer.py:  470: printSegment: | 5 | Select First Account | Selects first account, validates, proceeds |
+   DEBUG: 2026-03-29 12:25:30,610:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,611:      pdf_renderer.py:  470: printSegment: | 6 | 
+   DEBUG: 2026-03-29 12:25:30,613:      pdf_renderer.py:  470: printSegment: Maker Creates Service Request
+   DEBUG: 2026-03-29 12:25:30,616:      pdf_renderer.py:  470: printSegment:  ★ |
+   DEBUG: 2026-03-29 12:25:30,635:      pdf_renderer.py:  470: printSegment: Master keyword — executes steps 1-5 in one call |
+   DEBUG: 2026-03-29 12:25:30,636:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,638:      pdf_renderer.py:  470: printSegment: | 7 | Logout From Application | Ends session |
+   DEBUG: 2026-03-29 12:25:30,640:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,643:      pdf_renderer.py:  470: printSegment: | 8 | Navigate To
+   DEBUG: 2026-03-29 12:25:30,644:      pdf_renderer.py:  470: printSegment: Service Request Inbox | Opens SR Inbox |
+   DEBUG: 2026-03-29 12:25:30,646:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,648:      pdf_renderer.py:  470: printSegment: | 9 | Open Application By CIF | Finds application in inbox by CIF number
+   DEBUG: 2026-03-29 12:25:30,649:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2026-03-29 12:25:30,651:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,653:      pdf_renderer.py:  470: printSegment: | 10 | Approve Application | Manager approval action |
+   DEBUG: 2026-03-29 12:25:30,655:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,657:      pdf_renderer.py:  470: printSegment: | 11 | Close Application | Maker closure action |
+   DEBUG: 2026-03-29 12:25:30,658:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,661:      pdf_renderer.py:  470: printSegment: | 12 | Send
+   DEBUG: 2026-03-29 12:25:30,663:      pdf_renderer.py:  470: printSegment: For Verification | Sends to Manager for review |
+   DEBUG: 2026-03-29 12:25:30,665:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,667:      pdf_renderer.py:  470: printSegment: | 13 | Fill Move To Next Form | Assigns Manager and adds remarks
+   DEBUG: 2026-03-29 12:25:30,668:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2026-03-29 12:25:30,672:      pdf_renderer.py:  470: printSegment: 5. Service Request Page — Locators
+   DEBUG: 2026-03-29 12:25:30,673:      pdf_renderer.py:  470: printSegment: File: 
+   DEBUG: 2026-03-29 12:25:30,675:      pdf_renderer.py:  470: printSegment: pages/service_request_page.robot
+   DEBUG: 2026-03-29 12:25:30,677:      pdf_renderer.py:  470: printSegment: 5.1 What Are Locators?
+   DEBUG: 2026-03-29 12:25:30,680:      pdf_renderer.py:  470: printSegment: Locators are addresses used to identify web elements (buttons, fields, links) on a page.
+   DEBUG: 2026-03-29 12:25:30,681:      pdf_renderer.py:  470: printSegment: | Strategy | Syntax | Best For |
+   DEBUG: 2026-03-29 12:25:30,682:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,683:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,685:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,685:      pdf_renderer.py:  470: printSegment: | ID | 
+   DEBUG: 2026-03-29 12:25:30,686:      pdf_renderer.py:  470: printSegment: id=loginId
+   DEBUG: 2026-03-29 12:25:30,687:      pdf_renderer.py:  470: printSegment:  | Elements with unique IDs |
+   DEBUG: 2026-03-29 12:25:30,688:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,689:      pdf_renderer.py:  470: printSegment: | Name | 
+   DEBUG: 2026-03-29 12:25:30,690:      pdf_renderer.py:  470: printSegment: name=cifNo
+   DEBUG: 2026-03-29 12:25:30,691:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,692:      pdf_renderer.py:  470: printSegment: Elements with name attribute |
+   DEBUG: 2026-03-29 12:25:30,693:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,693:      pdf_renderer.py:  470: printSegment: | XPath | 
+   DEBUG: 2026-03-29 12:25:30,694:      pdf_renderer.py:  470: printSegment: xpath=//button[@id='save']
+   DEBUG: 2026-03-29 12:25:30,695:      pdf_renderer.py:  470: printSegment:  | Complex element paths |
+   DEBUG: 2026-03-29 12:25:30,696:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,696:      pdf_renderer.py:  470: printSegment: | CSS | 
+   DEBUG: 2026-03-29 12:25:30,697:      pdf_renderer.py:  470: printSegment: css=#loginBtn
+   DEBUG: 2026-03-29 12:25:30,698:      pdf_renderer.py:  470: printSegment:  | CSS selector patterns |
+   DEBUG: 2026-03-29 12:25:30,699:      pdf_renderer.py:  470: printSegment: 5.2 Action Buttons
+   DEBUG: 2026-03-29 12:25:30,700:      pdf_renderer.py:  470: printSegment: | Button | Used By | Purpose |
+   DEBUG: 2026-03-29 12:25:30,701:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,702:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,702:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,704:      pdf_renderer.py:  470: printSegment: | Send for Verification | Maker | Forwards to Manager |
+   DEBUG: 2026-03-29 12:25:30,704:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,706:      pdf_renderer.py:  470: printSegment: | Approve | Manager
+   DEBUG: 2026-03-29 12:25:30,707:      pdf_renderer.py:  470: printSegment: | Approves application |
+   DEBUG: 2026-03-29 12:25:30,708:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,709:      pdf_renderer.py:  470: printSegment: | Reject | Manager | Rejects application |
+   DEBUG: 2026-03-29 12:25:30,710:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,711:      pdf_renderer.py:  470: printSegment: | Return | Manager | Returns to Maker |
+   DEBUG: 2026-03-29 12:25:30,712:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,713:      pdf_renderer.py:  470: printSegment: | Close |
+   DEBUG: 2026-03-29 12:25:30,714:      pdf_renderer.py:  470: printSegment: Maker | Final closure |
+   DEBUG: 2026-03-29 12:25:30,716:      pdf_renderer.py:  470: printSegment: 6. Change Address — Full Implementation
+   DEBUG: 2026-03-29 12:25:30,717:      pdf_renderer.py:  470: printSegment: The only fully implemented SR. Serves as the reference for all others.
+   DEBUG: 2026-03-29 12:25:30,718:      pdf_renderer.py:  470: printSegment: 6.1 Execution Flow
+   DEBUG: 2026-03-29 12:25:30,720:      pdf_renderer.py:  470: printSegment: | Phase | Actor | Steps |
+   DEBUG: 2026-03-29 12:25:30,721:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,722:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,723:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,724:      pdf_renderer.py:  470: printSegment: | 1 | Maker | Login → Navigate → Search → Account → Fill Form → Save → Send → Logout |
+   DEBUG: 2026-03-29 12:25:30,725:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,728:      pdf_renderer.py:  470: printSegment: | 2 | Manager |
+   DEBUG: 2026-03-29 12:25:30,729:      pdf_renderer.py:  470: printSegment: Login → Inbox → Find by CIF → Approve → Logout |
+   DEBUG: 2026-03-29 12:25:30,730:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,731:      pdf_renderer.py:  470: printSegment: | 3 | Maker | Login → Inbox → Find by CIF → Close → End |
+   DEBUG: 2026-03-29 12:25:30,732:      pdf_renderer.py:  470: printSegment: 6.2 Address Types
+   DEBUG: 2026-03-29 12:25:30,734:      pdf_renderer.py:  470: printSegment: | Type | Excel Row | Supported Actions |
+   DEBUG: 2026-03-29 12:25:30,735:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,736:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,736:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,738:      pdf_renderer.py:  470: printSegment: | Residential | Row 3 | Create / Edit / Skip |
+   DEBUG: 2026-03-29 12:25:30,739:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,741:      pdf_renderer.py:  470: printSegment: | Permanent | Row 7 |
+   DEBUG: 2026-03-29 12:25:30,742:      pdf_renderer.py:  470: printSegment: Create / Edit / Skip |
+   DEBUG: 2026-03-29 12:25:30,743:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,744:      pdf_renderer.py:  470: printSegment: | Business | Row 11 | Create / Edit / Skip |
+   DEBUG: 2026-03-29 12:25:30,745:      pdf_renderer.py:  470: printSegment: 6.3 Form Fields
+   DEBUG: 2026-03-29 12:25:30,747:      pdf_renderer.py:  470: printSegment: | # | Field | Input Type | Validated |
+   DEBUG: 2026-03-29 12:25:30,748:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,749:      pdf_renderer.py:  470: printSegment: |---|---|---|---|
+   DEBUG: 2026-03-29 12:25:30,750:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,751:      pdf_renderer.py:  470: printSegment: | 1 | Customer Type | Select2 Dropdown | ✓ |
+   DEBUG: 2026-03-29 12:25:30,769:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,771:      pdf_renderer.py:  470: printSegment: | 2 | Address Type |
+   DEBUG: 2026-03-29 12:25:30,772:      pdf_renderer.py:  470: printSegment: Select2 Dropdown | ✓ |
+   DEBUG: 2026-03-29 12:25:30,773:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,775:      pdf_renderer.py:  470: printSegment: | 3 | Status | Select2 Dropdown | ✓ |
+   DEBUG: 2026-03-29 12:25:30,776:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,777:      pdf_renderer.py:  470: printSegment: | 4 | Living Since | Date Field | — |
+   DEBUG: 2026-03-29 12:25:30,778:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,780:      pdf_renderer.py:  470: printSegment: | 5 | Country | Select2
+   DEBUG: 2026-03-29 12:25:30,781:      pdf_renderer.py:  470: printSegment: (KUWAIT) | ✓ |
+   DEBUG: 2026-03-29 12:25:30,781:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,783:      pdf_renderer.py:  470: printSegment: | 6 | District | Select2 By Label | ✓ |
+   DEBUG: 2026-03-29 12:25:30,784:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,785:      pdf_renderer.py:  470: printSegment: | 7 | Area | Select2 Dropdown | ✓ |
+   DEBUG: 2026-03-29 12:25:30,786:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,789:      pdf_renderer.py:  470: printSegment: | 8 | Block, Street, Building | Text
+   DEBUG: 2026-03-29 12:25:30,790:      pdf_renderer.py:  470: printSegment: Input | ✓ |
+   DEBUG: 2026-03-29 12:25:30,791:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,792:      pdf_renderer.py:  470: printSegment: | 9 | Unit Type | Select2 Dropdown | ✓ |
+   DEBUG: 2026-03-29 12:25:30,793:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,795:      pdf_renderer.py:  470: printSegment: | 10 | Unit No, Floor | Text Input | ✓ |
+   DEBUG: 2026-03-29 12:25:30,796:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,797:      pdf_renderer.py:  470: printSegment: | 11 | Document | File Upload | — |
+   DEBUG: 2026-03-29 12:25:30,798:      pdf_renderer.py:  470: printSegment: 6.4 Technical Concepts
+   DEBUG: 2026-03-29 12:25:30,799:      pdf_renderer.py:  470: printSegment: | Concept | Description |
+   DEBUG: 2026-03-29 12:25:30,801:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,802:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:30,803:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,804:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,806:      pdf_renderer.py:  470: printSegment: iframe
+   DEBUG: 2026-03-29 12:25:30,808:      pdf_renderer.py:  470: printSegment:  | Form is inside an iframe — requires frame switching |
+   DEBUG: 2026-03-29 12:25:30,809:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,810:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,811:      pdf_renderer.py:  470: printSegment: Select2
+   DEBUG: 2026-03-29 12:25:30,815:      pdf_renderer.py:  470: printSegment:  | Custom
+   DEBUG: 2026-03-29 12:25:30,816:      pdf_renderer.py:  470: printSegment: dropdown — click visible span, then set hidden select value |
+   DEBUG: 2026-03-29 12:25:30,817:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,818:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,820:      pdf_renderer.py:  470: printSegment: Mapping Dictionary
+   DEBUG: 2026-03-29 12:25:30,823:      pdf_renderer.py:  470: printSegment:  | Converts Excel text to application
+   DEBUG: 2026-03-29 12:25:30,824:      pdf_renderer.py:  470: printSegment: codes (e.g., 
+   DEBUG: 2026-03-29 12:25:30,825:      pdf_renderer.py:  470: printSegment: "
+   DEBUG: 2026-03-29 12:25:30,826:      pdf_renderer.py:  470: printSegment: Main Applicant
+   DEBUG: 2026-03-29 12:25:30,827:      pdf_renderer.py:  470: printSegment: "
+   DEBUG: 2026-03-29 12:25:30,828:      pdf_renderer.py:  470: printSegment:  → 
+   DEBUG: 2026-03-29 12:25:30,829:      pdf_renderer.py:  470: printSegment: "
+   DEBUG: 2026-03-29 12:25:30,830:      pdf_renderer.py:  470: printSegment: 101
+   DEBUG: 2026-03-29 12:25:30,831:      pdf_renderer.py:  470: printSegment: "
+   DEBUG: 2026-03-29 12:25:30,832:      pdf_renderer.py:  470: printSegment: ) |
+   DEBUG: 2026-03-29 12:25:30,833:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,834:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,836:      pdf_renderer.py:  470: printSegment: Random Upload
+   DEBUG: 2026-03-29 12:25:30,837:      pdf_renderer.py:  470: printSegment:  | Picks a random file from a folder for document upload |
+   DEBUG: 2026-03-29 12:25:30,840:      pdf_renderer.py:  470: printSegment: 7. All 25 Service Requests — Status
+   DEBUG: 2026-03-29 12:25:30,842:      pdf_renderer.py:  470: printSegment: | # | Service Request | Status |
+   DEBUG: 2026-03-29 12:25:30,843:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,845:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,846:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,847:      pdf_renderer.py:  470: printSegment: | 1 | Employment Request | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,849:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,850:      pdf_renderer.py:  470: printSegment: | 2 | Personal Details | ⏳ Common
+   DEBUG: 2026-03-29 12:25:30,852:      pdf_renderer.py:  470: printSegment: flow |
+   DEBUG: 2026-03-29 12:25:30,853:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,855:      pdf_renderer.py:  470: printSegment: | 3 | Refund Maker | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,857:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,858:      pdf_renderer.py:  470: printSegment: | 4 | Valuation SR | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,859:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,861:      pdf_renderer.py:  470: printSegment: | 5 | Add Collateral SR | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,862:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,863:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2026-03-29 12:25:30,865:      pdf_renderer.py:  470: printSegment: 6 | 
+   DEBUG: 2026-03-29 12:25:30,866:      pdf_renderer.py:  470: printSegment: Change Address
+   DEBUG: 2026-03-29 12:25:30,867:      pdf_renderer.py:  470: printSegment:  | ✅ 
+   DEBUG: 2026-03-29 12:25:30,869:      pdf_renderer.py:  470: printSegment: Fully Implemented
+   DEBUG: 2026-03-29 12:25:30,870:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:30,871:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,873:      pdf_renderer.py:  470: printSegment: | 7 | CINET Cancel | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,874:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,876:      pdf_renderer.py:  470: printSegment: | 8 | Debt Ack Cancel | ⏳ Common
+   DEBUG: 2026-03-29 12:25:30,877:      pdf_renderer.py:  470: printSegment: flow |
+   DEBUG: 2026-03-29 12:25:30,878:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,880:      pdf_renderer.py:  470: printSegment: | 9 | Repayment Mode SR | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,881:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,882:      pdf_renderer.py:  470: printSegment: | 10 | Identification | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,884:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,886:      pdf_renderer.py:  470: printSegment: | 11 | Add Documents | ⏳ Common
+   DEBUG: 2026-03-29 12:25:30,888:      pdf_renderer.py:  470: printSegment: flow |
+   DEBUG: 2026-03-29 12:25:30,889:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,890:      pdf_renderer.py:  470: printSegment: | 12 | Skip Payment | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,890:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,891:      pdf_renderer.py:  470: printSegment: | 13 | Partial Settlement | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,892:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,893:      pdf_renderer.py:  470: printSegment: | 14 | Commercial Loan Extension
+   DEBUG: 2026-03-29 12:25:30,894:      pdf_renderer.py:  470: printSegment: | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,895:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,896:      pdf_renderer.py:  470: printSegment: | 15 | Retail Loan Amendment | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,896:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,897:      pdf_renderer.py:  470: printSegment: | 16 | Add Guarantor SR | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,898:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,900:      pdf_renderer.py:  470: printSegment: | 17 |
+   DEBUG: 2026-03-29 12:25:30,901:      pdf_renderer.py:  470: printSegment: Block/Unblock Service | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,902:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,903:      pdf_renderer.py:  470: printSegment: | 18 | Full Insurance Renew | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,903:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,905:      pdf_renderer.py:  470: printSegment: | 19 | Insurance Cancel | ⏳
+   DEBUG: 2026-03-29 12:25:30,906:      pdf_renderer.py:  470: printSegment: Common flow |
+   DEBUG: 2026-03-29 12:25:30,907:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,908:      pdf_renderer.py:  470: printSegment: | 20 | Delete Guarantor SR | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,909:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,910:      pdf_renderer.py:  470: printSegment: | 21 | Total Loss | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,910:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,912:      pdf_renderer.py:  470: printSegment: | 22 | Charges Waiver | ⏳
+   DEBUG: 2026-03-29 12:25:30,913:      pdf_renderer.py:  470: printSegment: Common flow |
+   DEBUG: 2026-03-29 12:25:30,913:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,914:      pdf_renderer.py:  470: printSegment: | 23 | Deceased/Fraud SR | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,915:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,916:      pdf_renderer.py:  470: printSegment: | 24 | Legal Action SR | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,917:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,919:      pdf_renderer.py:  470: printSegment: | 25 | Cancel Deal
+   DEBUG: 2026-03-29 12:25:30,920:      pdf_renderer.py:  470: printSegment: Request | ⏳ Common flow |
+   DEBUG: 2026-03-29 12:25:30,922:      pdf_renderer.py:  470: printSegment: Common flow
+   DEBUG: 2026-03-29 12:25:30,924:      pdf_renderer.py:  470: printSegment:  = Login → Menu → Search → Account Select → SR page opens.
+   DEBUG: 2026-03-29 12:25:30,925:      pdf_renderer.py:  470: printSegment: 8. Excel Input Files 
+   DEBUG: 2026-03-29 12:25:30,926:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-03-29 12:25:30,927:      pdf_renderer.py:  470: printSegment:  Python Readers
+   DEBUG: 2026-03-29 12:25:30,928:      pdf_renderer.py:  470: printSegment: 8.1 Excel Structure
+   DEBUG: 2026-03-29 12:25:30,929:      pdf_renderer.py:  470: printSegment: | Type | Format | Used By |
+   DEBUG: 2026-03-29 12:25:30,930:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,931:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,932:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,933:      pdf_renderer.py:  470: printSegment: | Standard (24 files) | Header row + value row (Customer ID) | All SRs |
+   DEBUG: 2026-03-29 12:25:30,934:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,939:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2026-03-29 12:25:30,941:      pdf_renderer.py:  470: printSegment: Change Address | 3 sections — Residential, Permanent, Business with 12 columns each | Change Address |
+   DEBUG: 2026-03-29 12:25:30,942:      pdf_renderer.py:  470: printSegment: 8.2 Python Readers
+   DEBUG: 2026-03-29 12:25:30,943:      pdf_renderer.py:  470: printSegment: | File | Function | Output |
+   DEBUG: 2026-03-29 12:25:30,944:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,944:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,945:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,946:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,947:      pdf_renderer.py:  470: printSegment: excel_reader.py
+   DEBUG: 2026-03-29 12:25:30,948:      pdf_renderer.py:  470: printSegment:  | Reads any SR Excel | Key-value dictionary |
+   DEBUG: 2026-03-29 12:25:30,949:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,950:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:30,951:      pdf_renderer.py:  470: printSegment: address_reader.py
+   DEBUG: 2026-03-29 12:25:30,952:      pdf_renderer.py:  470: printSegment:  | Reads 3 address sections + date conversion | Nested dictionary |
+   DEBUG: 2026-03-29 12:25:30,954:      pdf_renderer.py:  470: printSegment: 9. Validation Logic
+   DEBUG: 2026-03-29 12:25:30,955:      pdf_renderer.py:  470: printSegment: 9.1 Methods
+   DEBUG: 2026-03-29 12:25:30,956:      pdf_renderer.py:  470: printSegment: | Type | How It Works | Applied To |
+   DEBUG: 2026-03-29 12:25:30,957:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,958:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:30,959:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,960:      pdf_renderer.py:  470: printSegment: | Text Field | Reads field 
+   DEBUG: 2026-03-29 12:25:30,961:      pdf_renderer.py:  470: printSegment: value
+   DEBUG: 2026-03-29 12:25:30,964:      pdf_renderer.py:  470: printSegment:  attribute, compares with expected |
+   DEBUG: 2026-03-29 12:25:30,965:      pdf_renderer.py:  470: printSegment: Block, Street, Building, Unit No, Floor |
+   DEBUG: 2026-03-29 12:25:30,966:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,969:      pdf_renderer.py:  470: printSegment: | Select2 Dropdown | Reads container text, case-insensitive compare |
+   DEBUG: 2026-03-29 12:25:30,970:      pdf_renderer.py:  470: printSegment: Customer Type, Country, Area, etc. |
+   DEBUG: 2026-03-29 12:25:30,971:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,973:      pdf_renderer.py:  470: printSegment: | Customer ID | Input value verification | Pre-search validation |
+   DEBUG: 2026-03-29 12:25:30,974:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:30,975:      pdf_renderer.py:  470: printSegment: | Radio Button
+   DEBUG: 2026-03-29 12:25:30,976:      pdf_renderer.py:  470: printSegment: | JavaScript 
+   DEBUG: 2026-03-29 12:25:30,977:      pdf_renderer.py:  470: printSegment: checked
+   DEBUG: 2026-03-29 12:25:30,978:      pdf_renderer.py:  470: printSegment:  property | Account selection |
+   DEBUG: 2026-03-29 12:25:30,979:      pdf_renderer.py:  470: printSegment: 9.2 Behavior
+   DEBUG: 2026-03-29 12:25:30,980:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-03-29 12:25:30,981:      pdf_renderer.py:  470: printSegment: Mismatch →
+   DEBUG: 2026-03-29 12:25:30,995:      pdf_renderer.py:  470: printSegment:  Test FAILS: 
+   DEBUG: 2026-03-29 12:25:30,997:      pdf_renderer.py:  470: printSegment: VALIDATION FAILED: Field 'block' expected '1' but
+   DEBUG: 2026-03-29 12:25:30,998:      pdf_renderer.py:  470: printSegment: got ''
+   DEBUG: 2026-03-29 12:25:30,999:      pdf_renderer.py:  470: printSegment: l
+   DEBUG: 2026-03-29 12:25:31,000:      pdf_renderer.py:  470: printSegment: Match →
+   DEBUG: 2026-03-29 12:25:31,001:      pdf_renderer.py:  470: printSegment:  Logged: 
+   DEBUG: 2026-03-29 12:25:31,002:      pdf_renderer.py:  470: printSegment: ✓ VALIDATED: block = 1
+   DEBUG: 2026-03-29 12:25:31,018:      pdf_renderer.py:  470: printSegment: 10. Test Execution
+   DEBUG: 2026-03-29 12:25:31,020:      pdf_renderer.py:  470: printSegment: | Purpose | Command |
+   DEBUG: 2026-03-29 12:25:31,021:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,023:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,024:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,025:      pdf_renderer.py:  470: printSegment: | Single test | 
+   DEBUG: 2026-03-29 12:25:31,026:      pdf_renderer.py:  470: printSegment: robot tests/service_request/change_address.robot
+   DEBUG: 2026-03-29 12:25:31,027:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,029:      pdf_renderer.py:  470: printSegment: | All SR tests | 
+   DEBUG: 2026-03-29 12:25:31,030:      pdf_renderer.py:  470: printSegment: robot tests/service_request/
+   DEBUG: 2026-03-29 12:25:31,031:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,032:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,033:      pdf_renderer.py:  470: printSegment: | By tag | 
+   DEBUG: 2026-03-29 12:25:31,035:      pdf_renderer.py:  470: printSegment: robot --include change_address
+   DEBUG: 2026-03-29 12:25:31,036:      pdf_renderer.py:  470: printSegment: tests/
+   DEBUG: 2026-03-29 12:25:31,037:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,038:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,040:      pdf_renderer.py:  470: printSegment: | Parallel (4x) | 
+   DEBUG: 2026-03-29 12:25:31,041:      pdf_renderer.py:  470: printSegment: pabot --processes 4 tests/service_request/
+   DEBUG: 2026-03-29 12:25:31,042:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,043:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,044:      pdf_renderer.py:  470: printSegment: | Debug | 
+   DEBUG: 2026-03-29 12:25:31,046:      pdf_renderer.py:  470: printSegment: robot
+   DEBUG: 2026-03-29 12:25:31,048:      pdf_renderer.py:  470: printSegment: --loglevel DEBUG tests/...
+   DEBUG: 2026-03-29 12:25:31,049:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,051:      pdf_renderer.py:  470: printSegment: Output
+   DEBUG: 2026-03-29 12:25:31,052:      pdf_renderer.py:  470: printSegment: | File | Content |
+   DEBUG: 2026-03-29 12:25:31,053:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,054:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,056:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,057:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,058:      pdf_renderer.py:  470: printSegment: report.html
+   DEBUG: 2026-03-29 12:25:31,060:      pdf_renderer.py:  470: printSegment:  | Summary — pass/fail counts, graphs |
+   DEBUG: 2026-03-29 12:25:31,061:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,062:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,063:      pdf_renderer.py:  470: printSegment: log.html
+   DEBUG: 2026-03-29 12:25:31,065:      pdf_renderer.py:  470: printSegment:  | Detailed — step-by-step
+   DEBUG: 2026-03-29 12:25:31,066:      pdf_renderer.py:  470: printSegment: with screenshots |
+   DEBUG: 2026-03-29 12:25:31,067:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,068:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,069:      pdf_renderer.py:  470: printSegment: output.xml
+   DEBUG: 2026-03-29 12:25:31,071:      pdf_renderer.py:  470: printSegment:  | Machine-readable — for CI/CD integration |
+   DEBUG: 2026-03-29 12:25:31,074:      pdf_renderer.py:  470: printSegment: 11. CI/CD — Jenkins 
+   DEBUG: 2026-03-29 12:25:31,075:      pdf_renderer.py:  470: printSegment: &
+   DEBUG: 2026-03-29 12:25:31,075:      pdf_renderer.py:  470: printSegment:  Email
+   DEBUG: 2026-03-29 12:25:31,076:      pdf_renderer.py:  470: printSegment: Pipeline
+   DEBUG: 2026-03-29 12:25:31,077:      pdf_renderer.py:  470: printSegment: | Stage | Action |
+   DEBUG: 2026-03-29 12:25:31,077:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,078:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,079:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,080:      pdf_renderer.py:  470: printSegment: | Checkout | Download code from Git |
+   DEBUG: 2026-03-29 12:25:31,080:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,081:      pdf_renderer.py:  470: printSegment: | Setup | Install dependencies |
+   DEBUG: 2026-03-29 12:25:31,082:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,083:      pdf_renderer.py:  470: printSegment: | Run Tests | Parallel
+   DEBUG: 2026-03-29 12:25:31,083:      pdf_renderer.py:  470: printSegment: execution |
+   DEBUG: 2026-03-29 12:25:31,084:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,085:      pdf_renderer.py:  470: printSegment: | Report | Email results to omkar.patil@kiya.ai |
+   DEBUG: 2026-03-29 12:25:31,086:      pdf_renderer.py:  470: printSegment: Email Notifications
+   DEBUG: 2026-03-29 12:25:31,087:      pdf_renderer.py:  470: printSegment: | Result | Content |
+   DEBUG: 2026-03-29 12:25:31,087:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,088:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,089:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,090:      pdf_renderer.py:  470: printSegment: | Success | ✅ Pass count, rate, duration |
+   DEBUG: 2026-03-29 12:25:31,091:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,092:      pdf_renderer.py:  470: printSegment: | Failure | ❌ Fail details, investigation links |
+   DEBUG: 2026-03-29 12:25:31,110:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,112:      pdf_renderer.py:  470: printSegment: | Always |
+   DEBUG: 2026-03-29 12:25:31,113:      pdf_renderer.py:  470: printSegment: Attachments: report.html, log.html, output.xml |
+   DEBUG: 2026-03-29 12:25:31,115:      pdf_renderer.py:  470: printSegment: 12. Coding Concepts
+   DEBUG: 2026-03-29 12:25:31,116:      pdf_renderer.py:  470: printSegment: 12.1 Robot Framework
+   DEBUG: 2026-03-29 12:25:31,118:      pdf_renderer.py:  470: printSegment: A keyword-driven test automation framework. Tests are written in near-English syntax, built on Python.
+   DEBUG: 2026-03-29 12:25:31,120:      pdf_renderer.py:  470: printSegment: 12.2 File Structure
+   DEBUG: 2026-03-29 12:25:31,121:      pdf_renderer.py:  470: printSegment: Every 
+   DEBUG: 2026-03-29 12:25:31,122:      pdf_renderer.py:  470: printSegment: .robot
+   DEBUG: 2026-03-29 12:25:31,124:      pdf_renderer.py:  470: printSegment:  file has up to 4 sections:
+   DEBUG: 2026-03-29 12:25:31,125:      pdf_renderer.py:  470: printSegment: | Section | Purpose |
+   DEBUG: 2026-03-29 12:25:31,125:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,126:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,127:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,128:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,129:      pdf_renderer.py:  470: printSegment: *** Settings ***
+   DEBUG: 2026-03-29 12:25:31,130:      pdf_renderer.py:  470: printSegment:  | Import libraries and resources |
+   DEBUG: 2026-03-29 12:25:31,131:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,132:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,133:      pdf_renderer.py:  470: printSegment: *** Variables ***
+   DEBUG: 2026-03-29 12:25:31,134:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,135:      pdf_renderer.py:  470: printSegment: Define constants and data |
+   DEBUG: 2026-03-29 12:25:31,136:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,137:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,138:      pdf_renderer.py:  470: printSegment: *** Test Cases ***
+   DEBUG: 2026-03-29 12:25:31,139:      pdf_renderer.py:  470: printSegment:  | Executable test definitions |
+   DEBUG: 2026-03-29 12:25:31,140:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,140:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,141:      pdf_renderer.py:  470: printSegment: *** Keywords ***
+   DEBUG: 2026-03-29 12:25:31,143:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,144:      pdf_renderer.py:  470: printSegment: Reusable custom functions |
+   DEBUG: 2026-03-29 12:25:31,145:      pdf_renderer.py:  470: printSegment: 12.3 Variable Types
+   DEBUG: 2026-03-29 12:25:31,146:      pdf_renderer.py:  470: printSegment: | Type | Syntax | Scope |
+   DEBUG: 2026-03-29 12:25:31,147:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,147:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:31,148:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,149:      pdf_renderer.py:  470: printSegment: | Scalar | 
+   DEBUG: 2026-03-29 12:25:31,150:      pdf_renderer.py:  470: printSegment: ${NAME}
+   DEBUG: 2026-03-29 12:25:31,151:      pdf_renderer.py:  470: printSegment:  | Single value |
+   DEBUG: 2026-03-29 12:25:31,152:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,153:      pdf_renderer.py:  470: printSegment: | List | 
+   DEBUG: 2026-03-29 12:25:31,154:      pdf_renderer.py:  470: printSegment: @{NAME}
+   DEBUG: 2026-03-29 12:25:31,156:      pdf_renderer.py:  470: printSegment:  | Ordered collection |
+   DEBUG: 2026-03-29 12:25:31,157:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,158:      pdf_renderer.py:  470: printSegment: |
+   DEBUG: 2026-03-29 12:25:31,159:      pdf_renderer.py:  470: printSegment: Dictionary | 
+   DEBUG: 2026-03-29 12:25:31,160:      pdf_renderer.py:  470: printSegment: &{NAME}
+   DEBUG: 2026-03-29 12:25:31,160:      pdf_renderer.py:  470: printSegment:  | Key-value pairs |
+   DEBUG: 2026-03-29 12:25:31,161:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,162:      pdf_renderer.py:  470: printSegment: | Global | 
+   DEBUG: 2026-03-29 12:25:31,163:      pdf_renderer.py:  470: printSegment: Set Global Variable
+   DEBUG: 2026-03-29 12:25:31,164:      pdf_renderer.py:  470: printSegment:  | All keywords and tests |
+   DEBUG: 2026-03-29 12:25:31,165:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,166:      pdf_renderer.py:  470: printSegment: | Test | 
+   DEBUG: 2026-03-29 12:25:31,167:      pdf_renderer.py:  470: printSegment: Set Test Variable
+   DEBUG: 2026-03-29 12:25:31,168:      pdf_renderer.py:  470: printSegment:  | Current test only |
+   DEBUG: 2026-03-29 12:25:31,169:      pdf_renderer.py:  470: printSegment: 12.4 Keyword Types
+   DEBUG: 2026-03-29 12:25:31,171:      pdf_renderer.py:  470: printSegment: | Type | Description |
+   DEBUG: 2026-03-29 12:25:31,171:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,172:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,173:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,174:      pdf_renderer.py:  470: printSegment: | Simple | No arguments — directly callable |
+   DEBUG: 2026-03-29 12:25:31,175:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,176:      pdf_renderer.py:  470: printSegment: | Parameterized | Accepts inputs via 
+   DEBUG: 2026-03-29 12:25:31,177:      pdf_renderer.py:  470: printSegment: [Arguments]
+   DEBUG: 2026-03-29 12:25:31,178:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,179:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,180:      pdf_renderer.py:  470: printSegment: | Return | Returns value via 
+   DEBUG: 2026-03-29 12:25:31,181:      pdf_renderer.py:  470: printSegment: RETURN
+   DEBUG: 2026-03-29 12:25:31,182:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,183:      pdf_renderer.py:  470: printSegment: 12.5 Key Built-in Keywords
+   DEBUG: 2026-03-29 12:25:31,184:      pdf_renderer.py:  470: printSegment: | Keyword | Purpose |
+   DEBUG: 2026-03-29 12:25:31,185:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,186:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,187:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,188:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,189:      pdf_renderer.py:  470: printSegment: Log
+   DEBUG: 2026-03-29 12:25:31,190:      pdf_renderer.py:  470: printSegment:  | Write to execution log |
+   DEBUG: 2026-03-29 12:25:31,191:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,192:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,193:      pdf_renderer.py:  470: printSegment: Sleep
+   DEBUG: 2026-03-29 12:25:31,194:      pdf_renderer.py:  470: printSegment:  | Fixed-duration wait |
+   DEBUG: 2026-03-29 12:25:31,195:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,196:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,197:      pdf_renderer.py:  470: printSegment: Should Be Equal
+   DEBUG: 2026-03-29 12:25:31,198:      pdf_renderer.py:  470: printSegment: As Strings
+   DEBUG: 2026-03-29 12:25:31,199:      pdf_renderer.py:  470: printSegment:  | Assert equality |
+   DEBUG: 2026-03-29 12:25:31,200:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,200:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,201:      pdf_renderer.py:  470: printSegment: Should Be True
+   DEBUG: 2026-03-29 12:25:31,202:      pdf_renderer.py:  470: printSegment:  | Assert condition |
+   DEBUG: 2026-03-29 12:25:31,203:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,204:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,205:      pdf_renderer.py:  470: printSegment: Run Keyword If
+   DEBUG: 2026-03-29 12:25:31,207:      pdf_renderer.py:  470: printSegment:  | Conditional
+   DEBUG: 2026-03-29 12:25:31,207:      pdf_renderer.py:  470: printSegment: execution |
+   DEBUG: 2026-03-29 12:25:31,208:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,209:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,210:      pdf_renderer.py:  470: printSegment: Run Keyword And Return Status
+   DEBUG: 2026-03-29 12:25:31,212:      pdf_renderer.py:  470: printSegment:  | Error handling (returns True/False) |
+   DEBUG: 2026-03-29 12:25:31,212:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,213:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,214:      pdf_renderer.py:  470: printSegment: FOR ... IN ...
+   DEBUG: 2026-03-29 12:25:31,215:      pdf_renderer.py:  470: printSegment: END
+   DEBUG: 2026-03-29 12:25:31,216:      pdf_renderer.py:  470: printSegment:  | Loop iteration |
+   DEBUG: 2026-03-29 12:25:31,217:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,218:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,220:      pdf_renderer.py:  470: printSegment: Get From Dictionary
+   DEBUG: 2026-03-29 12:25:31,221:      pdf_renderer.py:  470: printSegment:  | Retrieve dictionary value |
+   DEBUG: 2026-03-29 12:25:31,222:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,223:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,224:      pdf_renderer.py:  470: printSegment: Evaluate
+   DEBUG: 2026-03-29 12:25:31,225:      pdf_renderer.py:  470: printSegment:  | Execute Python
+   DEBUG: 2026-03-29 12:25:31,226:      pdf_renderer.py:  470: printSegment: expression |
+   DEBUG: 2026-03-29 12:25:31,228:      pdf_renderer.py:  470: printSegment: 12.6 Key Selenium Keywords
+   DEBUG: 2026-03-29 12:25:31,229:      pdf_renderer.py:  470: printSegment: | Keyword | Purpose |
+   DEBUG: 2026-03-29 12:25:31,230:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,231:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,232:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,233:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,234:      pdf_renderer.py:  470: printSegment: Open Browser
+   DEBUG: 2026-03-29 12:25:31,235:      pdf_renderer.py:  470: printSegment:  / 
+   DEBUG: 2026-03-29 12:25:31,237:      pdf_renderer.py:  470: printSegment: Close Browser
+   DEBUG: 2026-03-29 12:25:31,238:      pdf_renderer.py:  470: printSegment:  | Browser lifecycle |
+   DEBUG: 2026-03-29 12:25:31,239:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,240:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,241:      pdf_renderer.py:  470: printSegment: Click Element
+   DEBUG: 2026-03-29 12:25:31,242:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,244:      pdf_renderer.py:  470: printSegment: Click web element |
+   DEBUG: 2026-03-29 12:25:31,244:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,245:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,246:      pdf_renderer.py:  470: printSegment: Input Text
+   DEBUG: 2026-03-29 12:25:31,248:      pdf_renderer.py:  470: printSegment:  | Enter text in field |
+   DEBUG: 2026-03-29 12:25:31,249:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,250:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,251:      pdf_renderer.py:  470: printSegment: Wait Until Element Is Visible
+   DEBUG: 2026-03-29 12:25:31,252:      pdf_renderer.py:  470: printSegment:  | Smart wait
+   DEBUG: 2026-03-29 12:25:31,254:      pdf_renderer.py:  470: printSegment: (preferred over Sleep) |
+   DEBUG: 2026-03-29 12:25:31,256:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,257:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,258:      pdf_renderer.py:  470: printSegment: Select From List By Value
+   DEBUG: 2026-03-29 12:25:31,259:      pdf_renderer.py:  470: printSegment:  | Dropdown selection |
+   DEBUG: 2026-03-29 12:25:31,261:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,262:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,263:      pdf_renderer.py:  470: printSegment: Execute JavaScript
+   DEBUG: 2026-03-29 12:25:31,265:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,266:      pdf_renderer.py:  470: printSegment: Direct JS execution for hidden elements |
+   DEBUG: 2026-03-29 12:25:31,268:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,269:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,270:      pdf_renderer.py:  470: printSegment: Choose File
+   DEBUG: 2026-03-29 12:25:31,271:      pdf_renderer.py:  470: printSegment:  | File upload |
+   DEBUG: 2026-03-29 12:25:31,272:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,273:      pdf_renderer.py:  470: printSegment: | 
+   DEBUG: 2026-03-29 12:25:31,275:      pdf_renderer.py:  470: printSegment: Select Frame
+   DEBUG: 2026-03-29 12:25:31,276:      pdf_renderer.py:  470: printSegment:  / 
+   DEBUG: 2026-03-29 12:25:31,277:      pdf_renderer.py:  470: printSegment: Unselect Frame
+   DEBUG: 2026-03-29 12:25:31,278:      pdf_renderer.py:  470: printSegment: 
+   DEBUG: 2026-03-29 12:25:31,278:      pdf_renderer.py:  470: printSegment: | iframe navigation |
+   DEBUG: 2026-03-29 12:25:31,280:      pdf_renderer.py:  470: printSegment: 12.7 Python Integration
+   DEBUG: 2026-03-29 12:25:31,281:      pdf_renderer.py:  470: printSegment: | Step | Description |
+   DEBUG: 2026-03-29 12:25:31,282:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,282:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,283:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,284:      pdf_renderer.py:  470: printSegment: | 1 | Create Python function in 
+   DEBUG: 2026-03-29 12:25:31,284:      pdf_renderer.py:  470: printSegment: utils/
+   DEBUG: 2026-03-29 12:25:31,285:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,286:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,287:      pdf_renderer.py:  470: printSegment: | 2 | Import in Robot: 
+   DEBUG: 2026-03-29 12:25:31,288:      pdf_renderer.py:  470: printSegment: Library   
+   DEBUG: 2026-03-29 12:25:31,289:      pdf_renderer.py:  470: printSegment: path/to/file.py
+   DEBUG: 2026-03-29 12:25:31,290:      pdf_renderer.py:  470: printSegment:  |
+   DEBUG: 2026-03-29 12:25:31,290:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,292:      pdf_renderer.py:  470: printSegment: | 3 | Call in Robot: function name with spaces instead of underscores |
+   DEBUG: 2026-03-29 12:25:31,293:      pdf_renderer.py:  470: printSegment: Convention:
+   DEBUG: 2026-03-29 12:25:31,294:      pdf_renderer.py:  470: printSegment:  Python 
+   DEBUG: 2026-03-29 12:25:31,295:      pdf_renderer.py:  470: printSegment: read_excel_data
+   DEBUG: 2026-03-29 12:25:31,295:      pdf_renderer.py:  470: printSegment:  becomes Robot 
+   DEBUG: 2026-03-29 12:25:31,296:      pdf_renderer.py:  470: printSegment: Read Excel Data
+   DEBUG: 2026-03-29 12:25:31,297:      pdf_renderer.py:  470: printSegment: 12.8 Python Libraries Used
+   DEBUG: 2026-03-29 12:25:31,298:      pdf_renderer.py:  470: printSegment: | Library | Purpose |
+   DEBUG: 2026-03-29 12:25:31,299:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,300:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,301:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,302:      pdf_renderer.py:  470: printSegment: | openpyxl | Excel operations |
+   DEBUG: 2026-03-29 12:25:31,302:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,304:      pdf_renderer.py:  470: printSegment: | datetime | Date parsing and formatting |
+   DEBUG: 2026-03-29 12:25:31,305:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,306:      pdf_renderer.py:  470: printSegment: | random |
+   DEBUG: 2026-03-29 12:25:31,307:      pdf_renderer.py:  470: printSegment: Random number generation |
+   DEBUG: 2026-03-29 12:25:31,308:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,309:      pdf_renderer.py:  470: printSegment: | os | File path handling |
+   DEBUG: 2026-03-29 12:25:31,311:      pdf_renderer.py:  470: printSegment: 13. Change Log
+   DEBUG: 2026-03-29 12:25:31,313:      pdf_renderer.py:  470: printSegment: Updated with each milestone.
+   DEBUG: 2026-03-29 12:25:31,315:      pdf_renderer.py:  470: printSegment: ✅ Completed
+   DEBUG: 2026-03-29 12:25:31,336:      pdf_renderer.py:  470: printSegment: | # | Milestone |
+   DEBUG: 2026-03-29 12:25:31,337:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,338:      pdf_renderer.py:  470: printSegment: |---|---|
+   DEBUG: 2026-03-29 12:25:31,338:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,340:      pdf_renderer.py:  470: printSegment: | 1 | Framework setup — Robot Framework, Selenium, project structure |
+   DEBUG: 2026-03-29 12:25:31,341:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,342:      pdf_renderer.py:  470: printSegment: | 2 | Login test verified |
+   DEBUG: 2026-03-29 12:25:31,343:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,344:      pdf_renderer.py:  470: printSegment: | 3 | Receipt management tests |
+   DEBUG: 2026-03-29 12:25:31,345:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,346:      pdf_renderer.py:  470: printSegment: | 4 | LOS Retail Flow — Select2, Excel, alert handling |
+   DEBUG: 2026-03-29 12:25:31,347:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,349:      pdf_renderer.py:  470: printSegment: | 5 | Change Address — fully
+   DEBUG: 2026-03-29 12:25:31,350:      pdf_renderer.py:  470: printSegment: implemented with validation |
+   DEBUG: 2026-03-29 12:25:31,351:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,352:      pdf_renderer.py:  470: printSegment: | 6 | 25 SR XPATHs defined |
+   DEBUG: 2026-03-29 12:25:31,353:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,354:      pdf_renderer.py:  470: printSegment: | 7 | Common keywords extracted |
+   DEBUG: 2026-03-29 12:25:31,356:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,357:      pdf_renderer.py:  470: printSegment: | 8 | 25 SR test files
+   DEBUG: 2026-03-29 12:25:31,358:      pdf_renderer.py:  470: printSegment: created |
+   DEBUG: 2026-03-29 12:25:31,358:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,360:      pdf_renderer.py:  470: printSegment: | 9 | 25 Excel input files created |
+   DEBUG: 2026-03-29 12:25:31,360:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,362:      pdf_renderer.py:  470: printSegment: | 10 | Validation — CIF, Account, Change Address fields |
+   DEBUG: 2026-03-29 12:25:31,363:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,364:      pdf_renderer.py:  470: printSegment: | 11 | Email updated
+   DEBUG: 2026-03-29 12:25:31,365:      pdf_renderer.py:  470: printSegment: to omkar.patil@kiya.ai |
+   DEBUG: 2026-03-29 12:25:31,366:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,368:      pdf_renderer.py:  470: printSegment: | 12 | GitHub — itsomkar4545/Kfic-automation |
+   DEBUG: 2026-03-29 12:25:31,369:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,371:      pdf_renderer.py:  470: printSegment: | 13 | Documentation — Hinglish + English
+   DEBUG: 2026-03-29 12:25:31,372:      pdf_renderer.py:  470: printSegment: versions |
+   DEBUG: 2026-03-29 12:25:31,373:      pdf_renderer.py:  470: printSegment: ⏳ Pending
+   DEBUG: 2026-03-29 12:25:31,374:      pdf_renderer.py:  470: printSegment: | # | Priority | Task |
+   DEBUG: 2026-03-29 12:25:31,375:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,376:      pdf_renderer.py:  470: printSegment: |---|---|---|
+   DEBUG: 2026-03-29 12:25:31,377:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,379:      pdf_renderer.py:  470: printSegment: | 1 | High | Implement action processing for 24 remaining SRs |
+   DEBUG: 2026-03-29 12:25:31,380:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,383:      pdf_renderer.py:  470: printSegment: | 2 | High | Add
+   DEBUG: 2026-03-29 12:25:31,384:      pdf_renderer.py:  470: printSegment: Manager approve + Maker close to all SRs |
+   DEBUG: 2026-03-29 12:25:31,385:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,386:      pdf_renderer.py:  470: printSegment: | 3 | Medium | SR-specific Excel input columns |
+   DEBUG: 2026-03-29 12:25:31,387:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,390:      pdf_renderer.py:  470: printSegment: | 4 | Medium | Field
+   DEBUG: 2026-03-29 12:25:31,391:      pdf_renderer.py:  470: printSegment: validation for each SR |
+   DEBUG: 2026-03-29 12:25:31,392:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,394:      pdf_renderer.py:  470: printSegment: | 5 | Low | Screenshot capture at key steps |
+   DEBUG: 2026-03-29 12:25:31,395:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,396:      pdf_renderer.py:  470: printSegment: | 6 | Low | Retry mechanism for flaky elements |
+   DEBUG: 2026-03-29 12:25:31,398:      pdf_renderer.py:  470: printSegment: Maintained by:
+   DEBUG: 2026-03-29 12:25:31,399:      pdf_renderer.py:  470: printSegment:  Omkar Patil
+   DEBUG: 2026-03-29 12:25:31,400:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,401:      pdf_renderer.py:  470: printSegment: Repository:
+   DEBUG: 2026-03-29 12:25:31,402:      pdf_renderer.py:  470: printSegment:  
+   DEBUG: 2026-03-29 12:25:31,404:      pdf_renderer.py:  470: printSegment: https://github.com/itsomkar4545/Kfic-automation
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 0, [1, 'KFIC Automation Framework — Technical Documentation', 1, 68.0]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 1, [2, 'Table of Contents', 1, 154.0]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 2, [2, '1. Project Overview', 1, 367.6]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 3, [3, '1.1 Purpose', 1, 400.8]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 4, [3, '1.2 Objectives', 1, 459.59999999999997]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 5, [3, '1.3 Technology Stack', 1, 536.4]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 6, [3, '1.4 Application Under Test', 1, 619.1999999999999]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 7, [3, '1.5 Workflow', 1, 695.9999999999999]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 8, [3, '1.6 User Roles', 2, 128.4]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 9, [2, '2. Setup ', 2, 199.60000000000002]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 10, [3, 'Troubleshooting', 2, 286.8]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 11, [2, '3. Project Structure', 2, 370.0]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 12, [3, 'Key Files', 2, 445.2]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 13, [2, '4. Common Keywords', 2, 540.3999999999999]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 14, [2, '5. Service Request Page — Locators', 3, 70.0]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 15, [3, '5.1 What Are Locators?', 3, 127.19999999999999]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 16, [3, '5.2 Action Buttons', 3, 216.0]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 17, [2, '6. Change Address — Full Implementation', 3, 299.2]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 18, [3, '6.1 Execution Flow', 3, 356.4]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 19, [3, '6.2 Address Types', 3, 415.19999999999993]
+   DEBUG: 2026-03-29 12:25:31,406:      pdf_renderer.py:   53: 20, [3, '6.3 Form Fields', 3, 473.9999999999999]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 21, [3, '6.4 Technical Concepts', 3, 556.7999999999998]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 22, [2, '7. All 25 Service Requests — Status', 3, 639.9999999999998]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 23, [2, '8. Excel Input Files ', 4, 194.8]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 24, [3, '8.1 Excel Structure', 4, 228.00000000000003]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 25, [3, '8.2 Python Readers', 4, 286.8]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 26, [2, '9. Validation Logic', 4, 358.0]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 27, [3, '9.1 Methods', 4, 391.2]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 28, [3, '9.2 Behavior', 4, 473.99999999999994]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 29, [2, '10. Test Execution', 4, 563.1999999999998]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 30, [3, 'Output', 4, 650.3999999999997]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 31, [2, '11. CI/CD — Jenkins ', 5, 70.0]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 32, [3, 'Pipeline', 5, 103.19999999999999]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 33, [3, 'Email Notifications', 5, 162.0]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 34, [2, '12. Coding Concepts', 5, 233.20000000000002]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 35, [3, '12.1 Robot Framework', 5, 266.4]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 36, [3, '12.2 File Structure', 5, 313.19999999999993]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 37, [3, '12.3 Variable Types', 5, 401.9999999999999]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 38, [3, '12.4 Keyword Types', 5, 472.79999999999984]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 39, [3, '12.5 Key Built-in Keywords', 5, 531.5999999999998]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 40, [3, '12.6 Key Selenium Keywords', 5, 626.3999999999997]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 41, [3, '12.7 Python Integration', 6, 72.0]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 42, [3, '12.8 Python Libraries Used', 6, 154.8]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 43, [2, '13. Change Log', 6, 226.00000000000003]
+   DEBUG: 2026-03-29 12:25:31,407:      pdf_renderer.py:   53: 44, [3, '✅ Completed', 6, 283.2]
+   DEBUG: 2026-03-29 12:25:31,408:      pdf_renderer.py:   53: 45, [3, '⏳ Pending', 6, 389.99999999999994]
