@@ -31,7 +31,8 @@ ${ELEMENT_TIMEOUT}      10
 
 # Test Data Configuration
 ${TEST_DATA_DIR}        ${CURDIR}/../data
-${SCREENSHOTS_DIR}      ${CURDIR}/../results/screenshots
+${SCREENSHOTS_BASE}     ${CURDIR}/../results/screenshots
+${SCREENSHOTS_DIR}      ${EMPTY}
 ${REPORTS_DIR}          ${CURDIR}/../results/reports
 ${LOGS_DIR}             ${CURDIR}/../results/logs
 

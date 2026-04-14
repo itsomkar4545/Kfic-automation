@@ -42,7 +42,7 @@ Open Application
     Set Selenium Implicit Wait    ${IMPLICIT_WAIT}
     Set Selenium Timeout    ${PAGE_LOAD_TIMEOUT}
     
-    # Setup test environment
+    # Setup test environment with timestamped screenshot folder
     Setup Test Environment
 
 Wait For Page Load
@@ -180,10 +180,14 @@ Select From Dropdown By Value
     Sleep    0.5s
 
 Setup Test Environment
-    [Documentation]    Setup test environment directories and logging
+    [Documentation]    Setup test environment directories with timestamped screenshot folder
+    ${timestamp}=    Get Current Date    result_format=%Y%m%d_%H%M%S
+    ${SCREENSHOTS_DIR}=    Join Path    ${SCREENSHOTS_BASE}    run_${timestamp}
+    Set Global Variable    ${SCREENSHOTS_DIR}
     Create Directory    ${SCREENSHOTS_DIR}
     Create Directory    ${REPORTS_DIR}
     Create Directory    ${LOGS_DIR}
+    Set Screenshot Directory    ${SCREENSHOTS_DIR}
     
     Log    Test environment setup completed
     Log    Screenshots directory: ${SCREENSHOTS_DIR}

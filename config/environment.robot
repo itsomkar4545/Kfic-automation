@@ -37,7 +37,8 @@ ${PAGE_LOAD_TIMEOUT}  30
 
 # Test Data Paths
 ${TEST_DATA_DIR}     ${CURDIR}/../data
-${SCREENSHOTS_DIR}   ${CURDIR}/../results/screenshots
+${SCREENSHOTS_BASE}  ${CURDIR}/../results/screenshots
+${SCREENSHOTS_DIR}   ${EMPTY}
 ${REPORTS_DIR}       ${CURDIR}/../results/reports
 
 # API Configuration
